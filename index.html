@@ -1,0 +1,364 @@
+<title>Datenschutzerklärung — Harmonica Cheatsheet</title>
+
+<style>
+  :root {
+    --bg: #faf7f2;
+    --bg-raised: #f1ebe1;
+    --ink: #1d1d1b;
+    --ink-soft: #5a5650;
+    --rule: #ded4c2;
+    --accent: #b5651d;
+    --accent-ink: #ffffff;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #17140f;
+      --bg-raised: #221e17;
+      --ink: #ede6da;
+      --ink-soft: #b3a996;
+      --rule: #3a3428;
+      --accent: #e0964a;
+      --accent-ink: #17140f;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #17140f;
+    --bg-raised: #221e17;
+    --ink: #ede6da;
+    --ink-soft: #b3a996;
+    --rule: #3a3428;
+    --accent: #e0964a;
+    --accent-ink: #17140f;
+  }
+  :root[data-theme="light"] {
+    --bg: #faf7f2;
+    --bg-raised: #f1ebe1;
+    --ink: #1d1d1b;
+    --ink-soft: #5a5650;
+    --rule: #ded4c2;
+    --accent: #b5651d;
+    --accent-ink: #ffffff;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+    line-height: 1.6;
+  }
+
+  .wrap {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 4.5rem 1.5rem 6rem;
+  }
+
+  header.masthead {
+    margin-bottom: 3rem;
+  }
+
+  .eyebrow {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  h1 {
+    font-size: clamp(1.9rem, 4vw, 2.5rem);
+    margin: 0.4rem 0 0;
+    text-wrap: balance;
+    font-weight: 400;
+  }
+
+  .updated {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    margin-top: 0.6rem;
+  }
+
+  .lang-toggle {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.8rem;
+    margin-top: 1.4rem;
+    display: flex;
+    gap: 1rem;
+  }
+  .lang-toggle a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+  }
+  .lang-toggle a:hover,
+  .lang-toggle a:focus-visible {
+    border-bottom-color: currentColor;
+  }
+
+  section {
+    margin-top: 2.6rem;
+    padding-top: 2.6rem;
+    border-top: 1px solid var(--rule);
+  }
+  section:first-of-type {
+    border-top: none;
+    padding-top: 0;
+  }
+
+  h2 {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--ink-soft);
+    margin: 0 0 1rem;
+  }
+
+  p { margin: 0 0 1rem; max-width: 62ch; }
+  p:last-child { margin-bottom: 0; }
+
+  ul {
+    margin: 0 0 1rem;
+    padding-left: 1.3rem;
+    max-width: 62ch;
+  }
+  li { margin-bottom: 0.5rem; }
+  li:last-child { margin-bottom: 0; }
+
+  .fact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+  }
+  .fact {
+    background: var(--bg-raised);
+    border-radius: 6px;
+    padding: 0.9rem 1rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  .fact .label {
+    font-size: 0.68rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  .fact .value {
+    font-size: 0.92rem;
+    margin-top: 0.25rem;
+    color: var(--ink);
+  }
+
+  a.contact {
+    color: var(--accent);
+  }
+
+  footer {
+    margin-top: 3.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--rule);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.78rem;
+    color: var(--ink-soft);
+  }
+
+  #en { display: none; }
+  :target { scroll-margin-top: 2rem; }
+</style>
+
+<div class="wrap">
+  <header class="masthead">
+    <div class="eyebrow">Harmonica Cheatsheet</div>
+    <h1 id="de-heading">Datenschutzerklärung</h1>
+    <div class="updated">Stand: August 2026</div>
+    <nav class="lang-toggle">
+      <a href="#de" id="show-de">Deutsch</a>
+      <a href="#en" id="show-en">English</a>
+    </nav>
+  </header>
+
+  <div id="de">
+    <div class="fact-grid">
+      <div class="fact">
+        <div class="label">Internetzugriff</div>
+        <div class="value">Nicht vorhanden</div>
+      </div>
+      <div class="fact">
+        <div class="label">Konto / Anmeldung</div>
+        <div class="value">Nicht erforderlich</div>
+      </div>
+      <div class="fact">
+        <div class="label">Werbung / Tracking</div>
+        <div class="value">Keines</div>
+      </div>
+      <div class="fact">
+        <div class="label">Datenübertragung</div>
+        <div class="value">Findet nicht statt</div>
+      </div>
+    </div>
+
+    <section>
+      <h2>Kurz gesagt</h2>
+      <p>
+        Harmonica Cheatsheet ist eine reine Offline-Nachschlage-App für
+        Mundharmonika-Spieler:innen. Die App zeigt vorgefertigte Diagramme an — sie
+        besitzt keinen Server, keine Internetverbindung und sammelt, speichert oder
+        überträgt keinerlei personenbezogene Daten.
+      </p>
+    </section>
+
+    <section>
+      <h2>Welche Daten verarbeitet werden</h2>
+      <p>
+        Die App speichert ausschließlich zwei einfache Einstellungen lokal auf deinem
+        Gerät (über die Android-eigene <em>SharedPreferences</em>-Funktion):
+      </p>
+      <ul>
+        <li>die zuletzt gewählte Anzeigesprache der App,</li>
+        <li>das zuletzt gewählte Farb-/Holz-Design.</li>
+      </ul>
+      <p>
+        Diese Einstellungen verlassen dein Gerät nie. Es gibt keine Analyse-,
+        Tracking- oder Werbe-Software (SDKs) in der App, keine Nutzerkonten, keine
+        Cloud-Synchronisierung und keine In-App-Käufe.
+      </p>
+    </section>
+
+    <section>
+      <h2>Berechtigungen</h2>
+      <p>
+        Die App fordert keine einzige Android-Berechtigung an — auch keinen
+        Internetzugriff. Das lässt sich in den Android-App-Einstellungen jederzeit
+        nachprüfen.
+      </p>
+    </section>
+
+    <section>
+      <h2>Änderungen dieser Erklärung</h2>
+      <p>
+        Sollte sich die Funktionsweise der App zukünftig ändern (z. B. durch neue
+        Funktionen, die tatsächlich Daten verarbeiten), wird diese Seite entsprechend
+        aktualisiert und das Datum oben angepasst.
+      </p>
+    </section>
+
+    <section>
+      <h2>Kontakt</h2>
+      <p>
+        Fragen zum Datenschutz beantworten wir gerne:
+        <a class="contact" href="mailto:gio_extrem@gmx.net">gio_extrem@gmx.net</a>
+      </p>
+    </section>
+  </div>
+
+  <div id="en">
+    <div class="fact-grid">
+      <div class="fact">
+        <div class="label">Internet access</div>
+        <div class="value">None</div>
+      </div>
+      <div class="fact">
+        <div class="label">Account / sign-in</div>
+        <div class="value">Not required</div>
+      </div>
+      <div class="fact">
+        <div class="label">Ads / tracking</div>
+        <div class="value">None</div>
+      </div>
+      <div class="fact">
+        <div class="label">Data transmission</div>
+        <div class="value">Never happens</div>
+      </div>
+    </div>
+
+    <section>
+      <h2>In short</h2>
+      <p>
+        Harmonica Cheatsheet is a purely offline reference app for harmonica
+        players. It displays pre-built diagrams — it has no server, no internet
+        connection, and does not collect, store, or transmit any personal data.
+      </p>
+    </section>
+
+    <section>
+      <h2>What data is processed</h2>
+      <p>
+        The app stores exactly two simple preferences locally on your device (via
+        Android's built-in <em>SharedPreferences</em> mechanism):
+      </p>
+      <ul>
+        <li>the last-selected display language,</li>
+        <li>the last-selected color/wood theme.</li>
+      </ul>
+      <p>
+        These settings never leave your device. There is no analytics, tracking, or
+        advertising SDK in the app, no user accounts, no cloud sync, and no in-app
+        purchases.
+      </p>
+    </section>
+
+    <section>
+      <h2>Permissions</h2>
+      <p>
+        The app requests zero Android permissions — including no internet access.
+        You can verify this at any time in the Android app settings.
+      </p>
+    </section>
+
+    <section>
+      <h2>Changes to this policy</h2>
+      <p>
+        If the app's functionality changes in the future (e.g. new features that
+        actually process data), this page will be updated accordingly and the date
+        above adjusted.
+      </p>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p>
+        Questions about privacy are welcome at
+        <a class="contact" href="mailto:gio_extrem@gmx.net">gio_extrem@gmx.net</a>
+      </p>
+    </section>
+  </div>
+
+  <footer>
+    Harmonica Cheatsheet — Datenschutzerklärung / Privacy Policy
+  </footer>
+</div>
+
+<script>
+  var de = document.getElementById('de');
+  var en = document.getElementById('en');
+  var heading = document.getElementById('de-heading');
+  function showLang(lang) {
+    if (lang === 'en') {
+      de.style.display = 'none';
+      en.style.display = 'block';
+      heading.textContent = 'Privacy Policy';
+      document.title = 'Privacy Policy — Harmonica Cheatsheet';
+    } else {
+      de.style.display = 'block';
+      en.style.display = 'none';
+      heading.textContent = 'Datenschutzerklärung';
+      document.title = 'Datenschutzerklärung — Harmonica Cheatsheet';
+    }
+  }
+  document.getElementById('show-de').addEventListener('click', function (e) {
+    e.preventDefault();
+    showLang('de');
+  });
+  document.getElementById('show-en').addEventListener('click', function (e) {
+    e.preventDefault();
+    showLang('en');
+  });
+  if (window.location.hash === '#en') showLang('en');
+</script>
