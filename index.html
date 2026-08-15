@@ -177,7 +177,7 @@
   <header class="masthead">
     <div class="eyebrow">Harmonica Cheatsheet</div>
     <h1 id="de-heading">Datenschutzerklärung</h1>
-    <div class="updated">Stand: August 2026</div>
+    <div class="updated">Stand: 15.&nbsp;August 2026</div>
     <nav class="lang-toggle">
       <a href="#de" id="show-de">Deutsch</a>
       <a href="#en" id="show-en">English</a>
@@ -187,8 +187,8 @@
   <div id="de">
     <div class="fact-grid">
       <div class="fact">
-        <div class="label">Internetzugriff</div>
-        <div class="value">Nicht vorhanden</div>
+        <div class="label">Tonaufnahme</div>
+        <div class="value">Wird nicht gespeichert</div>
       </div>
       <div class="fact">
         <div class="label">Konto / Anmeldung</div>
@@ -199,52 +199,120 @@
         <div class="value">Keines</div>
       </div>
       <div class="fact">
-        <div class="label">Datenübertragung</div>
-        <div class="value">Findet nicht statt</div>
+        <div class="label">Server des Anbieters</div>
+        <div class="value">Gibt es nicht</div>
       </div>
     </div>
 
     <section>
       <h2>Kurz gesagt</h2>
       <p>
-        Harmonica Cheatsheet ist eine reine Offline-Nachschlage-App für
-        Mundharmonika-Spieler:innen. Die App zeigt vorgefertigte Diagramme an — sie
-        besitzt keinen Server, keine Internetverbindung und sammelt, speichert oder
-        überträgt keinerlei personenbezogene Daten.
+        Harmonica Cheatsheet ist ein Nachschlagewerk f&uuml;r Mundharmonikaspieler. Die App
+        rechnet und zeichnet alles auf dem Ger&auml;t. Es gibt keinen Server des Anbieters,
+        keine Nutzerkonten, keine Werbung und keine Analyse-Software. Es werden keine
+        personenbezogenen Daten erhoben, gespeichert oder &uuml;bertragen.
       </p>
     </section>
 
     <section>
-      <h2>Welche Daten verarbeitet werden</h2>
+      <h2>Mikrofon im &Uuml;bungsmodus</h2>
       <p>
-        Die App speichert ausschließlich zwei einfache Einstellungen lokal auf deinem
-        Gerät (über die Android-eigene <em>SharedPreferences</em>-Funktion):
+        Die App hat einen &Uuml;bungsmodus: Sie h&ouml;rt &uuml;ber das Mikrofon mit und zeigt
+        an, welcher Ton gerade gespielt wird und wie genau er sitzt. Daf&uuml;r fragt sie
+        einmalig die Berechtigung <em>Mikrofon</em> ab.
       </p>
       <ul>
-        <li>die zuletzt gewählte Anzeigesprache der App,</li>
-        <li>das zuletzt gewählte Farb-/Holz-Design.</li>
+        <li>
+          Das Mikrofon l&auml;uft <strong>nur, solange der &Uuml;bungsmodus eingeschaltet
+          ist</strong>. Wird er ausgeschaltet oder die App verlassen, gibt sie das Mikrofon
+          sofort wieder frei.
+        </li>
+        <li>
+          Es wird <strong>nichts aufgezeichnet und nichts gespeichert</strong>. Das Signal wird
+          im Arbeitsspeicher in kurzen Abschnitten auf seine Tonh&ouml;he untersucht und
+          anschlie&szlig;end verworfen.
+        </li>
+        <li>
+          Es wird <strong>nichts &uuml;bertragen</strong>. Die Auswertung geschieht
+          vollst&auml;ndig auf dem Ger&auml;t; das Tonsignal verl&auml;sst es nie.
+        </li>
+        <li>
+          Der &Uuml;bungsmodus ist ausgeschaltet, solange man ihn nicht selbst einschaltet.
+          Ohne ihn fordert die App das Mikrofon gar nicht erst an.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Welche Daten auf dem Ger&auml;t liegen</h2>
+      <p>
+        Die App speichert lokal auf deinem Ger&auml;t deine Einstellungen (&uuml;ber die
+        Android-eigene <em>DataStore</em>-Funktion):
+      </p>
+      <ul>
+        <li>die gew&auml;hlte Anzeigesprache,</li>
+        <li>das Farbschema (hell, dunkel oder wie das System),</li>
+        <li>die Darstellung der Lochnummern-Reihe,</li>
+        <li>selbst gew&auml;hlte Farben und Zeichen der Tonstufen,</li>
+        <li>ob der einmalige Wischhinweis schon gesehen wurde,</li>
+        <li>ob die Vollversion freigeschaltet ist.</li>
       </ul>
       <p>
-        Diese Einstellungen verlassen dein Gerät nie. Es gibt keine Analyse-,
-        Tracking- oder Werbe-Software (SDKs) in der App, keine Nutzerkonten, keine
-        Cloud-Synchronisierung und keine In-App-Käufe.
+        Das sind keine personenbezogenen Daten, und sie verlassen dein Ger&auml;t nicht. Wenn du
+        die Android-Datensicherung aktiviert hast, sichert Android sie zusammen mit anderen
+        App-Daten in dein Google-Konto; das ist eine Funktion des Betriebssystems, nicht der App.
       </p>
     </section>
 
     <section>
-      <h2>Berechtigungen</h2>
+      <h2>Kauf der Vollversion</h2>
       <p>
-        Die App fordert keine einzige Android-Berechtigung an — auch keinen
-        Internetzugriff. Das lässt sich in den Android-App-Einstellungen jederzeit
-        nachprüfen.
+        Die App l&auml;sst sich 30 Tage lang vollst&auml;ndig kostenlos benutzen; danach
+        wird sie &uuml;ber einen einmaligen In-App-Kauf freigeschaltet. Der Kauf wird
+        <strong>vollst&auml;ndig von Google Play abgewickelt</strong>.
+      </p>
+      <ul>
+        <li>
+          Zahlungsdaten werden ausschlie&szlig;lich von Google verarbeitet. Der Anbieter dieser
+          App bekommt sie <strong>nicht</strong> zu sehen &mdash; weder Name, noch Adresse, noch
+          Zahlungsmittel.
+        </li>
+        <li>
+          Die App fragt bei Google Play lediglich ab, <em>ob</em> die Freischaltung besteht.
+          Daf&uuml;r braucht sie eine Internetverbindung; andere Netzwerkzugriffe finden nicht
+          statt.
+        </li>
+        <li>
+          F&uuml;r die Verarbeitung durch Google gilt deren eigene Datenschutzerkl&auml;rung:
+          <a class="contact" href="https://policies.google.com/privacy">policies.google.com/privacy</a>.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Berechtigungen im &Uuml;berblick</h2>
+      <ul>
+        <li><strong>Mikrofon</strong> &mdash; nur f&uuml;r den &Uuml;bungsmodus, siehe oben.</li>
+        <li><strong>Internet</strong> &mdash; nur f&uuml;r die Kaufabwicklung &uuml;ber Google Play.</li>
+      </ul>
+      <p>
+        Weitere Berechtigungen fordert die App nicht an. Das l&auml;sst sich in den
+        Android-App-Einstellungen jederzeit nachpr&uuml;fen.
       </p>
     </section>
 
     <section>
-      <h2>Änderungen dieser Erklärung</h2>
+      <h2>Kinder</h2>
       <p>
-        Sollte sich die Funktionsweise der App zukünftig ändern (z. B. durch neue
-        Funktionen, die tatsächlich Daten verarbeiten), wird diese Seite entsprechend
+        Die App richtet sich an Mundharmonikaspieler jeden Alters und erhebt von niemandem
+        Daten &mdash; auch nicht von Kindern.
+      </p>
+    </section>
+
+    <section>
+      <h2>&Auml;nderungen dieser Erkl&auml;rung</h2>
+      <p>
+        Sollte sich die Funktionsweise der App &auml;ndern, wird diese Seite entsprechend
         aktualisiert und das Datum oben angepasst.
       </p>
     </section>
@@ -261,8 +329,8 @@
   <div id="en">
     <div class="fact-grid">
       <div class="fact">
-        <div class="label">Internet access</div>
-        <div class="value">None</div>
+        <div class="label">Audio recording</div>
+        <div class="value">Never stored</div>
       </div>
       <div class="fact">
         <div class="label">Account / sign-in</div>
@@ -273,51 +341,116 @@
         <div class="value">None</div>
       </div>
       <div class="fact">
-        <div class="label">Data transmission</div>
-        <div class="value">Never happens</div>
+        <div class="label">Developer server</div>
+        <div class="value">Does not exist</div>
       </div>
     </div>
 
     <section>
       <h2>In short</h2>
       <p>
-        Harmonica Cheatsheet is a purely offline reference app for harmonica
-        players. It displays pre-built diagrams — it has no server, no internet
-        connection, and does not collect, store, or transmit any personal data.
+        Harmonica Cheatsheet is a reference app for harmonica players. Everything is computed
+        and drawn on your device. There is no developer server, no user account, no advertising
+        and no analytics software. No personal data is collected, stored or transmitted.
       </p>
     </section>
 
     <section>
-      <h2>What data is processed</h2>
+      <h2>Microphone in practice mode</h2>
       <p>
-        The app stores exactly two simple preferences locally on your device (via
-        Android's built-in <em>SharedPreferences</em> mechanism):
+        The app has a practice mode: it listens through the microphone and shows which note you
+        are playing and how accurately you hit it. For this it asks once for the
+        <em>microphone</em> permission.
       </p>
       <ul>
-        <li>the last-selected display language,</li>
-        <li>the last-selected color/wood theme.</li>
+        <li>
+          The microphone runs <strong>only while practice mode is switched on</strong>. Turn it
+          off or leave the app and the microphone is released immediately.
+        </li>
+        <li>
+          <strong>Nothing is recorded and nothing is stored.</strong> The signal is examined for
+          its pitch in short chunks held in memory, and then discarded.
+        </li>
+        <li>
+          <strong>Nothing is transmitted.</strong> The analysis happens entirely on the device;
+          the audio never leaves it.
+        </li>
+        <li>
+          Practice mode stays off until you switch it on yourself. Without it the app never even
+          requests the microphone.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>What is stored on the device</h2>
+      <p>
+        The app stores your preferences locally on your device (via Android&rsquo;s built-in
+        <em>DataStore</em> mechanism):
+      </p>
+      <ul>
+        <li>the selected display language,</li>
+        <li>the colour scheme (light, dark or follow system),</li>
+        <li>how the hole-number row is shown,</li>
+        <li>your own colours and markers for the scale degrees,</li>
+        <li>whether the one-off swipe hint has been seen,</li>
+        <li>whether the full version is unlocked.</li>
       </ul>
       <p>
-        These settings never leave your device. There is no analytics, tracking, or
-        advertising SDK in the app, no user accounts, no cloud sync, and no in-app
-        purchases.
+        None of this is personal data, and it does not leave your device. If you have Android
+        backup enabled, Android saves it to your Google account along with other app data; that
+        is a function of the operating system, not of this app.
       </p>
     </section>
 
     <section>
-      <h2>Permissions</h2>
+      <h2>Buying the full version</h2>
       <p>
-        The app requests zero Android permissions — including no internet access.
-        You can verify this at any time in the Android app settings.
+        The app can be used in full free of charge for 30 days; after that it is
+        unlocked by a one-time in-app purchase. The purchase is
+        <strong>handled entirely by Google Play</strong>.
+      </p>
+      <ul>
+        <li>
+          Payment details are processed exclusively by Google. The developer of this app
+          <strong>never sees them</strong> &mdash; no name, no address, no payment method.
+        </li>
+        <li>
+          The app only asks Google Play <em>whether</em> the unlock exists. That requires an
+          internet connection; no other network access takes place.
+        </li>
+        <li>
+          Google&rsquo;s own privacy policy applies to their processing:
+          <a class="contact" href="https://policies.google.com/privacy">policies.google.com/privacy</a>.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Permissions at a glance</h2>
+      <ul>
+        <li><strong>Microphone</strong> &mdash; for practice mode only, see above.</li>
+        <li><strong>Internet</strong> &mdash; for Google Play purchase handling only.</li>
+      </ul>
+      <p>
+        The app requests no other permissions. You can verify this at any time in the Android app
+        settings.
+      </p>
+    </section>
+
+    <section>
+      <h2>Children</h2>
+      <p>
+        The app is aimed at harmonica players of any age and collects data from nobody &mdash;
+        children included.
       </p>
     </section>
 
     <section>
       <h2>Changes to this policy</h2>
       <p>
-        If the app's functionality changes in the future (e.g. new features that
-        actually process data), this page will be updated accordingly and the date
-        above adjusted.
+        If the app&rsquo;s functionality changes, this page will be updated accordingly and the
+        date above adjusted.
       </p>
     </section>
 
