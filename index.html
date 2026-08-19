@@ -1,5 +1,9 @@
-<title>Datenschutzerklärung — Harmonica Cheatsheet</title>
-
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Harmonica Cheatsheet</title>
 <style>
   :root {
     --bg: #faf7f2;
@@ -8,7 +12,7 @@
     --ink-soft: #5a5650;
     --rule: #ded4c2;
     --accent: #b5651d;
-    --accent-ink: #ffffff;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   }
 
   @media (prefers-color-scheme: dark) {
@@ -19,26 +23,7 @@
       --ink-soft: #b3a996;
       --rule: #3a3428;
       --accent: #e0964a;
-      --accent-ink: #17140f;
     }
-  }
-  :root[data-theme="dark"] {
-    --bg: #17140f;
-    --bg-raised: #221e17;
-    --ink: #ede6da;
-    --ink-soft: #b3a996;
-    --rule: #3a3428;
-    --accent: #e0964a;
-    --accent-ink: #17140f;
-  }
-  :root[data-theme="light"] {
-    --bg: #faf7f2;
-    --bg-raised: #f1ebe1;
-    --ink: #1d1d1b;
-    --ink-soft: #5a5650;
-    --rule: #ded4c2;
-    --accent: #b5651d;
-    --accent-ink: #ffffff;
   }
 
   * { box-sizing: border-box; }
@@ -57,12 +42,10 @@
     padding: 4.5rem 1.5rem 6rem;
   }
 
-  header.masthead {
-    margin-bottom: 3rem;
-  }
+  header.masthead { margin-bottom: 3rem; }
 
   .eyebrow {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-family: var(--sans);
     font-size: 0.72rem;
     letter-spacing: 0.14em;
     text-transform: uppercase;
@@ -78,27 +61,32 @@
   }
 
   .updated {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-family: var(--sans);
     font-size: 0.85rem;
     color: var(--ink-soft);
     margin-top: 0.6rem;
   }
 
-  .lang-toggle {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    font-size: 0.8rem;
-    margin-top: 1.4rem;
+  /* Sprachwahl: ein einziges Auswahlfeld statt einundzwanzig Verknuepfungen. */
+  .lang-pick {
+    font-family: var(--sans);
+    font-size: 0.85rem;
+    margin-top: 1.6rem;
     display: flex;
-    gap: 1rem;
+    align-items: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
   }
-  .lang-toggle a {
-    color: var(--accent);
-    text-decoration: none;
-    border-bottom: 1px solid transparent;
-  }
-  .lang-toggle a:hover,
-  .lang-toggle a:focus-visible {
-    border-bottom-color: currentColor;
+  .lang-pick label { color: var(--ink-soft); }
+  .lang-pick select {
+    font-family: inherit;
+    font-size: 0.9rem;
+    padding: 0.4rem 0.6rem;
+    color: var(--ink);
+    background: var(--bg-raised);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    max-width: 100%;
   }
 
   section {
@@ -106,13 +94,10 @@
     padding-top: 2.6rem;
     border-top: 1px solid var(--rule);
   }
-  section:first-of-type {
-    border-top: none;
-    padding-top: 0;
-  }
+  section:first-of-type { border-top: none; padding-top: 0; }
 
   h2 {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-family: var(--sans);
     font-size: 0.78rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -124,11 +109,7 @@
   p { margin: 0 0 1rem; max-width: 62ch; }
   p:last-child { margin-bottom: 0; }
 
-  ul {
-    margin: 0 0 1rem;
-    padding-left: 1.3rem;
-    max-width: 62ch;
-  }
+  ul { margin: 0 0 1rem; padding-inline-start: 1.3rem; max-width: 62ch; }
   li { margin-bottom: 0.5rem; }
   li:last-child { margin-bottom: 0; }
 
@@ -142,7 +123,7 @@
     background: var(--bg-raised);
     border-radius: 6px;
     padding: 0.9rem 1rem;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-family: var(--sans);
   }
   .fact .label {
     font-size: 0.68rem;
@@ -150,348 +131,1253 @@
     text-transform: uppercase;
     color: var(--ink-soft);
   }
-  .fact .value {
-    font-size: 0.92rem;
-    margin-top: 0.25rem;
-    color: var(--ink);
+  .fact .value { font-size: 0.92rem; margin-top: 0.25rem; color: var(--ink); }
+
+  /* Vorrangklausel: steht nur ueber den neunzehn Uebersetzungen, nicht ueber DE und EN. */
+  .binding-note {
+    font-family: var(--sans);
+    font-size: 0.82rem;
+    color: var(--ink-soft);
+    background: var(--bg-raised);
+    border-inline-start: 3px solid var(--accent);
+    border-radius: 0 6px 6px 0;
+    padding: 0.8rem 1rem;
+    margin-top: 1.5rem;
+    max-width: 62ch;
   }
 
-  a.contact {
-    color: var(--accent);
-  }
+  a { color: var(--accent); }
 
   footer {
     margin-top: 3.5rem;
     padding-top: 1.5rem;
     border-top: 1px solid var(--rule);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-family: var(--sans);
     font-size: 0.78rem;
     color: var(--ink-soft);
   }
 
-  #en { display: none; }
-  :target { scroll-margin-top: 2rem; }
+  /* Arabisch laeuft von rechts nach links; alles Uebrige ist logisch bemasst. */
+  [dir="rtl"] .binding-note { border-radius: 6px 0 0 6px; }
 </style>
-
+</head>
+<body>
 <div class="wrap">
   <header class="masthead">
     <div class="eyebrow">Harmonica Cheatsheet</div>
-    <h1 id="de-heading">Datenschutzerklärung</h1>
-    <div class="updated">Stand: 15.&nbsp;August 2026</div>
-    <nav class="lang-toggle">
-      <a href="#de" id="show-de">Deutsch</a>
-      <a href="#en" id="show-en">English</a>
+    <h1 id="doc-title">Privacy Policy</h1>
+    <div class="updated" id="doc-updated">Last updated: 19 August 2026</div>
+    <nav class="lang-pick">
+      <label for="lang">Language</label>
+      <select id="lang"></select>
     </nav>
   </header>
 
-  <div id="de">
-    <div class="fact-grid">
-      <div class="fact">
-        <div class="label">Tonaufnahme</div>
-        <div class="value">Wird nicht gespeichert</div>
-      </div>
-      <div class="fact">
-        <div class="label">Konto / Anmeldung</div>
-        <div class="value">Nicht erforderlich</div>
-      </div>
-      <div class="fact">
-        <div class="label">Werbung / Tracking</div>
-        <div class="value">Keines</div>
-      </div>
-      <div class="fact">
-        <div class="label">Server des Anbieters</div>
-        <div class="value">Gibt es nicht</div>
-      </div>
-    </div>
+  <main id="doc">
+    <noscript>
+      <section>
+        <h2>In short</h2>
+        <p>
+          Harmonica Cheatsheet is a reference app for harmonica players. Everything is computed
+          and drawn on your device, and the app has <strong>no internet access</strong>. There is
+          no developer server, no user account, no advertising and no analytics. No personal data
+          is collected, stored or transmitted. The microphone is used only while practice mode is
+          switched on, and nothing is recorded, stored or transmitted.
+          Questions: <a href="mailto:gio_extrem@gmx.net">gio_extrem@gmx.net</a>
+        </p>
+      </section>
+    </noscript>
+  </main>
 
-    <section>
-      <h2>Kurz gesagt</h2>
-      <p>
-        Harmonica Cheatsheet ist ein Nachschlagewerk f&uuml;r Mundharmonikaspieler. Die App
-        rechnet und zeichnet alles auf dem Ger&auml;t. Es gibt keinen Server des Anbieters,
-        keine Nutzerkonten, keine Werbung und keine Analyse-Software. Es werden keine
-        personenbezogenen Daten erhoben, gespeichert oder &uuml;bertragen.
-      </p>
-    </section>
-
-    <section>
-      <h2>Mikrofon im &Uuml;bungsmodus</h2>
-      <p>
-        Die App hat einen &Uuml;bungsmodus: Sie h&ouml;rt &uuml;ber das Mikrofon mit und zeigt
-        an, welcher Ton gerade gespielt wird und wie genau er sitzt. Daf&uuml;r fragt sie
-        einmalig die Berechtigung <em>Mikrofon</em> ab.
-      </p>
-      <ul>
-        <li>
-          Das Mikrofon l&auml;uft <strong>nur, solange der &Uuml;bungsmodus eingeschaltet
-          ist</strong>. Wird er ausgeschaltet oder die App verlassen, gibt sie das Mikrofon
-          sofort wieder frei.
-        </li>
-        <li>
-          Es wird <strong>nichts aufgezeichnet und nichts gespeichert</strong>. Das Signal wird
-          im Arbeitsspeicher in kurzen Abschnitten auf seine Tonh&ouml;he untersucht und
-          anschlie&szlig;end verworfen.
-        </li>
-        <li>
-          Es wird <strong>nichts &uuml;bertragen</strong>. Die Auswertung geschieht
-          vollst&auml;ndig auf dem Ger&auml;t; das Tonsignal verl&auml;sst es nie.
-        </li>
-        <li>
-          Der &Uuml;bungsmodus ist ausgeschaltet, solange man ihn nicht selbst einschaltet.
-          Ohne ihn fordert die App das Mikrofon gar nicht erst an.
-        </li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Welche Daten auf dem Ger&auml;t liegen</h2>
-      <p>
-        Die App speichert lokal auf deinem Ger&auml;t deine Einstellungen (&uuml;ber die
-        Android-eigene <em>DataStore</em>-Funktion):
-      </p>
-      <ul>
-        <li>die gew&auml;hlte Anzeigesprache,</li>
-        <li>das Farbschema (hell, dunkel oder wie das System),</li>
-        <li>die Darstellung der Lochnummern-Reihe,</li>
-        <li>selbst gew&auml;hlte Farben und Zeichen der Tonstufen,</li>
-        <li>ob der einmalige Wischhinweis schon gesehen wurde,</li>
-        <li>ob die Vollversion freigeschaltet ist.</li>
-      </ul>
-      <p>
-        Das sind keine personenbezogenen Daten, und sie verlassen dein Ger&auml;t nicht. Wenn du
-        die Android-Datensicherung aktiviert hast, sichert Android sie zusammen mit anderen
-        App-Daten in dein Google-Konto; das ist eine Funktion des Betriebssystems, nicht der App.
-      </p>
-    </section>
-
-    <section>
-      <h2>Kauf der Vollversion</h2>
-      <p>
-        Die App l&auml;sst sich 30 Tage lang vollst&auml;ndig kostenlos benutzen; danach
-        wird sie &uuml;ber einen einmaligen In-App-Kauf freigeschaltet. Der Kauf wird
-        <strong>vollst&auml;ndig von Google Play abgewickelt</strong>.
-      </p>
-      <ul>
-        <li>
-          Zahlungsdaten werden ausschlie&szlig;lich von Google verarbeitet. Der Anbieter dieser
-          App bekommt sie <strong>nicht</strong> zu sehen &mdash; weder Name, noch Adresse, noch
-          Zahlungsmittel.
-        </li>
-        <li>
-          Die App fragt bei Google Play lediglich ab, <em>ob</em> die Freischaltung besteht.
-          Daf&uuml;r braucht sie eine Internetverbindung; andere Netzwerkzugriffe finden nicht
-          statt.
-        </li>
-        <li>
-          F&uuml;r die Verarbeitung durch Google gilt deren eigene Datenschutzerkl&auml;rung:
-          <a class="contact" href="https://policies.google.com/privacy">policies.google.com/privacy</a>.
-        </li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Berechtigungen im &Uuml;berblick</h2>
-      <ul>
-        <li><strong>Mikrofon</strong> &mdash; nur f&uuml;r den &Uuml;bungsmodus, siehe oben.</li>
-        <li><strong>Internet</strong> &mdash; nur f&uuml;r die Kaufabwicklung &uuml;ber Google Play.</li>
-      </ul>
-      <p>
-        Weitere Berechtigungen fordert die App nicht an. Das l&auml;sst sich in den
-        Android-App-Einstellungen jederzeit nachpr&uuml;fen.
-      </p>
-    </section>
-
-    <section>
-      <h2>Kinder</h2>
-      <p>
-        Die App richtet sich an Mundharmonikaspieler jeden Alters und erhebt von niemandem
-        Daten &mdash; auch nicht von Kindern.
-      </p>
-    </section>
-
-    <section>
-      <h2>&Auml;nderungen dieser Erkl&auml;rung</h2>
-      <p>
-        Sollte sich die Funktionsweise der App &auml;ndern, wird diese Seite entsprechend
-        aktualisiert und das Datum oben angepasst.
-      </p>
-    </section>
-
-    <section>
-      <h2>Kontakt</h2>
-      <p>
-        Fragen zum Datenschutz beantworten wir gerne:
-        <a class="contact" href="mailto:gio_extrem@gmx.net">gio_extrem@gmx.net</a>
-      </p>
-    </section>
-  </div>
-
-  <div id="en">
-    <div class="fact-grid">
-      <div class="fact">
-        <div class="label">Audio recording</div>
-        <div class="value">Never stored</div>
-      </div>
-      <div class="fact">
-        <div class="label">Account / sign-in</div>
-        <div class="value">Not required</div>
-      </div>
-      <div class="fact">
-        <div class="label">Ads / tracking</div>
-        <div class="value">None</div>
-      </div>
-      <div class="fact">
-        <div class="label">Developer server</div>
-        <div class="value">Does not exist</div>
-      </div>
-    </div>
-
-    <section>
-      <h2>In short</h2>
-      <p>
-        Harmonica Cheatsheet is a reference app for harmonica players. Everything is computed
-        and drawn on your device. There is no developer server, no user account, no advertising
-        and no analytics software. No personal data is collected, stored or transmitted.
-      </p>
-    </section>
-
-    <section>
-      <h2>Microphone in practice mode</h2>
-      <p>
-        The app has a practice mode: it listens through the microphone and shows which note you
-        are playing and how accurately you hit it. For this it asks once for the
-        <em>microphone</em> permission.
-      </p>
-      <ul>
-        <li>
-          The microphone runs <strong>only while practice mode is switched on</strong>. Turn it
-          off or leave the app and the microphone is released immediately.
-        </li>
-        <li>
-          <strong>Nothing is recorded and nothing is stored.</strong> The signal is examined for
-          its pitch in short chunks held in memory, and then discarded.
-        </li>
-        <li>
-          <strong>Nothing is transmitted.</strong> The analysis happens entirely on the device;
-          the audio never leaves it.
-        </li>
-        <li>
-          Practice mode stays off until you switch it on yourself. Without it the app never even
-          requests the microphone.
-        </li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>What is stored on the device</h2>
-      <p>
-        The app stores your preferences locally on your device (via Android&rsquo;s built-in
-        <em>DataStore</em> mechanism):
-      </p>
-      <ul>
-        <li>the selected display language,</li>
-        <li>the colour scheme (light, dark or follow system),</li>
-        <li>how the hole-number row is shown,</li>
-        <li>your own colours and markers for the scale degrees,</li>
-        <li>whether the one-off swipe hint has been seen,</li>
-        <li>whether the full version is unlocked.</li>
-      </ul>
-      <p>
-        None of this is personal data, and it does not leave your device. If you have Android
-        backup enabled, Android saves it to your Google account along with other app data; that
-        is a function of the operating system, not of this app.
-      </p>
-    </section>
-
-    <section>
-      <h2>Buying the full version</h2>
-      <p>
-        The app can be used in full free of charge for 30 days; after that it is
-        unlocked by a one-time in-app purchase. The purchase is
-        <strong>handled entirely by Google Play</strong>.
-      </p>
-      <ul>
-        <li>
-          Payment details are processed exclusively by Google. The developer of this app
-          <strong>never sees them</strong> &mdash; no name, no address, no payment method.
-        </li>
-        <li>
-          The app only asks Google Play <em>whether</em> the unlock exists. That requires an
-          internet connection; no other network access takes place.
-        </li>
-        <li>
-          Google&rsquo;s own privacy policy applies to their processing:
-          <a class="contact" href="https://policies.google.com/privacy">policies.google.com/privacy</a>.
-        </li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Permissions at a glance</h2>
-      <ul>
-        <li><strong>Microphone</strong> &mdash; for practice mode only, see above.</li>
-        <li><strong>Internet</strong> &mdash; for Google Play purchase handling only.</li>
-      </ul>
-      <p>
-        The app requests no other permissions. You can verify this at any time in the Android app
-        settings.
-      </p>
-    </section>
-
-    <section>
-      <h2>Children</h2>
-      <p>
-        The app is aimed at harmonica players of any age and collects data from nobody &mdash;
-        children included.
-      </p>
-    </section>
-
-    <section>
-      <h2>Changes to this policy</h2>
-      <p>
-        If the app&rsquo;s functionality changes, this page will be updated accordingly and the
-        date above adjusted.
-      </p>
-    </section>
-
-    <section>
-      <h2>Contact</h2>
-      <p>
-        Questions about privacy are welcome at
-        <a class="contact" href="mailto:gio_extrem@gmx.net">gio_extrem@gmx.net</a>
-      </p>
-    </section>
-  </div>
-
-  <footer>
-    Harmonica Cheatsheet — Datenschutzerklärung / Privacy Policy
-  </footer>
+  <footer id="doc-footer">Harmonica Cheatsheet — Privacy Policy</footer>
 </div>
 
 <script>
-  var de = document.getElementById('de');
-  var en = document.getElementById('en');
-  var heading = document.getElementById('de-heading');
-  function showLang(lang) {
-    if (lang === 'en') {
-      de.style.display = 'none';
-      en.style.display = 'block';
-      heading.textContent = 'Privacy Policy';
-      document.title = 'Privacy Policy — Harmonica Cheatsheet';
-    } else {
-      de.style.display = 'block';
-      en.style.display = 'none';
-      heading.textContent = 'Datenschutzerklärung';
-      document.title = 'Datenschutzerklärung — Harmonica Cheatsheet';
-    }
+/*
+ * Die Erklaerung liegt in allen einundzwanzig App-Sprachen vor. Sie steht als Datenstruktur da
+ * und nicht als einundzwanzig HTML-Bloecke: Bei acht Abschnitten je Sprache waere die Datei
+ * sonst unlesbar, und eine inhaltliche Aenderung muesste einundzwanzigmal von Hand nachgezogen
+ * werden statt einmal je Feld.
+ *
+ * Verbindlich sind Deutsch und Englisch. Ueber den uebrigen neunzehn steht deshalb eine
+ * Vorrangklausel (binding) - eine schief uebersetzte Rechtsaussage soll nicht fuer sich
+ * verbindlich werden.
+ *
+ * Die Sprachkennungen und die Eigennamen sind dieselben wie in AppLanguage der App
+ * (i18n/Strings.kt); die Reihenfolge hier ist ebenfalls die des dortigen Enums.
+ */
+var T = {};
+
+T.de = {
+  name: "Deutsch", dir: "ltr",
+  title: "Datenschutzerklärung",
+  updated: "Stand: 19. August 2026",
+  langLabel: "Sprache",
+  footer: "Harmonica Cheatsheet — Datenschutzerklärung",
+  facts: [
+    ["Tonaufnahme", "Wird nicht gespeichert"],
+    ["Konto / Anmeldung", "Nicht erforderlich"],
+    ["Werbung / Tracking", "Keines"],
+    ["Internetzugriff", "Nicht vorhanden"]
+  ],
+  sections: [
+    { h: "Kurz gesagt", p: [
+      "Harmonica Cheatsheet ist ein Nachschlagewerk für Mundharmonikaspieler. Die App rechnet und zeichnet alles auf dem Gerät und hat <strong>keinen Internetzugriff</strong>. Es gibt keinen Server des Anbieters, keine Nutzerkonten, keine Werbung und keine Analyse-Software. Es werden keine personenbezogenen Daten erhoben, gespeichert oder übertragen."
+    ]},
+    { h: "Mikrofon im Übungsmodus", p: [
+      "Die App hat einen Übungsmodus: Sie hört über das Mikrofon mit und zeigt an, welcher Ton gerade gespielt wird und wie genau er sitzt. Dafür fragt sie einmalig die Berechtigung <em>Mikrofon</em> ab."
+    ], ul: [
+      "Das Mikrofon läuft <strong>nur, solange der Übungsmodus eingeschaltet ist</strong>. Wird er ausgeschaltet oder die App verlassen, gibt sie das Mikrofon sofort wieder frei.",
+      "Es wird <strong>nichts aufgezeichnet und nichts gespeichert</strong>. Das Signal wird im Arbeitsspeicher in kurzen Abschnitten auf seine Tonhöhe untersucht und anschließend verworfen.",
+      "Es wird <strong>nichts übertragen</strong>. Die Auswertung geschieht vollständig auf dem Gerät; das Tonsignal verlässt es nie.",
+      "Der Übungsmodus ist ausgeschaltet, solange man ihn nicht selbst einschaltet. Ohne ihn fordert die App das Mikrofon gar nicht erst an."
+    ]},
+    { h: "Welche Daten auf dem Gerät liegen", p: [
+      "Die App speichert deine Anzeige- und Darstellungseinstellungen lokal auf deinem Gerät (über die Android-eigene <em>DataStore</em>-Funktion) — zum Beispiel die gewählte Anzeigesprache, das Farbschema, die Darstellung der Lochnummern-Reihe, deine eigenen Farben und Zeichen für die Tonstufen und ob ein einmaliger Hinweis schon gesehen wurde.",
+      "Das sind keine personenbezogenen Daten, und sie verlassen dein Gerät nicht. Wenn du die Android-Datensicherung aktiviert hast, sichert Android sie zusammen mit anderen App-Daten in dein Google-Konto; das ist eine Funktion des Betriebssystems, nicht der App."
+    ]},
+    { h: "Kauf im Google Play Store", p: [
+      "Harmonica Cheatsheet ist eine kostenpflichtige App. Der Kauf findet im Google Play Store statt, <strong>bevor</strong> die App zum ersten Mal startet — die App selbst enthält keine Kaufabwicklung, prüft nichts nach und fragt nichts ab.",
+      "Zahlungsdaten werden ausschließlich von Google verarbeitet; der Anbieter dieser App bekommt weder Name noch Anschrift noch Zahlungsmittel zu sehen. Dafür gilt Googles eigene Datenschutzerklärung: <a href=\"https://policies.google.com/privacy\">policies.google.com/privacy</a>."
+    ]},
+    { h: "Berechtigungen im Überblick", ul: [
+      "<strong>Mikrofon</strong> — nur für den Übungsmodus, siehe oben."
+    ], p: [
+      "Das ist die <strong>einzige</strong> Berechtigung, die die App anfordert — sie hat insbesondere <strong>keinen Internetzugriff</strong>. Das lässt sich in den Android-App-Einstellungen jederzeit nachprüfen."
+    ]},
+    { h: "Kinder", p: [
+      "Die App richtet sich an Mundharmonikaspieler jeden Alters und erhebt von niemandem Daten — auch nicht von Kindern."
+    ]},
+    { h: "Änderungen dieser Erklärung", p: [
+      "Sollte sich die Funktionsweise der App ändern, wird diese Seite entsprechend aktualisiert und das Datum oben angepasst."
+    ]},
+    { h: "Kontakt", p: [
+      "Fragen zum Datenschutz beantworten wir gerne: <a href=\"mailto:gio_extrem@gmx.net\">gio_extrem@gmx.net</a>"
+    ]}
+  ]
+};
+
+T.en = {
+  name: "English", dir: "ltr",
+  title: "Privacy Policy",
+  updated: "Last updated: 19 August 2026",
+  langLabel: "Language",
+  footer: "Harmonica Cheatsheet — Privacy Policy",
+  facts: [
+    ["Audio recording", "Never stored"],
+    ["Account / sign-in", "Not required"],
+    ["Ads / tracking", "None"],
+    ["Internet access", "None"]
+  ],
+  sections: [
+    { h: "In short", p: [
+      "Harmonica Cheatsheet is a reference app for harmonica players. Everything is computed and drawn on your device, and the app has <strong>no internet access</strong>. There is no developer server, no user account, no advertising and no analytics software. No personal data is collected, stored or transmitted."
+    ]},
+    { h: "Microphone in practice mode", p: [
+      "The app has a practice mode: it listens through the microphone and shows which note you are playing and how accurately you hit it. For this it asks once for the <em>microphone</em> permission."
+    ], ul: [
+      "The microphone runs <strong>only while practice mode is switched on</strong>. Turn it off or leave the app and the microphone is released immediately.",
+      "<strong>Nothing is recorded and nothing is stored.</strong> The signal is examined for its pitch in short chunks held in memory, and then discarded.",
+      "<strong>Nothing is transmitted.</strong> The analysis happens entirely on the device; the audio never leaves it.",
+      "Practice mode stays off until you switch it on yourself. Without it the app never even requests the microphone."
+    ]},
+    { h: "What is stored on the device", p: [
+      "The app stores your display and appearance preferences locally on your device, using the built-in Android <em>DataStore</em> mechanism — for example the selected display language, the colour scheme, how the hole-number row is shown, your own colours and markers for the scale degrees, and whether a one-off hint has already been seen.",
+      "None of this is personal data, and it does not leave your device. If you have Android backup enabled, Android saves it to your Google account along with other app data; that is a function of the operating system, not of this app."
+    ]},
+    { h: "Buying the app on Google Play", p: [
+      "Harmonica Cheatsheet is a paid app. The purchase happens in the Google Play Store <strong>before</strong> the app starts for the first time — the app itself contains no purchase handling, checks nothing and queries nothing.",
+      "Payment data is processed exclusively by Google; the developer of this app never sees your name, address or payment method. The Google privacy policy applies to that: <a href=\"https://policies.google.com/privacy\">policies.google.com/privacy</a>."
+    ]},
+    { h: "Permissions at a glance", ul: [
+      "<strong>Microphone</strong> — for practice mode only, see above."
+    ], p: [
+      "That is the <strong>only</strong> permission the app requests — in particular it has <strong>no internet access</strong>. You can verify this at any time in the Android app settings."
+    ]},
+    { h: "Children", p: [
+      "The app is aimed at harmonica players of any age and collects data from nobody — children included."
+    ]},
+    { h: "Changes to this policy", p: [
+      "If the way the app works changes, this page will be updated accordingly and the date above adjusted."
+    ]},
+    { h: "Contact", p: [
+      "Questions about privacy are welcome at <a href=\"mailto:gio_extrem@gmx.net\">gio_extrem@gmx.net</a>"
+    ]}
+  ]
+};
+
+T.fr = {
+  name: "Français", dir: "ltr",
+  title: "Politique de confidentialité",
+  updated: "Dernière mise à jour : 19 août 2026",
+  langLabel: "Langue",
+  footer: "Harmonica Cheatsheet — Politique de confidentialité",
+  binding: "Cette traduction est fournie pour faciliter la compréhension. Seule la version allemande fait foi.",
+  facts: [
+    ["Enregistrement audio", "Jamais conservé"],
+    ["Compte / connexion", "Non requis"],
+    ["Publicité / suivi", "Aucun"],
+    ["Accès à Internet", "Aucun"]
+  ],
+  sections: [
+    { h: "En bref", p: [
+      "Harmonica Cheatsheet est un ouvrage de référence pour les harmonicistes. Tout est calculé et dessiné sur votre appareil, et l'application n'a <strong>aucun accès à Internet</strong>. Il n'existe aucun serveur de l'éditeur, aucun compte utilisateur, aucune publicité et aucun logiciel d'analyse. Aucune donnée à caractère personnel n'est collectée, conservée ni transmise."
+    ]},
+    { h: "Le microphone en mode entraînement", p: [
+      "L'application propose un mode entraînement : elle écoute par le microphone et indique quelle note vous jouez et avec quelle justesse. Pour cela, elle demande une seule fois l'autorisation <em>Microphone</em>."
+    ], ul: [
+      "Le microphone ne fonctionne <strong>que tant que le mode entraînement est activé</strong>. Dès que vous le désactivez ou quittez l'application, le microphone est immédiatement libéré.",
+      "<strong>Rien n'est enregistré ni conservé.</strong> Le signal est analysé en mémoire, par courts fragments, pour en déterminer la hauteur, puis il est supprimé.",
+      "<strong>Rien n'est transmis.</strong> L'analyse a lieu entièrement sur l'appareil ; le signal audio ne le quitte jamais.",
+      "Le mode entraînement reste désactivé tant que vous ne l'activez pas vous-même. Sans lui, l'application ne demande même pas le microphone."
+    ]},
+    { h: "Ce qui est conservé sur l'appareil", p: [
+      "L'application enregistre localement sur votre appareil vos préférences d'affichage et de présentation, au moyen du mécanisme <em>DataStore</em> intégré à Android — par exemple la langue d'affichage choisie, le thème de couleurs, la présentation de la rangée des numéros de trous, vos propres couleurs et symboles pour les degrés, et si une indication ponctuelle a déjà été vue.",
+      "Il ne s'agit pas de données à caractère personnel et elles ne quittent pas votre appareil. Si vous avez activé la sauvegarde Android, le système les enregistre dans votre compte Google avec les autres données d'applications ; il s'agit d'une fonction du système d'exploitation, pas de cette application."
+    ]},
+    { h: "Achat sur Google Play", p: [
+      "Harmonica Cheatsheet est une application payante. L'achat a lieu sur le Google Play Store <strong>avant</strong> le premier démarrage de l'application — celle-ci ne contient aucun mécanisme d'achat, ne vérifie rien et n'interroge rien.",
+      "Les données de paiement sont traitées exclusivement par Google ; l'éditeur de cette application ne voit ni votre nom, ni votre adresse, ni votre moyen de paiement. La politique de confidentialité de Google s'applique à ce traitement : <a href=\"https://policies.google.com/privacy\">policies.google.com/privacy</a>."
+    ]},
+    { h: "Autorisations en un coup d'œil", ul: [
+      "<strong>Microphone</strong> — uniquement pour le mode entraînement, voir ci-dessus."
+    ], p: [
+      "C'est la <strong>seule</strong> autorisation demandée par l'application — elle n'a en particulier <strong>aucun accès à Internet</strong>. Vous pouvez le vérifier à tout moment dans les réglages d'applications Android."
+    ]},
+    { h: "Enfants", p: [
+      "L'application s'adresse aux harmonicistes de tout âge et ne collecte de données auprès de personne — pas davantage auprès des enfants."
+    ]},
+    { h: "Modifications de cette politique", p: [
+      "Si le fonctionnement de l'application change, cette page sera mise à jour en conséquence et la date ci-dessus adaptée."
+    ]},
+    { h: "Contact", p: [
+      "Vos questions relatives à la confidentialité sont les bienvenues : <a href=\"mailto:gio_extrem@gmx.net\">gio_extrem@gmx.net</a>"
+    ]}
+  ]
+};
+
+T.es = {
+  name: "Español", dir: "ltr",
+  title: "Política de privacidad",
+  updated: "Última actualización: 19 de agosto de 2026",
+  langLabel: "Idioma",
+  footer: "Harmonica Cheatsheet — Política de privacidad",
+  binding: "Esta traducción se ofrece para facilitar la comprensión. Solo la versión alemana es vinculante.",
+  facts: [
+    ["Grabación de audio", "Nunca se guarda"],
+    ["Cuenta / inicio de sesión", "No es necesaria"],
+    ["Publicidad / rastreo", "Ninguno"],
+    ["Acceso a Internet", "Ninguno"]
+  ],
+  sections: [
+    { h: "En resumen", p: [
+      "Harmonica Cheatsheet es una obra de consulta para armonicistas. Todo se calcula y se dibuja en tu dispositivo, y la aplicación <strong>no tiene acceso a Internet</strong>. No existe ningún servidor del desarrollador, ninguna cuenta de usuario, ninguna publicidad ni ningún software de análisis. No se recopilan, almacenan ni transmiten datos personales."
+    ]},
+    { h: "El micrófono en el modo de práctica", p: [
+      "La aplicación tiene un modo de práctica: escucha a través del micrófono y muestra qué nota estás tocando y con cuánta precisión la afinas. Para ello solicita una sola vez el permiso de <em>micrófono</em>."
+    ], ul: [
+      "El micrófono funciona <strong>solo mientras el modo de práctica está activado</strong>. Si lo desactivas o sales de la aplicación, el micrófono se libera de inmediato.",
+      "<strong>No se graba ni se guarda nada.</strong> La señal se analiza en la memoria, en fragmentos cortos, para determinar su altura, y después se descarta.",
+      "<strong>No se transmite nada.</strong> El análisis se realiza por completo en el dispositivo; la señal de audio nunca sale de él.",
+      "El modo de práctica permanece desactivado mientras no lo actives tú. Sin él, la aplicación ni siquiera solicita el micrófono."
+    ]},
+    { h: "Qué se guarda en el dispositivo", p: [
+      "La aplicación guarda localmente en tu dispositivo tus preferencias de visualización y presentación, mediante el mecanismo <em>DataStore</em> integrado en Android — por ejemplo el idioma de la interfaz elegido, el esquema de color, la presentación de la fila de números de agujero, tus propios colores y símbolos para los grados de la escala, y si ya se ha visto un aviso puntual.",
+      "No son datos personales y no salen de tu dispositivo. Si tienes activada la copia de seguridad de Android, el sistema los guarda en tu cuenta de Google junto con los datos de otras aplicaciones; se trata de una función del sistema operativo, no de esta aplicación."
+    ]},
+    { h: "Compra en Google Play", p: [
+      "Harmonica Cheatsheet es una aplicación de pago. La compra se realiza en Google Play Store <strong>antes</strong> de que la aplicación se inicie por primera vez — la aplicación en sí no contiene ninguna gestión de compra, no comprueba nada y no consulta nada.",
+      "Los datos de pago los procesa exclusivamente Google; el desarrollador de esta aplicación no ve tu nombre, ni tu dirección, ni tu medio de pago. A ese tratamiento se aplica la política de privacidad de Google: <a href=\"https://policies.google.com/privacy\">policies.google.com/privacy</a>."
+    ]},
+    { h: "Permisos de un vistazo", ul: [
+      "<strong>Micrófono</strong> — solo para el modo de práctica, véase más arriba."
+    ], p: [
+      "Es el <strong>único</strong> permiso que solicita la aplicación — en particular, <strong>no tiene acceso a Internet</strong>. Puedes comprobarlo en cualquier momento en los ajustes de aplicaciones de Android."
+    ]},
+    { h: "Menores", p: [
+      "La aplicación está dirigida a armonicistas de cualquier edad y no recopila datos de nadie — tampoco de menores."
+    ]},
+    { h: "Cambios en esta política", p: [
+      "Si cambia el funcionamiento de la aplicación, esta página se actualizará en consecuencia y se ajustará la fecha indicada arriba."
+    ]},
+    { h: "Contacto", p: [
+      "Con gusto respondemos a tus preguntas sobre privacidad: <a href=\"mailto:gio_extrem@gmx.net\">gio_extrem@gmx.net</a>"
+    ]}
+  ]
+};
+
+T.it = {
+  name: "Italiano", dir: "ltr",
+  title: "Informativa sulla privacy",
+  updated: "Ultimo aggiornamento: 19 agosto 2026",
+  langLabel: "Lingua",
+  footer: "Harmonica Cheatsheet — Informativa sulla privacy",
+  binding: "Questa traduzione è fornita per agevolare la comprensione. Fa fede esclusivamente la versione tedesca.",
+  facts: [
+    ["Registrazione audio", "Mai salvata"],
+    ["Account / accesso", "Non necessario"],
+    ["Pubblicità / tracciamento", "Nessuno"],
+    ["Accesso a Internet", "Nessuno"]
+  ],
+  sections: [
+    { h: "In breve", p: [
+      "Harmonica Cheatsheet è un'opera di consultazione per armonicisti. Tutto viene calcolato e disegnato sul tuo dispositivo e l'app <strong>non ha accesso a Internet</strong>. Non esiste alcun server del fornitore, nessun account utente, nessuna pubblicità e nessun software di analisi. Non vengono raccolti, conservati né trasmessi dati personali."
+    ]},
+    { h: "Il microfono nella modalità di esercizio", p: [
+      "L'app dispone di una modalità di esercizio: ascolta tramite il microfono e mostra quale nota stai suonando e con quanta precisione la intoni. A questo scopo chiede una sola volta l'autorizzazione <em>Microfono</em>."
+    ], ul: [
+      "Il microfono è attivo <strong>solo finché la modalità di esercizio è accesa</strong>. Se la spegni o esci dall'app, il microfono viene rilasciato immediatamente.",
+      "<strong>Non viene registrato né salvato nulla.</strong> Il segnale viene analizzato in memoria, in brevi frammenti, per determinarne l'altezza, e poi scartato.",
+      "<strong>Non viene trasmesso nulla.</strong> L'analisi avviene interamente sul dispositivo; il segnale audio non lo lascia mai.",
+      "La modalità di esercizio resta spenta finché non la accendi tu. Senza di essa l'app non richiede nemmeno il microfono."
+    ]},
+    { h: "Quali dati restano sul dispositivo", p: [
+      "L'app salva localmente sul tuo dispositivo le tue impostazioni di visualizzazione e di presentazione, tramite il meccanismo <em>DataStore</em> integrato in Android — per esempio la lingua dell'interfaccia scelta, lo schema di colori, la presentazione della riga dei numeri dei fori, i tuoi colori e simboli per i gradi della scala e se un avviso una tantum è già stato visto.",
+      "Non sono dati personali e non lasciano il tuo dispositivo. Se hai attivato il backup di Android, il sistema li salva nel tuo account Google insieme ai dati delle altre app; si tratta di una funzione del sistema operativo, non di questa app."
+    ]},
+    { h: "Acquisto su Google Play", p: [
+      "Harmonica Cheatsheet è un'app a pagamento. L'acquisto avviene sul Google Play Store <strong>prima</strong> che l'app venga avviata per la prima volta — l'app stessa non contiene alcuna gestione dell'acquisto, non verifica nulla e non interroga nulla.",
+      "I dati di pagamento sono trattati esclusivamente da Google; il fornitore di questa app non vede né il tuo nome, né il tuo indirizzo, né il tuo metodo di pagamento. A tale trattamento si applica l'informativa sulla privacy di Google: <a href=\"https://policies.google.com/privacy\">policies.google.com/privacy</a>."
+    ]},
+    { h: "Autorizzazioni in sintesi", ul: [
+      "<strong>Microfono</strong> — solo per la modalità di esercizio, vedi sopra."
+    ], p: [
+      "È l'<strong>unica</strong> autorizzazione richiesta dall'app — in particolare, essa <strong>non ha accesso a Internet</strong>. Puoi verificarlo in qualsiasi momento nelle impostazioni delle app di Android."
+    ]},
+    { h: "Minori", p: [
+      "L'app si rivolge agli armonicisti di ogni età e non raccoglie dati da nessuno — nemmeno dai minori."
+    ]},
+    { h: "Modifiche a questa informativa", p: [
+      "Se il funzionamento dell'app dovesse cambiare, questa pagina verrà aggiornata di conseguenza e la data indicata sopra verrà adeguata."
+    ]},
+    { h: "Contatti", p: [
+      "Rispondiamo volentieri alle domande sulla privacy: <a href=\"mailto:gio_extrem@gmx.net\">gio_extrem@gmx.net</a>"
+    ]}
+  ]
+};
+
+T.sv = {
+  name: "Svenska", dir: "ltr",
+  title: "Integritetspolicy",
+  updated: "Senast uppdaterad: 19 augusti 2026",
+  langLabel: "Språk",
+  footer: "Harmonica Cheatsheet — Integritetspolicy",
+  binding: "Den här översättningen tillhandahålls för att underlätta förståelsen. Endast den tyska versionen är bindande.",
+  facts: [
+    ["Ljudinspelning", "Sparas aldrig"],
+    ["Konto / inloggning", "Krävs inte"],
+    ["Annonser / spårning", "Inga"],
+    ["Internetåtkomst", "Ingen"]
+  ],
+  sections: [
+    { h: "Kort sagt", p: [
+      "Harmonica Cheatsheet är ett uppslagsverk för munspelare. Allt beräknas och ritas på din enhet, och appen har <strong>ingen internetåtkomst</strong>. Det finns ingen server hos utvecklaren, inga användarkonton, ingen reklam och ingen analysprogramvara. Inga personuppgifter samlas in, lagras eller överförs."
+    ]},
+    { h: "Mikrofonen i övningsläget", p: [
+      "Appen har ett övningsläge: den lyssnar via mikrofonen och visar vilken ton du spelar och hur exakt du träffar den. För detta ber den en enda gång om behörigheten <em>Mikrofon</em>."
+    ], ul: [
+      "Mikrofonen är igång <strong>endast så länge övningsläget är påslaget</strong>. Stänger du av det eller lämnar appen frigörs mikrofonen omedelbart.",
+      "<strong>Ingenting spelas in och ingenting sparas.</strong> Signalen analyseras i korta avsnitt i arbetsminnet för att bestämma tonhöjden och kastas sedan.",
+      "<strong>Ingenting överförs.</strong> Analysen sker helt och hållet på enheten; ljudsignalen lämnar den aldrig.",
+      "Övningsläget är avstängt tills du själv slår på det. Utan det ber appen inte ens om mikrofonen."
+    ]},
+    { h: "Vad som sparas på enheten", p: [
+      "Appen sparar dina visnings- och utseendeinställningar lokalt på din enhet med hjälp av den inbyggda Android-funktionen <em>DataStore</em> — till exempel valt gränssnittsspråk, färgschemat, hur raden med hålnummer visas, dina egna färger och tecken för skalstegen samt om ett engångstips redan har visats.",
+      "Det är inga personuppgifter och de lämnar inte din enhet. Om du har aktiverat Android-säkerhetskopiering sparar Android dem i ditt Google-konto tillsammans med andra appdata; det är en funktion i operativsystemet, inte i den här appen."
+    ]},
+    { h: "Köp på Google Play", p: [
+      "Harmonica Cheatsheet är en betalapp. Köpet sker i Google Play Store <strong>innan</strong> appen startar första gången — appen själv innehåller ingen köphantering, kontrollerar ingenting och frågar efter ingenting.",
+      "Betalningsuppgifter behandlas uteslutande av Google; utvecklaren av den här appen ser varken ditt namn, din adress eller ditt betalningsmedel. För den behandlingen gäller Googles egen integritetspolicy: <a href=\"https://policies.google.com/privacy\">policies.google.com/privacy</a>."
+    ]},
+    { h: "Behörigheter i korthet", ul: [
+      "<strong>Mikrofon</strong> — endast för övningsläget, se ovan."
+    ], p: [
+      "Det är den <strong>enda</strong> behörighet appen begär — den har i synnerhet <strong>ingen internetåtkomst</strong>. Det kan du när som helst kontrollera i Androids appinställningar."
+    ]},
+    { h: "Barn", p: [
+      "Appen vänder sig till munspelare i alla åldrar och samlar inte in uppgifter från någon — inte heller från barn."
+    ]},
+    { h: "Ändringar i denna policy", p: [
+      "Om appens funktionssätt ändras uppdateras den här sidan i enlighet med detta och datumet ovan justeras."
+    ]},
+    { h: "Kontakt", p: [
+      "Frågor om integritet besvarar vi gärna: <a href=\"mailto:gio_extrem@gmx.net\">gio_extrem@gmx.net</a>"
+    ]}
+  ]
+};
+
+T.ru = {
+  name: "Русский", dir: "ltr",
+  title: "Политика конфиденциальности",
+  updated: "Обновлено: 19 августа 2026 г.",
+  langLabel: "Язык",
+  footer: "Harmonica Cheatsheet — Политика конфиденциальности",
+  binding: "Этот перевод предоставлен для удобства понимания. Юридическую силу имеет только немецкая версия.",
+  facts: [
+    ["Аудиозапись", "Не сохраняется"],
+    ["Аккаунт / вход", "Не требуется"],
+    ["Реклама / аналитика", "Отсутствуют"],
+    ["Доступ в интернет", "Отсутствует"]
+  ],
+  sections: [
+    { h: "Коротко", p: [
+      "Harmonica Cheatsheet — это справочник для исполнителей на губной гармонике. Все вычисления и построения выполняются на вашем устройстве, и приложение <strong>не имеет доступа в интернет</strong>. Нет ни сервера разработчика, ни учётных записей, ни рекламы, ни аналитических библиотек. Персональные данные не собираются, не хранятся и не передаются."
+    ]},
+    { h: "Микрофон в режиме упражнений", p: [
+      "В приложении есть режим упражнений: оно слушает через микрофон и показывает, какую ноту вы играете и насколько точно попадаете. Для этого оно один раз запрашивает разрешение <em>Микрофон</em>."
+    ], ul: [
+      "Микрофон работает <strong>только пока включён режим упражнений</strong>. Как только вы его выключите или выйдете из приложения, микрофон сразу освобождается.",
+      "<strong>Ничего не записывается и ничего не сохраняется.</strong> Сигнал анализируется в оперативной памяти короткими фрагментами для определения высоты тона, после чего отбрасывается.",
+      "<strong>Ничего не передаётся.</strong> Анализ полностью выполняется на устройстве; звуковой сигнал его никогда не покидает.",
+      "Режим упражнений выключен, пока вы не включите его сами. Без него приложение вообще не запрашивает микрофон."
+    ]},
+    { h: "Какие данные остаются на устройстве", p: [
+      "Приложение сохраняет ваши настройки отображения локально на устройстве, используя встроенный механизм Android <em>DataStore</em>, — например выбранный язык интерфейса, цветовую схему, вид ряда с номерами отверстий, ваши собственные цвета и знаки для ступеней, а также сведения о том, был ли уже показан разовый совет.",
+      "Это не персональные данные, и они не покидают ваше устройство. Если у вас включено резервное копирование Android, система сохранит их в вашем аккаунте Google вместе с данными других приложений; это функция операционной системы, а не приложения."
+    ]},
+    { h: "Покупка в Google Play", p: [
+      "Harmonica Cheatsheet — платное приложение. Покупка совершается в Google Play Store <strong>до</strong> первого запуска приложения: само приложение не содержит механизма покупки, ничего не проверяет и ничего не запрашивает.",
+      "Платёжные данные обрабатывает исключительно Google; разработчик приложения не видит ни вашего имени, ни адреса, ни платёжного средства. К этой обработке применяется политика конфиденциальности Google: <a href=\"https://policies.google.com/privacy\">policies.google.com/privacy</a>."
+    ]},
+    { h: "Разрешения кратко", ul: [
+      "<strong>Микрофон</strong> — только для режима упражнений, см. выше."
+    ], p: [
+      "Это <strong>единственное</strong> разрешение, которое запрашивает приложение, — в частности, у него <strong>нет доступа в интернет</strong>. Это в любой момент можно проверить в настройках приложений Android."
+    ]},
+    { h: "Дети", p: [
+      "Приложение адресовано исполнителям любого возраста и не собирает данные ни у кого — в том числе у детей."
+    ]},
+    { h: "Изменения этой политики", p: [
+      "Если работа приложения изменится, эта страница будет соответствующим образом обновлена, а дата вверху скорректирована."
+    ]},
+    { h: "Контакт", p: [
+      "С радостью ответим на вопросы о конфиденциальности: <a href=\"mailto:gio_extrem@gmx.net\">gio_extrem@gmx.net</a>"
+    ]}
+  ]
+};
+
+T.ar = {
+  name: "العربية", dir: "rtl",
+  title: "سياسة الخصوصية",
+  updated: "آخر تحديث: 19 أغسطس 2026",
+  langLabel: "اللغة",
+  footer: "Harmonica Cheatsheet — سياسة الخصوصية",
+  binding: "هذه الترجمة مقدَّمة لتسهيل الفهم فقط. النسخة الألمانية وحدها هي المُلزِمة.",
+  facts: [
+    ["تسجيل الصوت", "لا يُحفظ إطلاقًا"],
+    ["حساب / تسجيل دخول", "غير مطلوب"],
+    ["إعلانات / تتبُّع", "لا يوجد"],
+    ["الوصول إلى الإنترنت", "لا يوجد"]
+  ],
+  sections: [
+    { h: "باختصار", p: [
+      "‏Harmonica Cheatsheet مرجع لعازفي الهارمونيكا. كل الحسابات والرسوم تتم على جهازك، والتطبيق <strong>لا يملك أي وصول إلى الإنترنت</strong>. لا يوجد خادم للمطوِّر، ولا حسابات مستخدمين، ولا إعلانات، ولا برامج تحليل. لا تُجمع أي بيانات شخصية ولا تُخزَّن ولا تُنقل."
+    ]},
+    { h: "الميكروفون في وضع التمرين", p: [
+      "يحتوي التطبيق على وضع تمرين: يستمع عبر الميكروفون ويُظهر النغمة التي تعزفها ومدى دقتها. ولهذا الغرض يطلب مرة واحدة إذن <em>الميكروفون</em>."
+    ], ul: [
+      "يعمل الميكروفون <strong>فقط ما دام وضع التمرين مُفعَّلًا</strong>. وبمجرد إيقافه أو مغادرة التطبيق يُحرَّر الميكروفون فورًا.",
+      "<strong>لا يُسجَّل شيء ولا يُحفظ شيء.</strong> تُحلَّل الإشارة في الذاكرة على مقاطع قصيرة لتحديد طبقة الصوت، ثم تُهمَل.",
+      "<strong>لا يُنقل شيء.</strong> يجري التحليل بالكامل على الجهاز؛ ولا تغادره الإشارة الصوتية أبدًا.",
+      "يبقى وضع التمرين مُطفأً ما لم تُفعِّله بنفسك. وبدونه لا يطلب التطبيق الميكروفون أصلًا."
+    ]},
+    { h: "ما الذي يُحفظ على الجهاز", p: [
+      "يحفظ التطبيق إعداداتك الخاصة بالعرض والمظهر محليًّا على جهازك عبر آلية <em>DataStore</em> المدمجة في أندرويد — مثل لغة الواجهة المختارة، ونظام الألوان، وطريقة عرض صف أرقام الفتحات، وألوانك ورموزك الخاصة بدرجات السلّم، وما إذا كان تلميح لمرة واحدة قد ظهر من قبل.",
+      "هذه ليست بيانات شخصية وهي لا تغادر جهازك. وإذا كنت قد فعَّلت النسخ الاحتياطي في أندرويد، فسيحفظها النظام في حساب Google الخاص بك مع بيانات التطبيقات الأخرى؛ وهذه وظيفة من وظائف نظام التشغيل لا من وظائف هذا التطبيق."
+    ]},
+    { h: "الشراء عبر Google Play", p: [
+      "‏Harmonica Cheatsheet تطبيق مدفوع. يتم الشراء في متجر Google Play <strong>قبل</strong> تشغيل التطبيق لأول مرة — فالتطبيق نفسه لا يتضمن أي معالجة للشراء، ولا يتحقق من شيء، ولا يستعلم عن شيء.",
+      "تعالج Google وحدها بيانات الدفع؛ ولا يرى مطوِّر هذا التطبيق اسمك ولا عنوانك ولا وسيلة الدفع الخاصة بك. وتسري على هذه المعالجة سياسة خصوصية Google: <a href=\"https://policies.google.com/privacy\">policies.google.com/privacy</a>."
+    ]},
+    { h: "الأذونات باختصار", ul: [
+      "<strong>الميكروفون</strong> — لوضع التمرين فقط، انظر أعلاه."
+    ], p: [
+      "هذا هو الإذن <strong>الوحيد</strong> الذي يطلبه التطبيق — وهو على وجه الخصوص <strong>لا يملك أي وصول إلى الإنترنت</strong>. ويمكنك التحقق من ذلك في أي وقت من إعدادات التطبيقات في أندرويد."
+    ]},
+    { h: "الأطفال", p: [
+      "يتوجه التطبيق إلى عازفي الهارمونيكا من كل الأعمار ولا يجمع بيانات من أحد — ولا من الأطفال."
+    ]},
+    { h: "تعديلات هذه السياسة", p: [
+      "إذا تغيّرت طريقة عمل التطبيق، فسيتم تحديث هذه الصفحة تبعًا لذلك وتعديل التاريخ المذكور أعلاه."
+    ]},
+    { h: "التواصل", p: [
+      "يسعدنا الرد على أسئلتك حول الخصوصية: <a href=\"mailto:gio_extrem@gmx.net\">gio_extrem@gmx.net</a>"
+    ]}
+  ]
+};
+
+T.zh = {
+  name: "中文", dir: "ltr",
+  title: "隐私政策",
+  updated: "最后更新：2026 年 8 月 19 日",
+  langLabel: "语言",
+  footer: "Harmonica Cheatsheet — 隐私政策",
+  binding: "本译文仅供理解之便，具有法律约束力的仅为德文版本。",
+  facts: [
+    ["录音", "从不保存"],
+    ["账户 / 登录", "无需"],
+    ["广告 / 追踪", "没有"],
+    ["网络访问", "没有"]
+  ],
+  sections: [
+    { h: "简而言之", p: [
+      "Harmonica Cheatsheet 是一款面向口琴演奏者的参考工具。所有计算和绘制都在您的设备上完成，本应用<strong>没有网络访问权限</strong>。开发者没有服务器，应用没有用户账户、没有广告、也没有任何分析软件。本应用不收集、不存储、也不传输任何个人数据。"
+    ]},
+    { h: "练习模式中的麦克风", p: [
+      "本应用有一个练习模式：它通过麦克风聆听，并显示您正在吹奏的音以及音准如何。为此它会一次性请求<em>麦克风</em>权限。"
+    ], ul: [
+      "麦克风<strong>仅在练习模式开启期间</strong>工作。一旦关闭该模式或离开应用，麦克风会立即释放。",
+      "<strong>不录制任何内容，也不保存任何内容。</strong>信号只在内存中被分成短片段用于分析音高，随后即被丢弃。",
+      "<strong>不传输任何内容。</strong>分析完全在设备上进行；音频信号从不离开设备。",
+      "在您自己开启之前，练习模式始终处于关闭状态。未开启时，应用根本不会请求麦克风。"
+    ]},
+    { h: "设备上保存了哪些数据", p: [
+      "本应用通过 Android 内置的 <em>DataStore</em> 机制，将您的显示与外观设置保存在设备本地——例如所选的界面语言、配色方案、孔号行的显示方式、您为各音级自定义的颜色与标记，以及某条一次性提示是否已经显示过。",
+      "这些都不是个人数据，也不会离开您的设备。如果您启用了 Android 备份，系统会将它们与其他应用数据一起保存到您的 Google 账户；这是操作系统的功能，而非本应用的功能。"
+    ]},
+    { h: "在 Google Play 上购买", p: [
+      "Harmonica Cheatsheet 是一款付费应用。购买在 Google Play 商店中完成，且发生在应用首次启动<strong>之前</strong>——应用本身不包含任何购买流程，不做任何校验，也不发出任何查询。",
+      "支付数据完全由 Google 处理；本应用的开发者看不到您的姓名、地址或支付方式。该处理适用 Google 自己的隐私政策：<a href=\"https://policies.google.com/privacy\">policies.google.com/privacy</a>。"
+    ]},
+    { h: "权限一览", ul: [
+      "<strong>麦克风</strong>——仅用于练习模式，见上文。"
+    ], p: [
+      "这是本应用请求的<strong>唯一</strong>权限——特别地，它<strong>没有网络访问权限</strong>。您随时可以在 Android 的应用设置中核实这一点。"
+    ]},
+    { h: "儿童", p: [
+      "本应用面向各年龄段的口琴演奏者，不从任何人处收集数据——儿童也不例外。"
+    ]},
+    { h: "本政策的变更", p: [
+      "如果本应用的工作方式发生变化，本页面会相应更新，上方的日期也会随之调整。"
+    ]},
+    { h: "联系方式", p: [
+      "欢迎就隐私问题与我们联系：<a href=\"mailto:gio_extrem@gmx.net\">gio_extrem@gmx.net</a>"
+    ]}
+  ]
+};
+
+T.ja = {
+  name: "日本語", dir: "ltr",
+  title: "プライバシーポリシー",
+  updated: "最終更新: 2026年8月19日",
+  langLabel: "言語",
+  footer: "Harmonica Cheatsheet — プライバシーポリシー",
+  binding: "この翻訳は理解を助けるためのものです。法的な拘束力を持つのはドイツ語版のみです。",
+  facts: [
+    ["録音", "保存しません"],
+    ["アカウント / ログイン", "不要"],
+    ["広告 / トラッキング", "なし"],
+    ["インターネット接続", "なし"]
+  ],
+  sections: [
+    { h: "要点", p: [
+      "Harmonica Cheatsheet はハーモニカ奏者のための資料アプリです。計算も描画もすべて端末上で行われ、本アプリには<strong>インターネットへのアクセス権限がありません</strong>。提供者のサーバーはなく、ユーザーアカウントも、広告も、解析ソフトウェアもありません。個人データの収集・保存・送信は一切行いません。"
+    ]},
+    { h: "練習モードでのマイク", p: [
+      "本アプリには練習モードがあります。マイクを通して音を聞き取り、いま鳴っている音と、その音程がどれだけ正確かを表示します。そのために <em>マイク</em> の権限を一度だけ求めます。"
+    ], ul: [
+      "マイクが動作するのは<strong>練習モードがオンの間だけ</strong>です。オフにするかアプリを離れると、マイクはただちに解放されます。",
+      "<strong>録音も保存も一切行いません。</strong>信号はメモリ上で短い区間ごとに音高が調べられ、その後破棄されます。",
+      "<strong>送信も一切行いません。</strong>解析は完全に端末内で行われ、音声信号が端末を出ることはありません。",
+      "練習モードは、自分でオンにするまでオフのままです。オンにしなければ、アプリはマイクを要求すらしません。"
+    ]},
+    { h: "端末に保存されるもの", p: [
+      "本アプリは、Android 標準の <em>DataStore</em> の仕組みを使って、表示に関する設定を端末内にのみ保存します。たとえば、選択した表示言語、配色、穴番号の行の表示方法、音度ごとに自分で選んだ色や記号、一度きりのヒントを既に見たかどうかなどです。",
+      "これらは個人データではなく、端末の外に出ることはありません。Android のバックアップを有効にしている場合は、他のアプリのデータと同様に Google アカウントへ保存されますが、それは OS の機能であって本アプリの機能ではありません。"
+    ]},
+    { h: "Google Play での購入", p: [
+      "Harmonica Cheatsheet は有料アプリです。購入はアプリが初めて起動する<strong>前に</strong> Google Play ストアで完了します。アプリ自体には購入処理が含まれておらず、確認も照会も行いません。",
+      "支払い情報を扱うのは Google のみで、本アプリの提供者が氏名・住所・支払い方法を見ることはありません。その取り扱いには Google 自身のプライバシーポリシーが適用されます: <a href=\"https://policies.google.com/privacy\">policies.google.com/privacy</a>"
+    ]},
+    { h: "権限の一覧", ul: [
+      "<strong>マイク</strong> — 練習モード専用です（上記参照）。"
+    ], p: [
+      "これが本アプリの要求する<strong>唯一</strong>の権限です。とくに<strong>インターネットへのアクセス権限はありません</strong>。Android のアプリ設定でいつでも確認できます。"
+    ]},
+    { h: "お子さまについて", p: [
+      "本アプリは年齢を問わずハーモニカ奏者に向けたもので、誰からもデータを収集しません。お子さまからも収集しません。"
+    ]},
+    { h: "本ポリシーの変更", p: [
+      "アプリの動作が変わった場合は、このページをそれに合わせて更新し、上部の日付も改めます。"
+    ]},
+    { h: "お問い合わせ", p: [
+      "プライバシーに関するご質問はこちらへ: <a href=\"mailto:gio_extrem@gmx.net\">gio_extrem@gmx.net</a>"
+    ]}
+  ]
+};
+
+T.ko = {
+  name: "한국어", dir: "ltr",
+  title: "개인정보 처리방침",
+  updated: "최종 업데이트: 2026년 8월 19일",
+  langLabel: "언어",
+  footer: "Harmonica Cheatsheet — 개인정보 처리방침",
+  binding: "이 번역은 이해를 돕기 위한 것입니다. 법적 효력을 갖는 것은 독일어판뿐입니다.",
+  facts: [
+    ["녹음", "저장하지 않음"],
+    ["계정 / 로그인", "필요 없음"],
+    ["광고 / 추적", "없음"],
+    ["인터넷 접근", "없음"]
+  ],
+  sections: [
+    { h: "요약", p: [
+      "Harmonica Cheatsheet는 하모니카 연주자를 위한 참고 자료 앱입니다. 모든 계산과 그리기는 기기에서 이루어지며, 이 앱에는 <strong>인터넷 접근 권한이 없습니다</strong>. 제공자의 서버도, 사용자 계정도, 광고도, 분석 소프트웨어도 없습니다. 개인정보는 수집·저장·전송되지 않습니다."
+    ]},
+    { h: "연습 모드의 마이크", p: [
+      "이 앱에는 연습 모드가 있습니다. 마이크로 소리를 듣고 지금 어떤 음을 불고 있는지, 음정이 얼마나 정확한지를 보여 줍니다. 이를 위해 <em>마이크</em> 권한을 한 번만 요청합니다."
+    ], ul: [
+      "마이크는 <strong>연습 모드가 켜져 있는 동안에만</strong> 작동합니다. 모드를 끄거나 앱을 벗어나면 마이크는 즉시 해제됩니다.",
+      "<strong>아무것도 녹음하지 않고 아무것도 저장하지 않습니다.</strong> 신호는 메모리에서 짧은 구간으로 나뉘어 음높이만 분석된 뒤 폐기됩니다.",
+      "<strong>아무것도 전송하지 않습니다.</strong> 분석은 전적으로 기기에서 이루어지며, 음성 신호는 기기를 벗어나지 않습니다.",
+      "연습 모드는 직접 켜기 전까지 꺼져 있습니다. 켜지 않으면 앱은 마이크를 요청조차 하지 않습니다."
+    ]},
+    { h: "기기에 저장되는 것", p: [
+      "이 앱은 Android에 내장된 <em>DataStore</em> 기능을 이용해 표시 및 외관 설정을 기기 안에만 저장합니다. 예를 들어 선택한 표시 언어, 색 구성, 구멍 번호 행의 표시 방식, 음계 단계별로 직접 고른 색과 기호, 일회성 안내를 이미 보았는지 여부 등입니다.",
+      "이는 개인정보가 아니며 기기를 벗어나지 않습니다. Android 백업을 켜 두었다면 다른 앱 데이터와 함께 Google 계정에 저장되지만, 그것은 운영체제의 기능이지 이 앱의 기능이 아닙니다."
+    ]},
+    { h: "Google Play에서의 구매", p: [
+      "Harmonica Cheatsheet는 유료 앱입니다. 구매는 앱이 처음 실행되기 <strong>전에</strong> Google Play 스토어에서 이루어집니다. 앱 자체에는 결제 처리 기능이 없고, 아무것도 확인하지 않으며, 아무것도 조회하지 않습니다.",
+      "결제 정보는 오직 Google이 처리하며, 이 앱의 제공자는 이름도 주소도 결제 수단도 볼 수 없습니다. 해당 처리에는 Google의 개인정보처리방침이 적용됩니다: <a href=\"https://policies.google.com/privacy\">policies.google.com/privacy</a>"
+    ]},
+    { h: "권한 한눈에 보기", ul: [
+      "<strong>마이크</strong> — 연습 모드에만 사용합니다(위 참조)."
+    ], p: [
+      "이것이 앱이 요청하는 <strong>유일한</strong> 권한이며, 특히 <strong>인터넷 접근 권한은 없습니다</strong>. Android 앱 설정에서 언제든지 확인할 수 있습니다."
+    ]},
+    { h: "어린이", p: [
+      "이 앱은 연령에 관계없이 하모니카 연주자를 위한 것이며, 누구에게서도 데이터를 수집하지 않습니다. 어린이도 마찬가지입니다."
+    ]},
+    { h: "이 방침의 변경", p: [
+      "앱의 작동 방식이 바뀌면 이 페이지도 그에 맞게 갱신하고 위의 날짜를 조정합니다."
+    ]},
+    { h: "연락처", p: [
+      "개인정보 관련 문의를 환영합니다: <a href=\"mailto:gio_extrem@gmx.net\">gio_extrem@gmx.net</a>"
+    ]}
+  ]
+};
+
+T.hi = {
+  name: "हिन्दी", dir: "ltr",
+  title: "गोपनीयता नीति",
+  updated: "अंतिम अद्यतन: 19 अगस्त 2026",
+  langLabel: "भाषा",
+  footer: "Harmonica Cheatsheet — गोपनीयता नीति",
+  binding: "यह अनुवाद केवल समझने की सुविधा के लिए है। कानूनी रूप से बाध्यकारी केवल जर्मन संस्करण है।",
+  facts: [
+    ["ऑडियो रिकॉर्डिंग", "कभी संग्रहीत नहीं"],
+    ["खाता / साइन-इन", "आवश्यक नहीं"],
+    ["विज्ञापन / ट्रैकिंग", "कोई नहीं"],
+    ["इंटरनेट पहुँच", "कोई नहीं"]
+  ],
+  sections: [
+    { h: "संक्षेप में", p: [
+      "Harmonica Cheatsheet हारमोनिका बजाने वालों के लिए एक संदर्भ ऐप है। सारी गणना और चित्रण आपके ही उपकरण पर होता है, और ऐप के पास <strong>इंटरनेट की कोई पहुँच नहीं</strong> है। न प्रदाता का कोई सर्वर है, न उपयोगकर्ता खाते, न विज्ञापन, न कोई विश्लेषण सॉफ़्टवेयर। कोई भी व्यक्तिगत डेटा एकत्र, संग्रहीत या प्रेषित नहीं किया जाता।"
+    ]},
+    { h: "अभ्यास मोड में माइक्रोफ़ोन", p: [
+      "ऐप में एक अभ्यास मोड है: यह माइक्रोफ़ोन से सुनता है और दिखाता है कि आप कौन-सा स्वर बजा रहे हैं और वह कितना सटीक है। इसके लिए यह एक बार <em>माइक्रोफ़ोन</em> की अनुमति माँगता है।"
+    ], ul: [
+      "माइक्रोफ़ोन <strong>केवल तब तक चलता है जब अभ्यास मोड चालू हो</strong>। उसे बंद करते ही या ऐप छोड़ते ही माइक्रोफ़ोन तुरंत मुक्त कर दिया जाता है।",
+      "<strong>कुछ भी रिकॉर्ड नहीं किया जाता और कुछ भी संग्रहीत नहीं किया जाता।</strong> संकेत को स्मृति में छोटे-छोटे खंडों में केवल स्वरमान के लिए जाँचा जाता है और फिर हटा दिया जाता है।",
+      "<strong>कुछ भी प्रेषित नहीं किया जाता।</strong> विश्लेषण पूरी तरह उपकरण पर ही होता है; ध्वनि संकेत उसे कभी नहीं छोड़ता।",
+      "जब तक आप स्वयं चालू न करें, अभ्यास मोड बंद रहता है। उसके बिना ऐप माइक्रोफ़ोन माँगता तक नहीं।"
+    ]},
+    { h: "उपकरण पर क्या रखा जाता है", p: [
+      "ऐप आपकी प्रदर्शन और रूप-रंग संबंधी सेटिंग्स Android की अंतर्निहित <em>DataStore</em> सुविधा से आपके उपकरण पर ही रखता है — जैसे चुनी गई प्रदर्शन भाषा, रंग योजना, छिद्र-संख्या पंक्ति का स्वरूप, स्वर-श्रेणियों के लिए आपके अपने रंग और चिह्न, और यह कि कोई एक-बार दिखने वाला संकेत पहले देखा जा चुका है या नहीं।",
+      "यह व्यक्तिगत डेटा नहीं है और यह आपके उपकरण से बाहर नहीं जाता। यदि आपने Android बैकअप चालू कर रखा है, तो सिस्टम इसे अन्य ऐप डेटा के साथ आपके Google खाते में सहेजता है; यह संचालन तंत्र की सुविधा है, इस ऐप की नहीं।"
+    ]},
+    { h: "Google Play पर खरीद", p: [
+      "Harmonica Cheatsheet एक सशुल्क ऐप है। खरीद Google Play Store में, ऐप के पहली बार चलने से <strong>पहले</strong> होती है — ऐप में स्वयं कोई खरीद-प्रक्रिया नहीं है, वह कुछ जाँचता नहीं और कुछ पूछता नहीं।",
+      "भुगतान संबंधी डेटा केवल Google संसाधित करता है; इस ऐप के प्रदाता को न आपका नाम दिखता है, न पता, न भुगतान का साधन। उस पर Google की अपनी गोपनीयता नीति लागू होती है: <a href=\"https://policies.google.com/privacy\">policies.google.com/privacy</a>"
+    ]},
+    { h: "अनुमतियाँ एक नज़र में", ul: [
+      "<strong>माइक्रोफ़ोन</strong> — केवल अभ्यास मोड के लिए, ऊपर देखें।"
+    ], p: [
+      "ऐप <strong>केवल यही एक</strong> अनुमति माँगता है — विशेष रूप से उसके पास <strong>इंटरनेट की कोई पहुँच नहीं</strong> है। इसे आप Android की ऐप सेटिंग्स में कभी भी जाँच सकते हैं।"
+    ]},
+    { h: "बच्चे", p: [
+      "यह ऐप हर आयु के हारमोनिका बजाने वालों के लिए है और किसी से भी डेटा एकत्र नहीं करता — बच्चों से भी नहीं।"
+    ]},
+    { h: "इस नीति में परिवर्तन", p: [
+      "यदि ऐप के काम करने का तरीका बदलता है, तो यह पृष्ठ तदनुसार अद्यतन किया जाएगा और ऊपर दी गई तिथि बदल दी जाएगी।"
+    ]},
+    { h: "संपर्क", p: [
+      "गोपनीयता से जुड़े प्रश्नों का उत्तर हम सहर्ष देंगे: <a href=\"mailto:gio_extrem@gmx.net\">gio_extrem@gmx.net</a>"
+    ]}
+  ]
+};
+
+T.pl = {
+  name: "Polski", dir: "ltr",
+  title: "Polityka prywatności",
+  updated: "Ostatnia aktualizacja: 19 sierpnia 2026",
+  langLabel: "Język",
+  footer: "Harmonica Cheatsheet — Polityka prywatności",
+  binding: "To tłumaczenie służy wyłącznie ułatwieniu zrozumienia. Wiążąca jest jedynie wersja niemiecka.",
+  facts: [
+    ["Nagrywanie dźwięku", "Nigdy nie jest zapisywane"],
+    ["Konto / logowanie", "Niewymagane"],
+    ["Reklamy / śledzenie", "Brak"],
+    ["Dostęp do internetu", "Brak"]
+  ],
+  sections: [
+    { h: "W skrócie", p: [
+      "Harmonica Cheatsheet to podręczny informator dla grających na harmonijce ustnej. Wszystko jest obliczane i rysowane na Twoim urządzeniu, a aplikacja <strong>nie ma dostępu do internetu</strong>. Nie istnieje żaden serwer dostawcy, nie ma kont użytkowników, reklam ani oprogramowania analitycznego. Żadne dane osobowe nie są zbierane, przechowywane ani przesyłane."
+    ]},
+    { h: "Mikrofon w trybie ćwiczeń", p: [
+      "Aplikacja ma tryb ćwiczeń: słucha przez mikrofon i pokazuje, jaki dźwięk grasz i jak dokładnie go trafiasz. W tym celu jednorazowo prosi o uprawnienie <em>mikrofon</em>."
+    ], ul: [
+      "Mikrofon działa <strong>tylko dopóki tryb ćwiczeń jest włączony</strong>. Po jego wyłączeniu lub opuszczeniu aplikacji mikrofon zostaje natychmiast zwolniony.",
+      "<strong>Nic nie jest nagrywane ani zapisywane.</strong> Sygnał jest analizowany w pamięci, w krótkich fragmentach, wyłącznie pod kątem wysokości dźwięku, a następnie odrzucany.",
+      "<strong>Nic nie jest przesyłane.</strong> Analiza odbywa się w całości na urządzeniu; sygnał dźwiękowy nigdy go nie opuszcza.",
+      "Tryb ćwiczeń pozostaje wyłączony, dopóki sam go nie włączysz. Bez niego aplikacja w ogóle nie prosi o mikrofon."
+    ]},
+    { h: "Co jest przechowywane na urządzeniu", p: [
+      "Aplikacja zapisuje Twoje ustawienia wyświetlania i wyglądu lokalnie na urządzeniu, korzystając z wbudowanego mechanizmu Androida <em>DataStore</em> — na przykład wybrany język interfejsu, schemat kolorów, sposób przedstawienia wiersza z numerami kanałów, Twoje własne kolory i znaki dla stopni skali oraz to, czy jednorazowa wskazówka została już zobaczona.",
+      "Nie są to dane osobowe i nie opuszczają Twojego urządzenia. Jeśli masz włączoną kopię zapasową Androida, system zapisuje je na Twoim koncie Google razem z danymi innych aplikacji; jest to funkcja systemu operacyjnego, a nie tej aplikacji."
+    ]},
+    { h: "Zakup w Google Play", p: [
+      "Harmonica Cheatsheet jest aplikacją płatną. Zakup odbywa się w sklepie Google Play <strong>zanim</strong> aplikacja uruchomi się po raz pierwszy — sama aplikacja nie zawiera żadnej obsługi zakupu, niczego nie sprawdza i o nic nie pyta.",
+      "Dane płatnicze przetwarza wyłącznie Google; dostawca tej aplikacji nie widzi ani Twojego imienia i nazwiska, ani adresu, ani metody płatności. Do tego przetwarzania stosuje się własna polityka prywatności Google: <a href=\"https://policies.google.com/privacy\">policies.google.com/privacy</a>."
+    ]},
+    { h: "Uprawnienia w skrócie", ul: [
+      "<strong>Mikrofon</strong> — wyłącznie do trybu ćwiczeń, patrz wyżej."
+    ], p: [
+      "To <strong>jedyne</strong> uprawnienie, o które prosi aplikacja — w szczególności <strong>nie ma ona dostępu do internetu</strong>. Można to w każdej chwili sprawdzić w ustawieniach aplikacji w Androidzie."
+    ]},
+    { h: "Dzieci", p: [
+      "Aplikacja jest skierowana do grających na harmonijce w każdym wieku i nie zbiera danych od nikogo — także od dzieci."
+    ]},
+    { h: "Zmiany tej polityki", p: [
+      "Jeśli sposób działania aplikacji się zmieni, ta strona zostanie odpowiednio zaktualizowana, a data u góry poprawiona."
+    ]},
+    { h: "Kontakt", p: [
+      "Chętnie odpowiemy na pytania dotyczące prywatności: <a href=\"mailto:gio_extrem@gmx.net\">gio_extrem@gmx.net</a>"
+    ]}
+  ]
+};
+
+T.cs = {
+  name: "Čeština", dir: "ltr",
+  title: "Zásady ochrany osobních údajů",
+  updated: "Poslední aktualizace: 19. srpna 2026",
+  langLabel: "Jazyk",
+  footer: "Harmonica Cheatsheet — Zásady ochrany osobních údajů",
+  binding: "Tento překlad slouží pouze pro snazší porozumění. Závazné je výhradně německé znění.",
+  facts: [
+    ["Nahrávání zvuku", "Nikdy se neukládá"],
+    ["Účet / přihlášení", "Není potřeba"],
+    ["Reklama / sledování", "Žádné"],
+    ["Přístup k internetu", "Žádný"]
+  ],
+  sections: [
+    { h: "Stručně", p: [
+      "Harmonica Cheatsheet je příručka pro hráče na foukací harmoniku. Vše se počítá a vykresluje přímo ve vašem zařízení a aplikace <strong>nemá přístup k internetu</strong>. Neexistuje žádný server poskytovatele, žádné uživatelské účty, žádná reklama ani analytický software. Žádné osobní údaje se neshromažďují, neukládají ani nepřenášejí."
+    ]},
+    { h: "Mikrofon v režimu cvičení", p: [
+      "Aplikace má režim cvičení: poslouchá přes mikrofon a ukazuje, který tón právě hrajete a jak přesně jej trefujete. K tomu si jednorázově vyžádá oprávnění <em>mikrofon</em>."
+    ], ul: [
+      "Mikrofon běží <strong>jen po dobu, kdy je režim cvičení zapnutý</strong>. Jakmile jej vypnete nebo aplikaci opustíte, mikrofon se okamžitě uvolní.",
+      "<strong>Nic se nenahrává a nic se neukládá.</strong> Signál se v paměti po krátkých úsecích zkoumá jen kvůli výšce tónu a poté se zahodí.",
+      "<strong>Nic se nepřenáší.</strong> Vyhodnocení probíhá zcela v zařízení; zvukový signál je nikdy neopustí.",
+      "Režim cvičení zůstává vypnutý, dokud jej sami nezapnete. Bez něj si aplikace o mikrofon vůbec neřekne."
+    ]},
+    { h: "Co zůstává v zařízení", p: [
+      "Aplikace ukládá vaše nastavení zobrazení a vzhledu místně ve vašem zařízení pomocí vestavěné funkce Androidu <em>DataStore</em> — například zvolený jazyk rozhraní, barevné schéma, podobu řádku s čísly kanálů, vaše vlastní barvy a značky pro stupně a to, zda už byla jednorázová nápověda zobrazena.",
+      "Nejde o osobní údaje a vaše zařízení neopouštějí. Máte-li zapnuté zálohování Androidu, systém je uloží spolu s daty ostatních aplikací do vašeho účtu Google; to je funkce operačního systému, nikoli této aplikace."
+    ]},
+    { h: "Nákup na Google Play", p: [
+      "Harmonica Cheatsheet je placená aplikace. Nákup probíhá v obchodě Google Play <strong>dříve</strong>, než se aplikace poprvé spustí — samotná aplikace neobsahuje žádné zpracování nákupu, nic neověřuje a na nic se nedotazuje.",
+      "Platební údaje zpracovává výhradně Google; poskytovatel této aplikace nevidí vaše jméno, adresu ani platební prostředek. Na toto zpracování se vztahují vlastní zásady ochrany osobních údajů společnosti Google: <a href=\"https://policies.google.com/privacy\">policies.google.com/privacy</a>."
+    ]},
+    { h: "Oprávnění v přehledu", ul: [
+      "<strong>Mikrofon</strong> — pouze pro režim cvičení, viz výše."
+    ], p: [
+      "To je <strong>jediné</strong> oprávnění, které si aplikace vyžádá — zejména <strong>nemá přístup k internetu</strong>. Kdykoli si to můžete ověřit v nastavení aplikací v Androidu."
+    ]},
+    { h: "Děti", p: [
+      "Aplikace je určena hráčům na harmoniku každého věku a neshromažďuje údaje od nikoho — ani od dětí."
+    ]},
+    { h: "Změny těchto zásad", p: [
+      "Pokud se způsob fungování aplikace změní, bude tato stránka odpovídajícím způsobem aktualizována a datum uvedené výše upraveno."
+    ]},
+    { h: "Kontakt", p: [
+      "Na dotazy k ochraně soukromí rádi odpovíme: <a href=\"mailto:gio_extrem@gmx.net\">gio_extrem@gmx.net</a>"
+    ]}
+  ]
+};
+
+T.nb = {
+  name: "Norsk", dir: "ltr",
+  title: "Personvernerklæring",
+  updated: "Sist oppdatert: 19. august 2026",
+  langLabel: "Språk",
+  footer: "Harmonica Cheatsheet — Personvernerklæring",
+  binding: "Denne oversettelsen er ment som en hjelp til forståelsen. Bare den tyske versjonen er bindende.",
+  facts: [
+    ["Lydopptak", "Lagres aldri"],
+    ["Konto / innlogging", "Ikke nødvendig"],
+    ["Annonser / sporing", "Ingen"],
+    ["Internettilgang", "Ingen"]
+  ],
+  sections: [
+    { h: "Kort sagt", p: [
+      "Harmonica Cheatsheet er et oppslagsverk for munnspillere. Alt regnes ut og tegnes på enheten din, og appen har <strong>ingen internettilgang</strong>. Det finnes ingen server hos leverandøren, ingen brukerkontoer, ingen reklame og ingen analyseprogramvare. Ingen personopplysninger samles inn, lagres eller overføres."
+    ]},
+    { h: "Mikrofonen i øvingsmodus", p: [
+      "Appen har en øvingsmodus: den lytter gjennom mikrofonen og viser hvilken tone du spiller og hvor nøyaktig du treffer den. Til dette ber den én gang om tillatelsen <em>mikrofon</em>."
+    ], ul: [
+      "Mikrofonen er i bruk <strong>bare så lenge øvingsmodus er slått på</strong>. Slår du den av eller forlater appen, frigis mikrofonen umiddelbart.",
+      "<strong>Ingenting tas opp og ingenting lagres.</strong> Signalet undersøkes i minnet i korte avsnitt bare for tonehøyden, og forkastes deretter.",
+      "<strong>Ingenting overføres.</strong> Analysen skjer i sin helhet på enheten; lydsignalet forlater den aldri.",
+      "Øvingsmodus er avslått til du slår den på selv. Uten den ber appen ikke engang om mikrofonen."
+    ]},
+    { h: "Hva som ligger på enheten", p: [
+      "Appen lagrer visnings- og utseendeinnstillingene dine lokalt på enheten ved hjelp av Androids innebygde <em>DataStore</em>-funksjon — for eksempel valgt visningsspråk, fargevalg, hvordan raden med hullnumre vises, dine egne farger og tegn for skalatrinnene, og om et engangstips allerede er sett.",
+      "Dette er ikke personopplysninger, og de forlater ikke enheten din. Har du slått på Android-sikkerhetskopiering, lagrer Android dem i Google-kontoen din sammen med andre appdata; det er en funksjon i operativsystemet, ikke i denne appen."
+    ]},
+    { h: "Kjøp i Google Play", p: [
+      "Harmonica Cheatsheet er en betalt app. Kjøpet skjer i Google Play Store <strong>før</strong> appen starter for første gang — appen selv inneholder ingen kjøpshåndtering, kontrollerer ingenting og spør om ingenting.",
+      "Betalingsopplysninger behandles utelukkende av Google; leverandøren av denne appen ser verken navn, adresse eller betalingsmiddel. For den behandlingen gjelder Googles egen personvernerklæring: <a href=\"https://policies.google.com/privacy\">policies.google.com/privacy</a>."
+    ]},
+    { h: "Tillatelser i korthet", ul: [
+      "<strong>Mikrofon</strong> — bare til øvingsmodus, se ovenfor."
+    ], p: [
+      "Det er den <strong>eneste</strong> tillatelsen appen ber om — den har i særdeleshet <strong>ingen internettilgang</strong>. Dette kan du når som helst kontrollere i appinnstillingene i Android."
+    ]},
+    { h: "Barn", p: [
+      "Appen retter seg mot munnspillere i alle aldre og samler ikke inn opplysninger fra noen — heller ikke fra barn."
+    ]},
+    { h: "Endringer i denne erklæringen", p: [
+      "Skulle appens virkemåte endre seg, blir denne siden oppdatert tilsvarende og datoen ovenfor justert."
+    ]},
+    { h: "Kontakt", p: [
+      "Spørsmål om personvern svarer vi gjerne på: <a href=\"mailto:gio_extrem@gmx.net\">gio_extrem@gmx.net</a>"
+    ]}
+  ]
+};
+
+T.fi = {
+  name: "Suomi", dir: "ltr",
+  title: "Tietosuojaseloste",
+  updated: "Viimeksi päivitetty: 19. elokuuta 2026",
+  langLabel: "Kieli",
+  footer: "Harmonica Cheatsheet — Tietosuojaseloste",
+  binding: "Tämä käännös on tarkoitettu ymmärtämisen helpottamiseksi. Sitova on ainoastaan saksankielinen versio.",
+  facts: [
+    ["Äänen tallennus", "Ei tallenneta koskaan"],
+    ["Tili / kirjautuminen", "Ei tarvita"],
+    ["Mainokset / seuranta", "Ei lainkaan"],
+    ["Internet-yhteys", "Ei lainkaan"]
+  ],
+  sections: [
+    { h: "Lyhyesti", p: [
+      "Harmonica Cheatsheet on hakuteos huuliharpunsoittajille. Kaikki lasketaan ja piirretään laitteellasi, eikä sovelluksella ole <strong>lainkaan internet-yhteyttä</strong>. Palveluntarjoajalla ei ole palvelinta, eikä sovelluksessa ole käyttäjätilejä, mainoksia tai analytiikkaohjelmistoa. Henkilötietoja ei kerätä, tallenneta eikä siirretä."
+    ]},
+    { h: "Mikrofoni harjoitustilassa", p: [
+      "Sovelluksessa on harjoitustila: se kuuntelee mikrofonin kautta ja näyttää, mitä säveltä soitat ja kuinka tarkasti se osuu. Tätä varten se pyytää kerran <em>mikrofonin</em> käyttöoikeuden."
+    ], ul: [
+      "Mikrofoni on käytössä <strong>vain niin kauan kuin harjoitustila on päällä</strong>. Kun suljet sen tai poistut sovelluksesta, mikrofoni vapautetaan välittömästi.",
+      "<strong>Mitään ei tallenneta eikä säilytetä.</strong> Signaalia tutkitaan muistissa lyhyinä jaksoina vain sävelkorkeuden osalta, minkä jälkeen se hylätään.",
+      "<strong>Mitään ei siirretä.</strong> Analyysi tapahtuu kokonaan laitteella; äänisignaali ei koskaan poistu siltä.",
+      "Harjoitustila pysyy pois päältä, kunnes kytket sen itse päälle. Ilman sitä sovellus ei edes pyydä mikrofonia."
+    ]},
+    { h: "Mitä laitteelle tallennetaan", p: [
+      "Sovellus tallentaa näyttö- ja ulkoasuasetuksesi paikallisesti laitteellesi Androidin sisäänrakennetun <em>DataStore</em>-toiminnon avulla — esimerkiksi valitun näyttökielen, väriteeman, reikänumerorivin esitystavan, omat värisi ja merkkisi sävelasteille sekä sen, onko kertaluonteinen vihje jo nähty.",
+      "Nämä eivät ole henkilötietoja eivätkä ne poistu laitteeltasi. Jos Androidin varmuuskopiointi on käytössä, järjestelmä tallentaa ne Google-tilillesi muiden sovellustietojen ohella; se on käyttöjärjestelmän eikä tämän sovelluksen toiminto."
+    ]},
+    { h: "Osto Google Playssa", p: [
+      "Harmonica Cheatsheet on maksullinen sovellus. Osto tapahtuu Google Play Kaupassa <strong>ennen</strong> kuin sovellus käynnistyy ensimmäisen kerran — sovelluksessa itsessään ei ole ostotoimintoa, se ei tarkista mitään eikä kysele mitään.",
+      "Maksutiedot käsittelee yksinomaan Google; tämän sovelluksen tarjoaja ei näe nimeäsi, osoitettasi eikä maksuvälinettäsi. Tähän käsittelyyn sovelletaan Googlen omaa tietosuojakäytäntöä: <a href=\"https://policies.google.com/privacy\">policies.google.com/privacy</a>."
+    ]},
+    { h: "Käyttöoikeudet lyhyesti", ul: [
+      "<strong>Mikrofoni</strong> — vain harjoitustilaa varten, katso yllä."
+    ], p: [
+      "Se on <strong>ainoa</strong> käyttöoikeus, jota sovellus pyytää — erityisesti sillä <strong>ei ole internet-yhteyttä</strong>. Voit tarkistaa tämän milloin tahansa Androidin sovellusasetuksista."
+    ]},
+    { h: "Lapset", p: [
+      "Sovellus on tarkoitettu kaikenikäisille huuliharpunsoittajille eikä se kerää tietoja keneltäkään — ei myöskään lapsilta."
+    ]},
+    { h: "Muutokset tähän selosteeseen", p: [
+      "Jos sovelluksen toimintatapa muuttuu, tämä sivu päivitetään vastaavasti ja ylläoleva päiväys korjataan."
+    ]},
+    { h: "Yhteystiedot", p: [
+      "Vastaamme mielellämme tietosuojaa koskeviin kysymyksiin: <a href=\"mailto:gio_extrem@gmx.net\">gio_extrem@gmx.net</a>"
+    ]}
+  ]
+};
+
+T.da = {
+  name: "Dansk", dir: "ltr",
+  title: "Privatlivspolitik",
+  updated: "Sidst opdateret: 19. august 2026",
+  langLabel: "Sprog",
+  footer: "Harmonica Cheatsheet — Privatlivspolitik",
+  binding: "Denne oversættelse er alene til hjælp for forståelsen. Kun den tyske version er bindende.",
+  facts: [
+    ["Lydoptagelse", "Gemmes aldrig"],
+    ["Konto / login", "Ikke nødvendig"],
+    ["Reklamer / sporing", "Ingen"],
+    ["Internetadgang", "Ingen"]
+  ],
+  sections: [
+    { h: "Kort fortalt", p: [
+      "Harmonica Cheatsheet er et opslagsværk for mundharmonikaspillere. Alt beregnes og tegnes på din enhed, og appen har <strong>ingen internetadgang</strong>. Der findes ingen server hos udbyderen, ingen brugerkonti, ingen reklamer og ingen analysesoftware. Der indsamles, gemmes eller overføres ingen personoplysninger."
+    ]},
+    { h: "Mikrofonen i øvetilstand", p: [
+      "Appen har en øvetilstand: den lytter gennem mikrofonen og viser, hvilken tone du spiller, og hvor præcist du rammer den. Til det beder den én gang om tilladelsen <em>mikrofon</em>."
+    ], ul: [
+      "Mikrofonen kører <strong>kun, så længe øvetilstanden er slået til</strong>. Slår du den fra eller forlader appen, frigives mikrofonen med det samme.",
+      "<strong>Der optages intet, og der gemmes intet.</strong> Signalet undersøges i hukommelsen i korte afsnit alene for tonehøjden og kasseres derefter.",
+      "<strong>Der overføres intet.</strong> Analysen sker udelukkende på enheden; lydsignalet forlader den aldrig.",
+      "Øvetilstanden er slået fra, indtil du selv slår den til. Uden den beder appen slet ikke om mikrofonen."
+    ]},
+    { h: "Hvad der ligger på enheden", p: [
+      "Appen gemmer dine visnings- og udseendeindstillinger lokalt på din enhed ved hjælp af Androids indbyggede <em>DataStore</em>-funktion — for eksempel det valgte visningssprog, farveskemaet, hvordan rækken med hulnumre vises, dine egne farver og tegn til skalatrinnene, og om et engangstip allerede er set.",
+      "Det er ikke personoplysninger, og de forlader ikke din enhed. Har du slået Android-sikkerhedskopiering til, gemmer Android dem i din Google-konto sammen med andre appdata; det er en funktion i styresystemet, ikke i denne app."
+    ]},
+    { h: "Køb i Google Play", p: [
+      "Harmonica Cheatsheet er en betalt app. Købet foregår i Google Play Butik, <strong>inden</strong> appen starter første gang — appen indeholder selv ingen købshåndtering, kontrollerer ingenting og forespørger om ingenting.",
+      "Betalingsoplysninger behandles udelukkende af Google; udbyderen af denne app ser hverken navn, adresse eller betalingsmiddel. For den behandling gælder Googles egen privatlivspolitik: <a href=\"https://policies.google.com/privacy\">policies.google.com/privacy</a>."
+    ]},
+    { h: "Tilladelser i overblik", ul: [
+      "<strong>Mikrofon</strong> — kun til øvetilstanden, se ovenfor."
+    ], p: [
+      "Det er den <strong>eneste</strong> tilladelse, appen beder om — den har i særdeleshed <strong>ingen internetadgang</strong>. Det kan du til enhver tid kontrollere i appindstillingerne i Android."
+    ]},
+    { h: "Børn", p: [
+      "Appen henvender sig til mundharmonikaspillere i alle aldre og indsamler ikke oplysninger fra nogen — heller ikke fra børn."
+    ]},
+    { h: "Ændringer af denne politik", p: [
+      "Skulle appens virkemåde ændre sig, bliver denne side opdateret tilsvarende, og datoen ovenfor justeret."
+    ]},
+    { h: "Kontakt", p: [
+      "Spørgsmål om privatliv besvarer vi gerne: <a href=\"mailto:gio_extrem@gmx.net\">gio_extrem@gmx.net</a>"
+    ]}
+  ]
+};
+
+T.id = {
+  name: "Bahasa Indonesia", dir: "ltr",
+  title: "Kebijakan Privasi",
+  updated: "Terakhir diperbarui: 19 Agustus 2026",
+  langLabel: "Bahasa",
+  footer: "Harmonica Cheatsheet — Kebijakan Privasi",
+  binding: "Terjemahan ini disediakan untuk memudahkan pemahaman. Hanya versi bahasa Jerman yang mengikat.",
+  facts: [
+    ["Rekaman audio", "Tidak pernah disimpan"],
+    ["Akun / masuk", "Tidak diperlukan"],
+    ["Iklan / pelacakan", "Tidak ada"],
+    ["Akses internet", "Tidak ada"]
+  ],
+  sections: [
+    { h: "Ringkasnya", p: [
+      "Harmonica Cheatsheet adalah buku acuan bagi pemain harmonika. Semua perhitungan dan penggambaran dilakukan di perangkat Anda, dan aplikasi ini <strong>tidak memiliki akses internet</strong>. Tidak ada server penyedia, tidak ada akun pengguna, tidak ada iklan, dan tidak ada perangkat lunak analitik. Tidak ada data pribadi yang dikumpulkan, disimpan, atau dikirimkan."
+    ]},
+    { h: "Mikrofon dalam mode latihan", p: [
+      "Aplikasi ini memiliki mode latihan: ia mendengarkan melalui mikrofon dan menunjukkan nada apa yang sedang Anda mainkan serta seberapa tepat nada itu. Untuk itu ia meminta izin <em>mikrofon</em> satu kali saja."
+    ], ul: [
+      "Mikrofon berjalan <strong>hanya selama mode latihan aktif</strong>. Begitu Anda mematikannya atau meninggalkan aplikasi, mikrofon segera dilepaskan.",
+      "<strong>Tidak ada yang direkam dan tidak ada yang disimpan.</strong> Sinyal diperiksa di memori dalam potongan pendek hanya untuk menentukan tinggi nadanya, lalu dibuang.",
+      "<strong>Tidak ada yang dikirimkan.</strong> Analisis sepenuhnya berlangsung di perangkat; sinyal suara tidak pernah meninggalkannya.",
+      "Mode latihan tetap mati sampai Anda sendiri menyalakannya. Tanpa itu, aplikasi bahkan tidak meminta mikrofon."
+    ]},
+    { h: "Apa yang tersimpan di perangkat", p: [
+      "Aplikasi menyimpan pengaturan tampilan Anda secara lokal di perangkat menggunakan mekanisme <em>DataStore</em> bawaan Android — misalnya bahasa tampilan yang dipilih, skema warna, cara baris nomor lubang ditampilkan, warna dan tanda pilihan Anda sendiri untuk setiap tingkat nada, serta apakah suatu petunjuk sekali pakai sudah pernah dilihat.",
+      "Semua itu bukan data pribadi dan tidak meninggalkan perangkat Anda. Jika Anda mengaktifkan cadangan Android, sistem menyimpannya ke akun Google Anda bersama data aplikasi lain; itu adalah fungsi sistem operasi, bukan fungsi aplikasi ini."
+    ]},
+    { h: "Pembelian di Google Play", p: [
+      "Harmonica Cheatsheet adalah aplikasi berbayar. Pembelian berlangsung di Google Play Store <strong>sebelum</strong> aplikasi dijalankan untuk pertama kalinya — aplikasi itu sendiri tidak memuat proses pembelian apa pun, tidak memeriksa apa pun, dan tidak menanyakan apa pun.",
+      "Data pembayaran diproses semata-mata oleh Google; penyedia aplikasi ini tidak melihat nama, alamat, maupun alat pembayaran Anda. Untuk pemrosesan itu berlaku kebijakan privasi Google sendiri: <a href=\"https://policies.google.com/privacy\">policies.google.com/privacy</a>."
+    ]},
+    { h: "Izin secara sekilas", ul: [
+      "<strong>Mikrofon</strong> — hanya untuk mode latihan, lihat di atas."
+    ], p: [
+      "Itulah <strong>satu-satunya</strong> izin yang diminta aplikasi — khususnya, aplikasi ini <strong>tidak memiliki akses internet</strong>. Anda dapat memeriksanya kapan saja di pengaturan aplikasi Android."
+    ]},
+    { h: "Anak-anak", p: [
+      "Aplikasi ini ditujukan bagi pemain harmonika segala usia dan tidak mengumpulkan data dari siapa pun — termasuk dari anak-anak."
+    ]},
+    { h: "Perubahan kebijakan ini", p: [
+      "Jika cara kerja aplikasi berubah, halaman ini akan diperbarui sesuai dengan itu dan tanggal di atas disesuaikan."
+    ]},
+    { h: "Kontak", p: [
+      "Pertanyaan tentang privasi kami jawab dengan senang hati: <a href=\"mailto:gio_extrem@gmx.net\">gio_extrem@gmx.net</a>"
+    ]}
+  ]
+};
+
+T.th = {
+  name: "ไทย", dir: "ltr",
+  title: "นโยบายความเป็นส่วนตัว",
+  updated: "อัปเดตล่าสุด: 19 สิงหาคม 2026",
+  langLabel: "ภาษา",
+  footer: "Harmonica Cheatsheet — นโยบายความเป็นส่วนตัว",
+  binding: "คำแปลนี้จัดทำขึ้นเพื่อความเข้าใจเท่านั้น ฉบับที่มีผลผูกพันคือฉบับภาษาเยอรมันเท่านั้น",
+  facts: [
+    ["การบันทึกเสียง", "ไม่เก็บไว้เลย"],
+    ["บัญชี / การลงชื่อเข้าใช้", "ไม่จำเป็น"],
+    ["โฆษณา / การติดตาม", "ไม่มี"],
+    ["การเข้าถึงอินเทอร์เน็ต", "ไม่มี"]
+  ],
+  sections: [
+    { h: "โดยสรุป", p: [
+      "Harmonica Cheatsheet เป็นคู่มืออ้างอิงสำหรับผู้เล่นฮาร์โมนิกา การคำนวณและการวาดทั้งหมดเกิดขึ้นบนอุปกรณ์ของคุณ และแอปนี้<strong>ไม่มีการเข้าถึงอินเทอร์เน็ต</strong> ไม่มีเซิร์ฟเวอร์ของผู้ให้บริการ ไม่มีบัญชีผู้ใช้ ไม่มีโฆษณา และไม่มีซอฟต์แวร์วิเคราะห์ข้อมูล ไม่มีการเก็บรวบรวม จัดเก็บ หรือส่งต่อข้อมูลส่วนบุคคลใด ๆ"
+    ]},
+    { h: "ไมโครโฟนในโหมดฝึกซ้อม", p: [
+      "แอปมีโหมดฝึกซ้อม โดยจะฟังผ่านไมโครโฟนและแสดงว่าคุณกำลังเล่นโน้ตใดและตรงเสียงเพียงใด สำหรับสิ่งนี้แอปจะขอสิทธิ์ <em>ไมโครโฟน</em> เพียงครั้งเดียว"
+    ], ul: [
+      "ไมโครโฟนจะทำงาน<strong>เฉพาะขณะที่เปิดโหมดฝึกซ้อมเท่านั้น</strong> เมื่อคุณปิดโหมดนี้หรือออกจากแอป ไมโครโฟนจะถูกปล่อยคืนทันที",
+      "<strong>ไม่มีการบันทึกและไม่มีการจัดเก็บใด ๆ</strong> สัญญาณจะถูกวิเคราะห์ในหน่วยความจำเป็นช่วงสั้น ๆ เพื่อหาระดับเสียงเท่านั้น แล้วจึงถูกทิ้งไป",
+      "<strong>ไม่มีการส่งข้อมูลใด ๆ ออกไป</strong> การวิเคราะห์เกิดขึ้นบนอุปกรณ์ทั้งหมด สัญญาณเสียงไม่เคยออกจากอุปกรณ์",
+      "โหมดฝึกซ้อมจะปิดอยู่จนกว่าคุณจะเปิดเอง หากไม่เปิด แอปจะไม่ขอสิทธิ์ไมโครโฟนเลย"
+    ]},
+    { h: "ข้อมูลใดที่อยู่บนอุปกรณ์", p: [
+      "แอปจัดเก็บการตั้งค่าการแสดงผลของคุณไว้บนอุปกรณ์เท่านั้น โดยใช้กลไก <em>DataStore</em> ที่มีมาในตัวของ Android เช่น ภาษาที่เลือกใช้ ชุดสี รูปแบบการแสดงแถวหมายเลขช่อง สีและเครื่องหมายที่คุณกำหนดเองสำหรับขั้นของบันไดเสียง และคำแนะนำแบบครั้งเดียวว่าเคยแสดงไปแล้วหรือยัง",
+      "ข้อมูลเหล่านี้ไม่ใช่ข้อมูลส่วนบุคคลและจะไม่ออกจากอุปกรณ์ของคุณ หากคุณเปิดใช้การสำรองข้อมูลของ Android ระบบจะบันทึกข้อมูลเหล่านี้ไว้ในบัญชี Google ของคุณพร้อมกับข้อมูลแอปอื่น ๆ ซึ่งเป็นฟังก์ชันของระบบปฏิบัติการ ไม่ใช่ของแอปนี้"
+    ]},
+    { h: "การซื้อบน Google Play", p: [
+      "Harmonica Cheatsheet เป็นแอปแบบเสียเงิน การซื้อเกิดขึ้นใน Google Play Store <strong>ก่อน</strong> ที่แอปจะเริ่มทำงานเป็นครั้งแรก ตัวแอปเองไม่มีกระบวนการซื้อใด ๆ ไม่ตรวจสอบสิ่งใด และไม่สอบถามสิ่งใด",
+      "ข้อมูลการชำระเงินได้รับการประมวลผลโดย Google เท่านั้น ผู้ให้บริการแอปนี้ไม่เห็นทั้งชื่อ ที่อยู่ หรือวิธีการชำระเงินของคุณ การประมวลผลดังกล่าวอยู่ภายใต้นโยบายความเป็นส่วนตัวของ Google เอง: <a href=\"https://policies.google.com/privacy\">policies.google.com/privacy</a>"
+    ]},
+    { h: "สิทธิ์โดยสรุป", ul: [
+      "<strong>ไมโครโฟน</strong> — สำหรับโหมดฝึกซ้อมเท่านั้น ดูด้านบน"
+    ], p: [
+      "นี่คือสิทธิ์<strong>เพียงอย่างเดียว</strong>ที่แอปร้องขอ โดยเฉพาะอย่างยิ่งแอปนี้<strong>ไม่มีการเข้าถึงอินเทอร์เน็ต</strong> คุณสามารถตรวจสอบได้ตลอดเวลาในการตั้งค่าแอปของ Android"
+    ]},
+    { h: "เด็ก", p: [
+      "แอปนี้มีไว้สำหรับผู้เล่นฮาร์โมนิกาทุกวัย และไม่เก็บข้อมูลจากผู้ใด รวมถึงเด็กด้วย"
+    ]},
+    { h: "การเปลี่ยนแปลงนโยบายนี้", p: [
+      "หากวิธีการทำงานของแอปเปลี่ยนไป หน้านี้จะได้รับการปรับปรุงให้สอดคล้องกัน และวันที่ด้านบนจะถูกแก้ไขตาม"
+    ]},
+    { h: "ติดต่อ", p: [
+      "เรายินดีตอบคำถามเกี่ยวกับความเป็นส่วนตัว: <a href=\"mailto:gio_extrem@gmx.net\">gio_extrem@gmx.net</a>"
+    ]}
+  ]
+};
+
+T.pt = {
+  name: "Português", dir: "ltr",
+  title: "Política de Privacidade",
+  updated: "Última atualização: 19 de agosto de 2026",
+  langLabel: "Idioma",
+  footer: "Harmonica Cheatsheet — Política de Privacidade",
+  binding: "Esta tradução destina-se apenas a facilitar a compreensão. Só a versão alemã é vinculativa.",
+  facts: [
+    ["Gravação de áudio", "Nunca é guardada"],
+    ["Conta / início de sessão", "Não é necessária"],
+    ["Publicidade / rastreio", "Nenhum"],
+    ["Acesso à Internet", "Nenhum"]
+  ],
+  sections: [
+    { h: "Em resumo", p: [
+      "Harmonica Cheatsheet é uma obra de consulta para tocadores de harmónica. Tudo é calculado e desenhado no seu dispositivo, e a aplicação <strong>não tem qualquer acesso à Internet</strong>. Não existe servidor do fornecedor, nem contas de utilizador, nem publicidade, nem software de análise. Não são recolhidos, guardados nem transmitidos quaisquer dados pessoais."
+    ]},
+    { h: "O microfone no modo de treino", p: [
+      "A aplicação tem um modo de treino: escuta pelo microfone e mostra que nota está a tocar e com que exatidão a afina. Para isso pede uma única vez a permissão de <em>microfone</em>."
+    ], ul: [
+      "O microfone funciona <strong>apenas enquanto o modo de treino estiver ligado</strong>. Ao desligá-lo ou ao sair da aplicação, o microfone é libertado de imediato.",
+      "<strong>Nada é gravado e nada é guardado.</strong> O sinal é analisado em memória, em curtos fragmentos, apenas quanto à sua altura, e depois descartado.",
+      "<strong>Nada é transmitido.</strong> A análise decorre inteiramente no dispositivo; o sinal de áudio nunca sai dele.",
+      "O modo de treino permanece desligado até que o ligue você mesmo. Sem ele, a aplicação nem sequer pede o microfone."
+    ]},
+    { h: "O que fica guardado no dispositivo", p: [
+      "A aplicação guarda as suas definições de apresentação localmente no dispositivo, através do mecanismo <em>DataStore</em> integrado no Android — por exemplo o idioma de apresentação escolhido, o esquema de cores, o modo como é mostrada a linha com os números dos furos, as suas próprias cores e marcas para os graus da escala, e se uma indicação única já foi vista.",
+      "Não são dados pessoais e não saem do seu dispositivo. Se tiver a cópia de segurança do Android ativada, o sistema guarda-os na sua conta Google juntamente com os dados de outras aplicações; trata-se de uma função do sistema operativo e não desta aplicação."
+    ]},
+    { h: "Compra na Google Play", p: [
+      "Harmonica Cheatsheet é uma aplicação paga. A compra ocorre na Google Play Store <strong>antes</strong> de a aplicação arrancar pela primeira vez — a própria aplicação não contém qualquer processamento de compra, não verifica nada e não consulta nada.",
+      "Os dados de pagamento são tratados exclusivamente pela Google; o fornecedor desta aplicação não vê o seu nome, morada nem meio de pagamento. A esse tratamento aplica-se a política de privacidade da própria Google: <a href=\"https://policies.google.com/privacy\">policies.google.com/privacy</a>."
+    ]},
+    { h: "Permissões num relance", ul: [
+      "<strong>Microfone</strong> — apenas para o modo de treino, ver acima."
+    ], p: [
+      "Essa é a <strong>única</strong> permissão que a aplicação pede — em particular, não tem <strong>qualquer acesso à Internet</strong>. Pode verificá-lo a qualquer momento nas definições de aplicações do Android."
+    ]},
+    { h: "Crianças", p: [
+      "A aplicação dirige-se a tocadores de harmónica de qualquer idade e não recolhe dados de ninguém — também não de crianças."
+    ]},
+    { h: "Alterações a esta política", p: [
+      "Caso o funcionamento da aplicação se altere, esta página será atualizada em conformidade e a data acima ajustada."
+    ]},
+    { h: "Contacto", p: [
+      "Respondemos com gosto a questões sobre privacidade: <a href=\"mailto:gio_extrem@gmx.net\">gio_extrem@gmx.net</a>"
+    ]}
+  ]
+};
+
+T.nl = {
+  name: "Nederlands", dir: "ltr",
+  title: "Privacyverklaring",
+  updated: "Laatst bijgewerkt: 19 augustus 2026",
+  langLabel: "Taal",
+  footer: "Harmonica Cheatsheet — Privacyverklaring",
+  binding: "Deze vertaling dient alleen ter verduidelijking. Uitsluitend de Duitse versie is bindend.",
+  facts: [
+    ["Geluidsopname", "Wordt nooit bewaard"],
+    ["Account / aanmelden", "Niet nodig"],
+    ["Advertenties / tracking", "Geen"],
+    ["Internettoegang", "Geen"]
+  ],
+  sections: [
+    { h: "Kort gezegd", p: [
+      "Harmonica Cheatsheet is een naslagwerk voor mondharmonicaspelers. Alles wordt op je apparaat berekend en getekend, en de app heeft <strong>geen internettoegang</strong>. Er is geen server van de aanbieder, er zijn geen gebruikersaccounts, geen advertenties en geen analysesoftware. Er worden geen persoonsgegevens verzameld, opgeslagen of doorgegeven."
+    ]},
+    { h: "De microfoon in de oefenmodus", p: [
+      "De app heeft een oefenmodus: hij luistert via de microfoon mee en laat zien welke toon je speelt en hoe zuiver die is. Daarvoor vraagt hij eenmalig de toestemming <em>microfoon</em>."
+    ], ul: [
+      "De microfoon loopt <strong>alleen zolang de oefenmodus aanstaat</strong>. Zet je hem uit of verlaat je de app, dan wordt de microfoon meteen weer vrijgegeven.",
+      "<strong>Er wordt niets opgenomen en niets bewaard.</strong> Het signaal wordt in het werkgeheugen in korte stukjes alleen op toonhoogte onderzocht en daarna weggegooid.",
+      "<strong>Er wordt niets verzonden.</strong> De analyse gebeurt volledig op het apparaat; het geluidssignaal verlaat het nooit.",
+      "De oefenmodus staat uit totdat je hem zelf aanzet. Zonder die modus vraagt de app de microfoon niet eens aan."
+    ]},
+    { h: "Wat er op het apparaat staat", p: [
+      "De app bewaart je weergave-instellingen lokaal op je apparaat via de ingebouwde Android-functie <em>DataStore</em> — bijvoorbeeld de gekozen weergavetaal, het kleurenschema, hoe de rij met gaatjesnummers wordt getoond, je eigen kleuren en tekens voor de toontrappen, en of een eenmalige tip al is gezien.",
+      "Dit zijn geen persoonsgegevens en ze verlaten je apparaat niet. Heb je de Android-back-up ingeschakeld, dan bewaart Android ze samen met andere app-gegevens in je Google-account; dat is een functie van het besturingssysteem, niet van deze app."
+    ]},
+    { h: "Aankoop in Google Play", p: [
+      "Harmonica Cheatsheet is een betaalde app. De aankoop vindt plaats in de Google Play Store, <strong>voordat</strong> de app voor het eerst start — de app zelf bevat geen enkele aankoopafhandeling, controleert niets en vraagt niets op.",
+      "Betaalgegevens worden uitsluitend door Google verwerkt; de aanbieder van deze app krijgt naam, adres noch betaalmiddel te zien. Daarvoor geldt de eigen privacyverklaring van Google: <a href=\"https://policies.google.com/privacy\">policies.google.com/privacy</a>."
+    ]},
+    { h: "Toestemmingen in één oogopslag", ul: [
+      "<strong>Microfoon</strong> — alleen voor de oefenmodus, zie hierboven."
+    ], p: [
+      "Dat is de <strong>enige</strong> toestemming die de app vraagt — hij heeft met name <strong>geen internettoegang</strong>. Dat kun je op elk moment nakijken in de Android-app-instellingen."
+    ]},
+    { h: "Kinderen", p: [
+      "De app richt zich op mondharmonicaspelers van elke leeftijd en verzamelt van niemand gegevens — ook niet van kinderen."
+    ]},
+    { h: "Wijzigingen in deze verklaring", p: [
+      "Mocht de werking van de app veranderen, dan wordt deze pagina daarop aangepast en de datum hierboven bijgewerkt."
+    ]},
+    { h: "Contact", p: [
+      "Vragen over privacy beantwoorden we graag: <a href=\"mailto:gio_extrem@gmx.net\">gio_extrem@gmx.net</a>"
+    ]}
+  ]
+};
+
+/*
+ * Reihenfolge des Auswahlfelds - dieselbe wie `languageMenuOrder` in der App: erst die Sprachen
+ * in lateinischer Schrift alphabetisch nach ihrem Eigennamen (ohne Diakritika), dann die
+ * uebrigen nach Sprachkennung. Wer seine Sprache in der App gefunden hat, findet sie hier an
+ * derselben Stelle.
+ */
+var ORDER = ["id", "cs", "da", "de", "en", "es", "fr", "it", "nl", "nb", "pl", "pt", "fi", "sv",
+             "ar", "hi", "ja", "ko", "ru", "th", "zh"];
+
+/*
+ * Dieselben Fallstricke wie in der App (LANGUAGE_ALIASES in i18n/Strings.kt): Indonesisch kommt
+ * historisch als `in`, Norwegisch je nach Geraet als `no` oder `nn`. Dazu die Regionalformen,
+ * die Browser liefern - `pt-BR`, `zh-Hans-CN`, `nb-NO` werden auf ihre Basis gekuerzt.
+ */
+var ALIASES = { "in": "id", "no": "nb", "nn": "nb", "iw": "en" };
+
+function normalize(tag) {
+  if (!tag) return null;
+  var base = String(tag).toLowerCase().split("-")[0];
+  if (ALIASES[base]) base = ALIASES[base];
+  return T[base] ? base : null;
+}
+
+/*
+ * Die Sprachwahl in der Reihenfolge ihrer Verlaesslichkeit:
+ *   1. `?lang=` - das haengt die App an, wenn sie die Seite oeffnet. Sie kennt ihre eigene
+ *      Anzeigesprache, und die muss nicht die Systemsprache sein.
+ *   2. `#de`/`#en` - die Sprunganker der alten zweisprachigen Fassung, damit vorhandene
+ *      Verweise weiter treffen.
+ *   3. die Browsersprachen.
+ *   4. Englisch.
+ */
+function pickLang() {
+  var byQuery = normalize(new URLSearchParams(window.location.search).get("lang"));
+  if (byQuery) return byQuery;
+
+  var byHash = normalize(window.location.hash.replace("#", ""));
+  if (byHash) return byHash;
+
+  var list = navigator.languages || [navigator.language];
+  for (var i = 0; i < list.length; i++) {
+    var hit = normalize(list[i]);
+    if (hit) return hit;
   }
-  document.getElementById('show-de').addEventListener('click', function (e) {
-    e.preventDefault();
-    showLang('de');
+  return "en";
+}
+
+function ul(items) {
+  var out = "<ul>";
+  for (var i = 0; i < items.length; i++) out += "<li>" + items[i] + "</li>";
+  return out + "</ul>";
+}
+
+function paragraphs(items) {
+  var out = "";
+  for (var i = 0; i < items.length; i++) out += "<p>" + items[i] + "</p>";
+  return out;
+}
+
+function render(code) {
+  var t = T[code];
+  if (!t) return;
+
+  document.documentElement.lang = code;
+  document.documentElement.dir = t.dir;
+  document.title = t.title + " — Harmonica Cheatsheet";
+  document.getElementById("doc-title").textContent = t.title;
+  document.getElementById("doc-updated").textContent = t.updated;
+  document.getElementById("doc-footer").textContent = t.footer;
+  document.querySelector(".lang-pick label").textContent = t.langLabel;
+
+  var html = "<div class=\"fact-grid\">";
+  for (var f = 0; f < t.facts.length; f++) {
+    html += "<div class=\"fact\"><div class=\"label\">" + t.facts[f][0] +
+            "</div><div class=\"value\">" + t.facts[f][1] + "</div></div>";
+  }
+  html += "</div>";
+
+  // Die Vorrangklausel steht nur ueber den neunzehn Uebersetzungen, nicht ueber DE und EN.
+  if (t.binding) html += "<div class=\"binding-note\">" + t.binding + "</div>";
+
+  for (var s = 0; s < t.sections.length; s++) {
+    var sec = t.sections[s];
+    html += "<section><h2>" + sec.h + "</h2>";
+    /*
+     * Absatz und Aufzaehlung werden in der Reihenfolge ausgegeben, in der sie im Objekt stehen.
+     * Das ist kein Zufall, sondern die Absicht: Im Berechtigungsabschnitt nennt die Liste die
+     * Berechtigung und der Absatz zieht daraus den Schluss ("das ist die einzige") - dort steht
+     * `ul` deshalb vor `p`, ueberall sonst umgekehrt. JavaScript erhaelt die Reihenfolge der
+     * Schluessel eines Objektliterals, also braucht es dafuer kein zusaetzliches Feld.
+     */
+    var keys = Object.keys(sec);
+    for (var k = 0; k < keys.length; k++) {
+      if (keys[k] === "p") html += paragraphs(sec.p);
+      else if (keys[k] === "ul") html += ul(sec.ul);
+    }
+    html += "</section>";
+  }
+
+  document.getElementById("doc").innerHTML = html;
+  document.getElementById("lang").value = code;
+}
+
+(function boot() {
+  var select = document.getElementById("lang");
+  for (var i = 0; i < ORDER.length; i++) {
+    var code = ORDER[i];
+    if (!T[code]) continue;
+    var opt = document.createElement("option");
+    opt.value = code;
+    opt.textContent = T[code].name;
+    select.appendChild(opt);
+  }
+
+  select.addEventListener("change", function () {
+    render(select.value);
+    // Die Wahl landet in der Adresse, damit sie ein Neuladen und ein Weitergeben ueberlebt.
+    window.history.replaceState(null, "", window.location.pathname + "?lang=" + select.value);
   });
-  document.getElementById('show-en').addEventListener('click', function (e) {
-    e.preventDefault();
-    showLang('en');
-  });
-  if (window.location.hash === '#en') showLang('en');
+
+  render(pickLang());
+})();
 </script>
+</body>
+</html>
