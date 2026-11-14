@@ -192,11 +192,12 @@
         <h2>In short</h2>
         <p>
           Harmonica Cheatsheet is a reference app for harmonica players. Everything is computed
-          and drawn on your device, and the app has <strong>no internet access</strong>. There is
+          and drawn on your device, and the app itself <strong>sends no data</strong>. There is
           no developer server, no user account, no advertising and no analytics. No personal data
           is collected, stored or transmitted. The microphone is used only while practice mode is
           switched on, and nothing is recorded, stored or transmitted.
-          An optional one-time purchase is handled entirely by Google Play.
+          An optional one-time purchase is handled entirely by Google Play; Google’s billing library
+          brings the Android permissions Internet and network state for this.
           Questions: <a href="mailto:verynicedevelopments@gmail.com">verynicedevelopments@gmail.com</a>
         </p>
         <p>
@@ -235,11 +236,11 @@ T.de = {
     ["Tonaufnahme", "Wird nicht gespeichert"],
     ["Konto / Anmeldung", "Nicht erforderlich"],
     ["Werbung / Tracking", "Keines"],
-    ["Internetzugriff", "Nicht vorhanden"]
+    ["Internetzugriff", "Nur für Google-Play-Käufe"]
   ],
   sections: [
     { h: "Kurz gesagt", p: [
-      "Harmonica Cheatsheet ist ein Nachschlagewerk für Mundharmonikaspieler. Die App rechnet und zeichnet alles auf dem Gerät und hat <strong>keinen Internetzugriff</strong>. Es gibt keinen Server des Anbieters, keine Nutzerkonten, keine Werbung und keine Analyse-Software. Es werden keine personenbezogenen Daten erhoben, gespeichert oder übertragen."
+      "Harmonica Cheatsheet ist ein Nachschlagewerk für Mundharmonikaspieler. Die App rechnet und zeichnet alles auf dem Gerät und <strong>sendet selbst keine Daten</strong>. Es gibt keinen Server des Anbieters, keine Nutzerkonten, keine Werbung und keine Analyse-Software. Es werden keine personenbezogenen Daten erhoben, gespeichert oder übertragen."
     ]},
     { h: "Mikrofon im Übungsmodus", p: [
       "Die App hat einen Übungsmodus: Sie hört über das Mikrofon mit und zeigt an, welcher Ton gerade gespielt wird und wie genau er sitzt. Dafür fragt sie einmalig die Berechtigung <em>Mikrofon</em> ab."
@@ -254,14 +255,15 @@ T.de = {
       "Das sind keine personenbezogenen Daten, und sie verlassen dein Gerät nicht. Wenn du die Android-Datensicherung aktiviert hast, sichert Android sie zusammen mit anderen App-Daten in dein Google-Konto; das ist eine Funktion des Betriebssystems, nicht der App."
     ]},
     { h: "Einmalkauf über Google Play", p: [
-      "Harmonica Cheatsheet ist kostenlos. Weitere Positionen, Tonarten und Stimmungen lassen sich mit einem <strong>einmaligen In-App-Kauf</strong> („Vollversion“) freischalten. Den Kauf wickelt Google Play ab: Die App fragt dafür bei der Play-Store-App auf deinem Gerät nach, ob der Kauf vorliegt — sie selbst hat weiterhin <strong>keinen Internetzugriff</strong> und keinen eigenen Server.",
+      "Harmonica Cheatsheet ist kostenlos. Weitere Positionen, Tonarten und Stimmungen lassen sich mit einem <strong>einmaligen In-App-Kauf</strong> („Vollversion“) freischalten. Den Kauf wickelt Google Play ab: Die App fragt dafür bei der Play-Store-App auf deinem Gerät nach, ob der Kauf vorliegt — einen eigenen Server hat sie nicht. Googles Kaufbibliothek (Google Play Billing Library), die die App dafür enthält, bringt die Android-Berechtigungen <em>Internet</em> und <em>Netzwerkstatus</em> mit; darüber kann Google technische Diagnosedaten zum Kaufvorgang an sich selbst übermitteln. Der Anbieter dieser App erhält davon nichts.",
       "Zahlungsdaten werden ausschließlich von Google verarbeitet; der Anbieter dieser App bekommt weder Name noch Anschrift noch Zahlungsmittel zu sehen. Dafür gilt Googles eigene Datenschutzerklärung: <a href=\"https://policies.google.com/privacy\">policies.google.com/privacy</a>."
     ]},
     { h: "Berechtigungen im Überblick", ul: [
       "<strong>Mikrofon</strong> — nur für den Übungsmodus, siehe oben.",
-      "<strong>Google Play Billing</strong> — damit die App den Einmalkauf über die Play-Store-App abwickeln kann."
+      "<strong>Google Play Billing</strong> — damit die App den Einmalkauf über die Play-Store-App abwickeln kann.",
+      "<strong>Internet und Netzwerkstatus</strong> — bringt Googles Kaufbibliothek mit, genutzt nur für die Kaufabwicklung mit Google Play; die App selbst sendet darüber keine Daten."
     ], p: [
-      "Weitere Berechtigungen fordert die App nicht an — sie hat insbesondere <strong>keinen Internetzugriff</strong>. Das lässt sich in den Android-App-Einstellungen jederzeit nachprüfen."
+      "Weitere Berechtigungen fordert die App nicht an. Es gibt keine Werbung, kein Tracking und keinen Server des Anbieters."
     ]},
     { h: "Kinder", p: [
       "Die App richtet sich an Mundharmonikaspieler jeden Alters und erhebt von niemandem Daten — auch nicht von Kindern."
@@ -288,11 +290,11 @@ T.en = {
     ["Audio recording", "Never stored"],
     ["Account / sign-in", "Not required"],
     ["Ads / tracking", "None"],
-    ["Internet access", "None"]
+    ["Internet access", "Only for Google Play purchases"]
   ],
   sections: [
     { h: "In short", p: [
-      "Harmonica Cheatsheet is a reference app for harmonica players. Everything is computed and drawn on your device, and the app has <strong>no internet access</strong>. There is no developer server, no user account, no advertising and no analytics software. No personal data is collected, stored or transmitted."
+      "Harmonica Cheatsheet is a reference app for harmonica players. Everything is computed and drawn on your device, and the app itself <strong>sends no data</strong>. There is no developer server, no user account, no advertising and no analytics software. No personal data is collected, stored or transmitted."
     ]},
     { h: "Microphone in practice mode", p: [
       "The app has a practice mode: it listens through the microphone and shows which note you are playing and how accurately you hit it. For this it asks once for the <em>microphone</em> permission."
@@ -307,14 +309,15 @@ T.en = {
       "None of this is personal data, and it does not leave your device. If you have Android backup enabled, Android saves it to your Google account along with other app data; that is a function of the operating system, not of this app."
     ]},
     { h: "One-time purchase on Google Play", p: [
-      "Harmonica Cheatsheet is free. Further positions, keys and tunings can be unlocked with a <strong>one-time in-app purchase</strong> (“Full version”). Google Play handles the purchase: the app asks the Play Store app on your device whether the purchase exists — the app itself still has <strong>no internet access</strong> and no server of its own.",
+      "Harmonica Cheatsheet is free. Further positions, keys and tunings can be unlocked with a <strong>one-time in-app purchase</strong> (“Full version”). Google Play handles the purchase: the app asks the Play Store app on your device whether the purchase exists — it has no server of its own. Google’s billing library (Google Play Billing Library), which the app includes for this, brings the Android permissions <em>Internet</em> and <em>network state</em> with it; through them Google may transmit technical diagnostic data about the purchase process to itself. The developer of this app receives none of it.",
       "Payment data is processed exclusively by Google; the developer of this app never sees your name, address or payment method. The Google privacy policy applies to that: <a href=\"https://policies.google.com/privacy\">policies.google.com/privacy</a>."
     ]},
     { h: "Permissions at a glance", ul: [
       "<strong>Microphone</strong> — for practice mode only, see above.",
-      "<strong>Google Play Billing</strong> — so that the app can handle the one-time purchase through the Play Store app."
+      "<strong>Google Play Billing</strong> — so that the app can handle the one-time purchase through the Play Store app.",
+      "<strong>Internet and network state</strong> — come with Google’s billing library and are used only for processing purchases with Google Play; the app itself sends no data through them."
     ], p: [
-      "The app requests no other permissions — in particular it has <strong>no internet access</strong>. You can verify this at any time in the Android app settings."
+      "The app requests no other permissions. There is no advertising, no tracking and no developer server."
     ]},
     { h: "Children", p: [
       "The app is aimed at harmonica players of any age and collects data from nobody — children included."
@@ -342,11 +345,11 @@ T.fr = {
     ["Enregistrement audio", "Jamais conservé"],
     ["Compte / connexion", "Non requis"],
     ["Publicité / suivi", "Aucun"],
-    ["Accès à Internet", "Aucun"]
+    ["Accès à Internet", "Uniquement pour les achats Google Play"]
   ],
   sections: [
     { h: "En bref", p: [
-      "Harmonica Cheatsheet est un ouvrage de référence pour les harmonicistes. Tout est calculé et dessiné sur votre appareil, et l'application n'a <strong>aucun accès à Internet</strong>. Il n'existe aucun serveur de l'éditeur, aucun compte utilisateur, aucune publicité et aucun logiciel d'analyse. Aucune donnée à caractère personnel n'est collectée, conservée ni transmise."
+      "Harmonica Cheatsheet est un ouvrage de référence pour les harmonicistes. Tout est calculé et dessiné sur votre appareil, et l'application elle-même <strong>n'envoie aucune donnée</strong>. Il n'existe aucun serveur de l'éditeur, aucun compte utilisateur, aucune publicité et aucun logiciel d'analyse. Aucune donnée à caractère personnel n'est collectée, conservée ni transmise."
     ]},
     { h: "Le microphone en mode entraînement", p: [
       "L'application propose un mode entraînement : elle écoute par le microphone et indique quelle note vous jouez et avec quelle justesse. Pour cela, elle demande une seule fois l'autorisation <em>Microphone</em>."
@@ -361,14 +364,15 @@ T.fr = {
       "Il ne s'agit pas de données à caractère personnel et elles ne quittent pas votre appareil. Si vous avez activé la sauvegarde Android, le système les enregistre dans votre compte Google avec les autres données d'applications ; il s'agit d'une fonction du système d'exploitation, pas de cette application."
     ]},
     { h: "Achat unique sur Google Play", p: [
-      "Harmonica Cheatsheet est gratuite. D'autres positions, tonalités et accordages peuvent être débloqués par un <strong>achat intégré unique</strong> (« Version complète »). Google Play gère l'achat : l'application demande à l'application Play Store de votre appareil si l'achat existe — elle-même n'a toujours <strong>aucun accès à Internet</strong> ni serveur propre.",
+      "Harmonica Cheatsheet est gratuite. D'autres positions, tonalités et accordages peuvent être débloqués par un <strong>achat intégré unique</strong> (« Version complète »). Google Play gère l'achat : l'application demande à l'application Play Store de votre appareil si l'achat existe — elle n'a pas de serveur propre. La bibliothèque d'achat de Google (Google Play Billing Library), intégrée à l'application à cet effet, apporte les autorisations Android <em>Internet</em> et <em>état du réseau</em> ; par leur biais, Google peut se transmettre des données techniques de diagnostic sur le processus d'achat. L'éditeur de cette application n'en reçoit rien.",
       "Les données de paiement sont traitées exclusivement par Google ; l'éditeur de cette application ne voit ni votre nom, ni votre adresse, ni votre moyen de paiement. La politique de confidentialité de Google s'applique à ce traitement : <a href=\"https://policies.google.com/privacy\">policies.google.com/privacy</a>."
     ]},
     { h: "Autorisations en un coup d'œil", ul: [
       "<strong>Microphone</strong> — uniquement pour le mode entraînement, voir ci-dessus.",
-      "<strong>Google Play Billing</strong> — pour que l'application puisse gérer l'achat unique via l'application Play Store."
+      "<strong>Google Play Billing</strong> — pour que l'application puisse gérer l'achat unique via l'application Play Store.",
+      "<strong>Internet et état du réseau</strong> — fournies par la bibliothèque d'achat de Google et utilisées uniquement pour traiter les achats avec Google Play ; l'application elle-même n'envoie aucune donnée par ce biais."
     ], p: [
-      "L'application ne demande aucune autre autorisation — elle n'a en particulier <strong>aucun accès à Internet</strong>. Vous pouvez le vérifier à tout moment dans les réglages d'applications Android."
+      "L'application ne demande aucune autre autorisation. Il n'y a ni publicité, ni suivi, ni serveur de l'éditeur."
     ]},
     { h: "Enfants", p: [
       "L'application s'adresse aux harmonicistes de tout âge et ne collecte de données auprès de personne — pas davantage auprès des enfants."
@@ -396,11 +400,11 @@ T.es = {
     ["Grabación de audio", "Nunca se guarda"],
     ["Cuenta / inicio de sesión", "No es necesaria"],
     ["Publicidad / rastreo", "Ninguno"],
-    ["Acceso a Internet", "Ninguno"]
+    ["Acceso a Internet", "Solo para compras en Google Play"]
   ],
   sections: [
     { h: "En resumen", p: [
-      "Harmonica Cheatsheet es una obra de consulta para armonicistas. Todo se calcula y se dibuja en tu dispositivo, y la aplicación <strong>no tiene acceso a Internet</strong>. No existe ningún servidor del desarrollador, ninguna cuenta de usuario, ninguna publicidad ni ningún software de análisis. No se recopilan, almacenan ni transmiten datos personales."
+      "Harmonica Cheatsheet es una obra de consulta para armonicistas. Todo se calcula y se dibuja en tu dispositivo, y la aplicación por sí misma <strong>no envía ningún dato</strong>. No existe ningún servidor del desarrollador, ninguna cuenta de usuario, ninguna publicidad ni ningún software de análisis. No se recopilan, almacenan ni transmiten datos personales."
     ]},
     { h: "El micrófono en el modo de práctica", p: [
       "La aplicación tiene un modo de práctica: escucha a través del micrófono y muestra qué nota estás tocando y con cuánta precisión la afinas. Para ello solicita una sola vez el permiso de <em>micrófono</em>."
@@ -415,14 +419,15 @@ T.es = {
       "No son datos personales y no salen de tu dispositivo. Si tienes activada la copia de seguridad de Android, el sistema los guarda en tu cuenta de Google junto con los datos de otras aplicaciones; se trata de una función del sistema operativo, no de esta aplicación."
     ]},
     { h: "Compra única en Google Play", p: [
-      "Harmonica Cheatsheet es gratuita. Otras posiciones, tonalidades y afinaciones se pueden desbloquear con una <strong>compra única dentro de la aplicación</strong> («Versión completa»). Google Play gestiona la compra: la aplicación pregunta a la aplicación Play Store de tu dispositivo si existe la compra; ella misma sigue <strong>sin acceso a Internet</strong> y sin servidor propio.",
+      "Harmonica Cheatsheet es gratuita. Otras posiciones, tonalidades y afinaciones se pueden desbloquear con una <strong>compra única dentro de la aplicación</strong> («Versión completa»). Google Play gestiona la compra: la aplicación pregunta a la aplicación Play Store de tu dispositivo si existe la compra; no tiene servidor propio. La biblioteca de compras de Google (Google Play Billing Library), incluida en la aplicación para ello, trae consigo los permisos de Android <em>Internet</em> y <em>estado de la red</em>; a través de ellos, Google puede transmitirse datos técnicos de diagnóstico sobre el proceso de compra. El desarrollador de esta aplicación no recibe nada de ello.",
       "Los datos de pago los procesa exclusivamente Google; el desarrollador de esta aplicación no ve tu nombre, ni tu dirección, ni tu medio de pago. A ese tratamiento se aplica la política de privacidad de Google: <a href=\"https://policies.google.com/privacy\">policies.google.com/privacy</a>."
     ]},
     { h: "Permisos de un vistazo", ul: [
       "<strong>Micrófono</strong> — solo para el modo de práctica, véase más arriba.",
-      "<strong>Google Play Billing</strong> — para que la aplicación pueda gestionar la compra única a través de la aplicación Play Store."
+      "<strong>Google Play Billing</strong> — para que la aplicación pueda gestionar la compra única a través de la aplicación Play Store.",
+      "<strong>Internet y estado de la red</strong> — los trae la biblioteca de compras de Google y solo se usan para tramitar compras con Google Play; la aplicación por sí misma no envía datos a través de ellos."
     ], p: [
-      "La aplicación no solicita ningún otro permiso — en particular, <strong>no tiene acceso a Internet</strong>. Puedes comprobarlo en cualquier momento en los ajustes de aplicaciones de Android."
+      "La aplicación no solicita ningún otro permiso. No hay publicidad, ni seguimiento, ni servidor del desarrollador."
     ]},
     { h: "Menores", p: [
       "La aplicación está dirigida a armonicistas de cualquier edad y no recopila datos de nadie — tampoco de menores."
@@ -450,11 +455,11 @@ T.it = {
     ["Registrazione audio", "Mai salvata"],
     ["Account / accesso", "Non necessario"],
     ["Pubblicità / tracciamento", "Nessuno"],
-    ["Accesso a Internet", "Nessuno"]
+    ["Accesso a Internet", "Solo per gli acquisti Google Play"]
   ],
   sections: [
     { h: "In breve", p: [
-      "Harmonica Cheatsheet è un'opera di consultazione per armonicisti. Tutto viene calcolato e disegnato sul tuo dispositivo e l'app <strong>non ha accesso a Internet</strong>. Non esiste alcun server del fornitore, nessun account utente, nessuna pubblicità e nessun software di analisi. Non vengono raccolti, conservati né trasmessi dati personali."
+      "Harmonica Cheatsheet è un'opera di consultazione per armonicisti. Tutto viene calcolato e disegnato sul tuo dispositivo e l'app di per sé <strong>non invia alcun dato</strong>. Non esiste alcun server del fornitore, nessun account utente, nessuna pubblicità e nessun software di analisi. Non vengono raccolti, conservati né trasmessi dati personali."
     ]},
     { h: "Il microfono nella modalità di esercizio", p: [
       "L'app dispone di una modalità di esercizio: ascolta tramite il microfono e mostra quale nota stai suonando e con quanta precisione la intoni. A questo scopo chiede una sola volta l'autorizzazione <em>Microfono</em>."
@@ -469,14 +474,15 @@ T.it = {
       "Non sono dati personali e non lasciano il tuo dispositivo. Se hai attivato il backup di Android, il sistema li salva nel tuo account Google insieme ai dati delle altre app; si tratta di una funzione del sistema operativo, non di questa app."
     ]},
     { h: "Acquisto unico su Google Play", p: [
-      "Harmonica Cheatsheet è gratuita. Altre posizioni, tonalità e accordature si possono sbloccare con un <strong>acquisto in-app unico</strong> («Versione completa»). L'acquisto è gestito da Google Play: l'app chiede all'app Play Store del tuo dispositivo se l'acquisto esiste — l'app stessa continua a <strong>non avere accesso a Internet</strong> né un server proprio.",
+      "Harmonica Cheatsheet è gratuita. Altre posizioni, tonalità e accordature si possono sbloccare con un <strong>acquisto in-app unico</strong> («Versione completa»). L'acquisto è gestito da Google Play: l'app chiede all'app Play Store del tuo dispositivo se l'acquisto esiste — un server proprio non ce l'ha. La libreria di acquisto di Google (Google Play Billing Library), inclusa nell'app a questo scopo, porta con sé le autorizzazioni Android <em>Internet</em> e <em>stato della rete</em>; tramite esse Google può trasmettere a sé stessa dati tecnici di diagnostica sul processo di acquisto. Il fornitore di questa app non ne riceve nulla.",
       "I dati di pagamento sono trattati esclusivamente da Google; il fornitore di questa app non vede né il tuo nome, né il tuo indirizzo, né il tuo metodo di pagamento. A tale trattamento si applica l'informativa sulla privacy di Google: <a href=\"https://policies.google.com/privacy\">policies.google.com/privacy</a>."
     ]},
     { h: "Autorizzazioni in sintesi", ul: [
       "<strong>Microfono</strong> — solo per la modalità di esercizio, vedi sopra.",
-      "<strong>Google Play Billing</strong> — perché l'app possa gestire l'acquisto unico tramite l'app Play Store."
+      "<strong>Google Play Billing</strong> — perché l'app possa gestire l'acquisto unico tramite l'app Play Store.",
+      "<strong>Internet e stato della rete</strong> — arrivano con la libreria di acquisto di Google e servono solo a gestire gli acquisti con Google Play; l'app di per sé non invia dati attraverso di esse."
     ], p: [
-      "L'app non richiede altre autorizzazioni — in particolare, <strong>non ha accesso a Internet</strong>. Puoi verificarlo in qualsiasi momento nelle impostazioni delle app di Android."
+      "L'app non richiede altre autorizzazioni. Non ci sono pubblicità, tracciamento né server del fornitore."
     ]},
     { h: "Minori", p: [
       "L'app si rivolge agli armonicisti di ogni età e non raccoglie dati da nessuno — nemmeno dai minori."
@@ -504,11 +510,11 @@ T.sv = {
     ["Ljudinspelning", "Sparas aldrig"],
     ["Konto / inloggning", "Krävs inte"],
     ["Annonser / spårning", "Inga"],
-    ["Internetåtkomst", "Ingen"]
+    ["Internetåtkomst", "Endast för köp via Google Play"]
   ],
   sections: [
     { h: "Kort sagt", p: [
-      "Harmonica Cheatsheet är ett uppslagsverk för munspelare. Allt beräknas och ritas på din enhet, och appen har <strong>ingen internetåtkomst</strong>. Det finns ingen server hos utvecklaren, inga användarkonton, ingen reklam och ingen analysprogramvara. Inga personuppgifter samlas in, lagras eller överförs."
+      "Harmonica Cheatsheet är ett uppslagsverk för munspelare. Allt beräknas och ritas på din enhet, och appen själv <strong>skickar inga data</strong>. Det finns ingen server hos utvecklaren, inga användarkonton, ingen reklam och ingen analysprogramvara. Inga personuppgifter samlas in, lagras eller överförs."
     ]},
     { h: "Mikrofonen i övningsläget", p: [
       "Appen har ett övningsläge: den lyssnar via mikrofonen och visar vilken ton du spelar och hur exakt du träffar den. För detta ber den en enda gång om behörigheten <em>Mikrofon</em>."
@@ -523,14 +529,15 @@ T.sv = {
       "Det är inga personuppgifter och de lämnar inte din enhet. Om du har aktiverat Android-säkerhetskopiering sparar Android dem i ditt Google-konto tillsammans med andra appdata; det är en funktion i operativsystemet, inte i den här appen."
     ]},
     { h: "Engångsköp på Google Play", p: [
-      "Harmonica Cheatsheet är gratis. Fler positioner, tonarter och stämningar kan låsas upp med ett <strong>engångsköp i appen</strong> (”Fullversion”). Köpet hanteras av Google Play: appen frågar Play Butik-appen på din enhet om köpet finns — själv har appen fortfarande <strong>ingen internetåtkomst</strong> och ingen egen server.",
+      "Harmonica Cheatsheet är gratis. Fler positioner, tonarter och stämningar kan låsas upp med ett <strong>engångsköp i appen</strong> (”Fullversion”). Köpet hanteras av Google Play: appen frågar Play Butik-appen på din enhet om köpet finns — någon egen server har den inte. Googles köpbibliotek (Google Play Billing Library), som appen innehåller för detta, för med sig Android-behörigheterna <em>Internet</em> och <em>nätverksstatus</em>; via dem kan Google skicka tekniska diagnosdata om köpet till sig själv. Utvecklaren av den här appen får inget av det.",
       "Betalningsuppgifter behandlas uteslutande av Google; utvecklaren av den här appen ser varken ditt namn, din adress eller ditt betalningsmedel. För den behandlingen gäller Googles egen integritetspolicy: <a href=\"https://policies.google.com/privacy\">policies.google.com/privacy</a>."
     ]},
     { h: "Behörigheter i korthet", ul: [
       "<strong>Mikrofon</strong> — endast för övningsläget, se ovan.",
-      "<strong>Google Play Billing</strong> — så att appen kan hantera engångsköpet via Play Butik-appen."
+      "<strong>Google Play Billing</strong> — så att appen kan hantera engångsköpet via Play Butik-appen.",
+      "<strong>Internet och nätverksstatus</strong> — följer med Googles köpbibliotek och används bara för att hantera köp med Google Play; appen själv skickar inga data via dem."
     ], p: [
-      "Appen begär inga andra behörigheter — den har i synnerhet <strong>ingen internetåtkomst</strong>. Det kan du när som helst kontrollera i Androids appinställningar."
+      "Appen begär inga andra behörigheter. Det finns ingen reklam, ingen spårning och ingen server hos utvecklaren."
     ]},
     { h: "Barn", p: [
       "Appen vänder sig till munspelare i alla åldrar och samlar inte in uppgifter från någon — inte heller från barn."
@@ -558,11 +565,11 @@ T.ru = {
     ["Аудиозапись", "Не сохраняется"],
     ["Аккаунт / вход", "Не требуется"],
     ["Реклама / аналитика", "Отсутствуют"],
-    ["Доступ в интернет", "Отсутствует"]
+    ["Доступ в интернет", "Только для покупок в Google Play"]
   ],
   sections: [
     { h: "Коротко", p: [
-      "Harmonica Cheatsheet — это справочник для исполнителей на губной гармонике. Все вычисления и построения выполняются на вашем устройстве, и приложение <strong>не имеет доступа в интернет</strong>. Нет ни сервера разработчика, ни учётных записей, ни рекламы, ни аналитических библиотек. Персональные данные не собираются, не хранятся и не передаются."
+      "Harmonica Cheatsheet — это справочник для исполнителей на губной гармонике. Все вычисления и построения выполняются на вашем устройстве, и само приложение <strong>не отправляет никаких данных</strong>. Нет ни сервера разработчика, ни учётных записей, ни рекламы, ни аналитических библиотек. Персональные данные не собираются, не хранятся и не передаются."
     ]},
     { h: "Микрофон в режиме упражнений", p: [
       "В приложении есть режим упражнений: оно слушает через микрофон и показывает, какую ноту вы играете и насколько точно попадаете. Для этого оно один раз запрашивает разрешение <em>Микрофон</em>."
@@ -577,14 +584,15 @@ T.ru = {
       "Это не персональные данные, и они не покидают ваше устройство. Если у вас включено резервное копирование Android, система сохранит их в вашем аккаунте Google вместе с данными других приложений; это функция операционной системы, а не приложения."
     ]},
     { h: "Разовая покупка в Google Play", p: [
-      "Harmonica Cheatsheet бесплатно. Остальные позиции, тональности и строи можно открыть <strong>разовой встроенной покупкой</strong> («Полная версия»). Покупку проводит Google Play: приложение спрашивает у приложения Play Маркет на вашем устройстве, совершена ли покупка, — само оно по-прежнему <strong>не имеет доступа в интернет</strong> и собственного сервера.",
+      "Harmonica Cheatsheet бесплатно. Остальные позиции, тональности и строи можно открыть <strong>разовой встроенной покупкой</strong> («Полная версия»). Покупку проводит Google Play: приложение спрашивает у приложения Play Маркет на вашем устройстве, совершена ли покупка, — собственного сервера у него нет. Встроенная для этого библиотека покупок Google (Google Play Billing Library) добавляет разрешения Android <em>Интернет</em> и <em>состояние сети</em>; через них Google может передавать себе технические диагностические данные о процессе покупки. Разработчик приложения ничего из этого не получает.",
       "Платёжные данные обрабатывает исключительно Google; разработчик приложения не видит ни вашего имени, ни адреса, ни платёжного средства. К этой обработке применяется политика конфиденциальности Google: <a href=\"https://policies.google.com/privacy\">policies.google.com/privacy</a>."
     ]},
     { h: "Разрешения кратко", ul: [
       "<strong>Микрофон</strong> — только для режима упражнений, см. выше.",
-      "<strong>Google Play Billing</strong> — чтобы приложение могло провести разовую покупку через приложение Play Маркет."
+      "<strong>Google Play Billing</strong> — чтобы приложение могло провести разовую покупку через приложение Play Маркет.",
+      "<strong>Интернет и состояние сети</strong> — добавляются библиотекой покупок Google и используются только для проведения покупок через Google Play; само приложение через них данных не отправляет."
     ], p: [
-      "Других разрешений приложение не запрашивает — в частности, у него <strong>нет доступа в интернет</strong>. Это в любой момент можно проверить в настройках приложений Android."
+      "Других разрешений приложение не запрашивает. Нет ни рекламы, ни отслеживания, ни сервера разработчика."
     ]},
     { h: "Дети", p: [
       "Приложение адресовано исполнителям любого возраста и не собирает данные ни у кого — в том числе у детей."
@@ -612,11 +620,11 @@ T.ar = {
     ["تسجيل الصوت", "لا يُحفظ إطلاقًا"],
     ["حساب / تسجيل دخول", "غير مطلوب"],
     ["إعلانات / تتبُّع", "لا يوجد"],
-    ["الوصول إلى الإنترنت", "لا يوجد"]
+    ["الوصول إلى الإنترنت", "لعمليات الشراء عبر Google Play فقط"]
   ],
   sections: [
     { h: "باختصار", p: [
-      "‏Harmonica Cheatsheet مرجع لعازفي الهارمونيكا. كل الحسابات والرسوم تتم على جهازك، والتطبيق <strong>لا يملك أي وصول إلى الإنترنت</strong>. لا يوجد خادم للمطوِّر، ولا حسابات مستخدمين، ولا إعلانات، ولا برامج تحليل. لا تُجمع أي بيانات شخصية ولا تُخزَّن ولا تُنقل."
+      "‏Harmonica Cheatsheet مرجع لعازفي الهارمونيكا. كل الحسابات والرسوم تتم على جهازك، والتطبيق نفسه <strong>لا يرسل أي بيانات</strong>. لا يوجد خادم للمطوِّر، ولا حسابات مستخدمين، ولا إعلانات، ولا برامج تحليل. لا تُجمع أي بيانات شخصية ولا تُخزَّن ولا تُنقل."
     ]},
     { h: "الميكروفون في وضع التمرين", p: [
       "يحتوي التطبيق على وضع تمرين: يستمع عبر الميكروفون ويُظهر النغمة التي تعزفها ومدى دقتها. ولهذا الغرض يطلب مرة واحدة إذن <em>الميكروفون</em>."
@@ -631,14 +639,15 @@ T.ar = {
       "هذه ليست بيانات شخصية وهي لا تغادر جهازك. وإذا كنت قد فعَّلت النسخ الاحتياطي في أندرويد، فسيحفظها النظام في حساب Google الخاص بك مع بيانات التطبيقات الأخرى؛ وهذه وظيفة من وظائف نظام التشغيل لا من وظائف هذا التطبيق."
     ]},
     { h: "شراء لمرة واحدة عبر Google Play", p: [
-      "‏Harmonica Cheatsheet مجاني. يمكن فتح وضعيات ومقامات ودوزنات إضافية <strong>بشراء واحد داخل التطبيق</strong> («النسخة الكاملة»). تتولى Google Play عملية الشراء: يسأل التطبيق تطبيقَ متجر Play على جهازك عمّا إذا كان الشراء موجودًا — أما التطبيق نفسه فما زال <strong>بلا أي وصول إلى الإنترنت</strong> وبلا خادم خاص.",
+      "‏Harmonica Cheatsheet مجاني. يمكن فتح وضعيات ومقامات ودوزنات إضافية <strong>بشراء واحد داخل التطبيق</strong> («النسخة الكاملة»). تتولى Google Play عملية الشراء: يسأل التطبيق تطبيقَ متجر Play على جهازك عمّا إذا كان الشراء موجودًا — وليس له خادم خاص. تجلب مكتبة الشراء من Google ‏(Google Play Billing Library)، المضمَّنة في التطبيق لهذا الغرض، إذنَي أندرويد <em>الإنترنت</em> و<em>حالة الشبكة</em>؛ ومن خلالهما قد ترسل Google إلى نفسها بيانات تشخيص تقنية عن عملية الشراء. ولا يتلقى مطوِّر هذا التطبيق شيئًا منها.",
       "تعالج Google وحدها بيانات الدفع؛ ولا يرى مطوِّر هذا التطبيق اسمك ولا عنوانك ولا وسيلة الدفع الخاصة بك. وتسري على هذه المعالجة سياسة خصوصية Google: <a href=\"https://policies.google.com/privacy\">policies.google.com/privacy</a>."
     ]},
     { h: "الأذونات باختصار", ul: [
       "<strong>الميكروفون</strong> — لوضع التمرين فقط، انظر أعلاه.",
-      "<strong>Google Play Billing</strong> — ليتمكن التطبيق من إتمام الشراء لمرة واحدة عبر تطبيق متجر Play."
+      "<strong>Google Play Billing</strong> — ليتمكن التطبيق من إتمام الشراء لمرة واحدة عبر تطبيق متجر Play.",
+      "<strong>الإنترنت وحالة الشبكة</strong> — تجلبهما مكتبة الشراء من Google ولا يُستخدمان إلا لإتمام عمليات الشراء مع Google Play؛ ولا يرسل التطبيق نفسه عبرهما أي بيانات."
     ], p: [
-      "لا يطلب التطبيق أي أذونات أخرى — وهو على وجه الخصوص <strong>لا يملك أي وصول إلى الإنترنت</strong>. ويمكنك التحقق من ذلك في أي وقت من إعدادات التطبيقات في أندرويد."
+      "لا يطلب التطبيق أي أذونات أخرى. لا توجد إعلانات ولا تتبُّع ولا خادم للمطوِّر."
     ]},
     { h: "الأطفال", p: [
       "يتوجه التطبيق إلى عازفي الهارمونيكا من كل الأعمار ولا يجمع بيانات من أحد — ولا من الأطفال."
@@ -666,11 +675,11 @@ T.zh = {
     ["录音", "从不保存"],
     ["账户 / 登录", "无需"],
     ["广告 / 追踪", "没有"],
-    ["网络访问", "没有"]
+    ["网络访问", "仅用于 Google Play 购买"]
   ],
   sections: [
     { h: "简而言之", p: [
-      "Harmonica Cheatsheet 是一款面向口琴演奏者的参考工具。所有计算和绘制都在您的设备上完成，本应用<strong>没有网络访问权限</strong>。开发者没有服务器，应用没有用户账户、没有广告、也没有任何分析软件。本应用不收集、不存储、也不传输任何个人数据。"
+      "Harmonica Cheatsheet 是一款面向口琴演奏者的参考工具。所有计算和绘制都在您的设备上完成，本应用自身<strong>不发送任何数据</strong>。开发者没有服务器，应用没有用户账户、没有广告、也没有任何分析软件。本应用不收集、不存储、也不传输任何个人数据。"
     ]},
     { h: "练习模式中的麦克风", p: [
       "本应用有一个练习模式：它通过麦克风聆听，并显示您正在吹奏的音以及音准如何。为此它会一次性请求<em>麦克风</em>权限。"
@@ -685,14 +694,15 @@ T.zh = {
       "这些都不是个人数据，也不会离开您的设备。如果您启用了 Android 备份，系统会将它们与其他应用数据一起保存到您的 Google 账户；这是操作系统的功能，而非本应用的功能。"
     ]},
     { h: "在 Google Play 上一次性购买", p: [
-      "Harmonica Cheatsheet 免费。其他把位、调和调音可通过<strong>一次性应用内购买</strong>（“完整版”）解锁。购买由 Google Play 处理：应用会询问您设备上的 Play 商店应用是否存在该购买——应用本身仍然<strong>没有网络访问权限</strong>，也没有自己的服务器。",
+      "Harmonica Cheatsheet 免费。其他把位、调和调音可通过<strong>一次性应用内购买</strong>（“完整版”）解锁。购买由 Google Play 处理：应用会询问您设备上的 Play 商店应用是否存在该购买——应用没有自己的服务器。为此内置的 Google 购买库（Google Play Billing Library）会带来 Android 的<em>网络</em>和<em>网络状态</em>权限；Google 可能借此向自身传输有关购买过程的技术诊断数据。本应用的开发者不会收到其中任何数据。",
       "支付数据完全由 Google 处理；本应用的开发者看不到您的姓名、地址或支付方式。该处理适用 Google 自己的隐私政策：<a href=\"https://policies.google.com/privacy\">policies.google.com/privacy</a>。"
     ]},
     { h: "权限一览", ul: [
       "<strong>麦克风</strong>——仅用于练习模式，见上文。",
-      "<strong>Google Play Billing</strong>——使应用能够通过 Play 商店应用完成一次性购买。"
+      "<strong>Google Play Billing</strong>——使应用能够通过 Play 商店应用完成一次性购买。",
+      "<strong>网络和网络状态</strong>——由 Google 购买库带来，仅用于通过 Google Play 处理购买；应用自身不通过它们发送任何数据。"
     ], p: [
-      "本应用不请求其他任何权限——特别地，它<strong>没有网络访问权限</strong>。您随时可以在 Android 的应用设置中核实这一点。"
+      "本应用不请求其他任何权限。没有广告、没有跟踪，开发者也没有服务器。"
     ]},
     { h: "儿童", p: [
       "本应用面向各年龄段的口琴演奏者，不从任何人处收集数据——儿童也不例外。"
@@ -720,11 +730,11 @@ T.ja = {
     ["録音", "保存しません"],
     ["アカウント / ログイン", "不要"],
     ["広告 / トラッキング", "なし"],
-    ["インターネット接続", "なし"]
+    ["インターネット接続", "Google Play での購入のみ"]
   ],
   sections: [
     { h: "要点", p: [
-      "Harmonica Cheatsheet はハーモニカ奏者のための資料アプリです。計算も描画もすべて端末上で行われ、本アプリには<strong>インターネットへのアクセス権限がありません</strong>。提供者のサーバーはなく、ユーザーアカウントも、広告も、解析ソフトウェアもありません。個人データの収集・保存・送信は一切行いません。"
+      "Harmonica Cheatsheet はハーモニカ奏者のための資料アプリです。計算も描画もすべて端末上で行われ、本アプリ自体は<strong>データを一切送信しません</strong>。提供者のサーバーはなく、ユーザーアカウントも、広告も、解析ソフトウェアもありません。個人データの収集・保存・送信は一切行いません。"
     ]},
     { h: "練習モードでのマイク", p: [
       "本アプリには練習モードがあります。マイクを通して音を聞き取り、いま鳴っている音と、その音程がどれだけ正確かを表示します。そのために <em>マイク</em> の権限を一度だけ求めます。"
@@ -739,14 +749,15 @@ T.ja = {
       "これらは個人データではなく、端末の外に出ることはありません。Android のバックアップを有効にしている場合は、他のアプリのデータと同様に Google アカウントへ保存されますが、それは OS の機能であって本アプリの機能ではありません。"
     ]},
     { h: "Google Play での買い切り購入", p: [
-      "Harmonica Cheatsheet は無料です。ほかのポジション、キー、チューニングは<strong>一度きりのアプリ内購入</strong>（「フルバージョン」）で解除できます。購入は Google Play が処理します。アプリは端末の Play ストアアプリに購入の有無を問い合わせるだけで、アプリ自体には引き続き<strong>インターネットへのアクセス権限はなく</strong>、独自のサーバーもありません。",
+      "Harmonica Cheatsheet は無料です。ほかのポジション、キー、チューニングは<strong>一度きりのアプリ内購入</strong>（「フルバージョン」）で解除できます。購入は Google Play が処理します。アプリは端末の Play ストアアプリに購入の有無を問い合わせるだけで、独自のサーバーはありません。そのためにアプリに組み込まれている Google の購入ライブラリ（Google Play Billing Library）は、Android の<em>インターネット</em>および<em>ネットワーク状態</em>の権限を伴います。これを通じて Google が購入処理に関する技術的な診断データを自社に送信することがあります。本アプリの提供者がそれを受け取ることはありません。",
       "支払い情報を扱うのは Google のみで、本アプリの提供者が氏名・住所・支払い方法を見ることはありません。その取り扱いには Google 自身のプライバシーポリシーが適用されます: <a href=\"https://policies.google.com/privacy\">policies.google.com/privacy</a>"
     ]},
     { h: "権限の一覧", ul: [
       "<strong>マイク</strong> — 練習モード専用です（上記参照）。",
-      "<strong>Google Play Billing</strong> — Play ストアアプリを通じて買い切り購入を処理するため。"
+      "<strong>Google Play Billing</strong> — Play ストアアプリを通じて買い切り購入を処理するため。",
+      "<strong>インターネットとネットワーク状態</strong> — Google の購入ライブラリに含まれ、Google Play での購入処理にのみ使われます。アプリ自体はこれを通じてデータを送信しません。"
     ], p: [
-      "本アプリはこれ以外の権限を要求しません。とくに<strong>インターネットへのアクセス権限はありません</strong>。Android のアプリ設定でいつでも確認できます。"
+      "本アプリはこれ以外の権限を要求しません。広告も、トラッキングも、提供者のサーバーもありません。"
     ]},
     { h: "お子さまについて", p: [
       "本アプリは年齢を問わずハーモニカ奏者に向けたもので、誰からもデータを収集しません。お子さまからも収集しません。"
@@ -774,11 +785,11 @@ T.ko = {
     ["녹음", "저장하지 않음"],
     ["계정 / 로그인", "필요 없음"],
     ["광고 / 추적", "없음"],
-    ["인터넷 접근", "없음"]
+    ["인터넷 접근", "Google Play 구매에만 사용"]
   ],
   sections: [
     { h: "요약", p: [
-      "Harmonica Cheatsheet는 하모니카 연주자를 위한 참고 자료 앱입니다. 모든 계산과 그리기는 기기에서 이루어지며, 이 앱에는 <strong>인터넷 접근 권한이 없습니다</strong>. 제공자의 서버도, 사용자 계정도, 광고도, 분석 소프트웨어도 없습니다. 개인정보는 수집·저장·전송되지 않습니다."
+      "Harmonica Cheatsheet는 하모니카 연주자를 위한 참고 자료 앱입니다. 모든 계산과 그리기는 기기에서 이루어지며, 이 앱 자체는 <strong>어떤 데이터도 전송하지 않습니다</strong>. 제공자의 서버도, 사용자 계정도, 광고도, 분석 소프트웨어도 없습니다. 개인정보는 수집·저장·전송되지 않습니다."
     ]},
     { h: "연습 모드의 마이크", p: [
       "이 앱에는 연습 모드가 있습니다. 마이크로 소리를 듣고 지금 어떤 음을 불고 있는지, 음정이 얼마나 정확한지를 보여 줍니다. 이를 위해 <em>마이크</em> 권한을 한 번만 요청합니다."
@@ -793,14 +804,15 @@ T.ko = {
       "이는 개인정보가 아니며 기기를 벗어나지 않습니다. Android 백업을 켜 두었다면 다른 앱 데이터와 함께 Google 계정에 저장되지만, 그것은 운영체제의 기능이지 이 앱의 기능이 아닙니다."
     ]},
     { h: "Google Play 일회성 구매", p: [
-      "Harmonica Cheatsheet는 무료입니다. 나머지 포지션, 키, 튜닝은 <strong>일회성 인앱 구매</strong>(\"정식 버전\")로 잠금 해제할 수 있습니다. 구매는 Google Play가 처리합니다. 앱은 기기의 Play 스토어 앱에 구매 여부를 확인할 뿐이며, 앱 자체에는 여전히 <strong>인터넷 접근 권한이 없고</strong> 자체 서버도 없습니다.",
+      "Harmonica Cheatsheet는 무료입니다. 나머지 포지션, 키, 튜닝은 <strong>일회성 인앱 구매</strong>(\"정식 버전\")로 잠금 해제할 수 있습니다. 구매는 Google Play가 처리합니다. 앱은 기기의 Play 스토어 앱에 구매 여부를 확인할 뿐이며, 자체 서버는 없습니다. 이를 위해 앱에 포함된 Google 구매 라이브러리(Google Play Billing Library)는 Android의 <em>인터넷</em> 및 <em>네트워크 상태</em> 권한을 함께 가져옵니다. 이를 통해 Google이 구매 처리에 관한 기술적 진단 데이터를 자체적으로 전송할 수 있습니다. 이 앱의 제공자는 그 데이터를 받지 않습니다.",
       "결제 정보는 오직 Google이 처리하며, 이 앱의 제공자는 이름도 주소도 결제 수단도 볼 수 없습니다. 해당 처리에는 Google의 개인정보처리방침이 적용됩니다: <a href=\"https://policies.google.com/privacy\">policies.google.com/privacy</a>"
     ]},
     { h: "권한 한눈에 보기", ul: [
       "<strong>마이크</strong> — 연습 모드에만 사용합니다(위 참조).",
-      "<strong>Google Play Billing</strong> — Play 스토어 앱을 통해 일회성 구매를 처리하기 위해 필요합니다."
+      "<strong>Google Play Billing</strong> — Play 스토어 앱을 통해 일회성 구매를 처리하기 위해 필요합니다.",
+      "<strong>인터넷 및 네트워크 상태</strong> — Google 구매 라이브러리에 포함되어 있으며 Google Play 구매 처리에만 사용됩니다. 앱 자체는 이를 통해 데이터를 전송하지 않습니다."
     ], p: [
-      "앱은 이 밖의 다른 권한을 요청하지 않으며, 특히 <strong>인터넷 접근 권한은 없습니다</strong>. Android 앱 설정에서 언제든지 확인할 수 있습니다."
+      "앱은 이 밖의 다른 권한을 요청하지 않습니다. 광고도, 추적도, 제공자의 서버도 없습니다."
     ]},
     { h: "어린이", p: [
       "이 앱은 연령에 관계없이 하모니카 연주자를 위한 것이며, 누구에게서도 데이터를 수집하지 않습니다. 어린이도 마찬가지입니다."
@@ -828,11 +840,11 @@ T.hi = {
     ["ऑडियो रिकॉर्डिंग", "कभी संग्रहीत नहीं"],
     ["खाता / साइन-इन", "आवश्यक नहीं"],
     ["विज्ञापन / ट्रैकिंग", "कोई नहीं"],
-    ["इंटरनेट पहुँच", "कोई नहीं"]
+    ["इंटरनेट पहुँच", "केवल Google Play ख़रीद के लिए"]
   ],
   sections: [
     { h: "संक्षेप में", p: [
-      "Harmonica Cheatsheet हारमोनिका बजाने वालों के लिए एक संदर्भ ऐप है। सारी गणना और चित्रण आपके ही उपकरण पर होता है, और ऐप के पास <strong>इंटरनेट की कोई पहुँच नहीं</strong> है। न प्रदाता का कोई सर्वर है, न उपयोगकर्ता खाते, न विज्ञापन, न कोई विश्लेषण सॉफ़्टवेयर। कोई भी व्यक्तिगत डेटा एकत्र, संग्रहीत या प्रेषित नहीं किया जाता।"
+      "Harmonica Cheatsheet हारमोनिका बजाने वालों के लिए एक संदर्भ ऐप है। सारी गणना और चित्रण आपके ही उपकरण पर होता है, और ऐप स्वयं <strong>कोई डेटा नहीं भेजता</strong>। न प्रदाता का कोई सर्वर है, न उपयोगकर्ता खाते, न विज्ञापन, न कोई विश्लेषण सॉफ़्टवेयर। कोई भी व्यक्तिगत डेटा एकत्र, संग्रहीत या प्रेषित नहीं किया जाता।"
     ]},
     { h: "अभ्यास मोड में माइक्रोफ़ोन", p: [
       "ऐप में एक अभ्यास मोड है: यह माइक्रोफ़ोन से सुनता है और दिखाता है कि आप कौन-सा स्वर बजा रहे हैं और वह कितना सटीक है। इसके लिए यह एक बार <em>माइक्रोफ़ोन</em> की अनुमति माँगता है।"
@@ -847,14 +859,15 @@ T.hi = {
       "यह व्यक्तिगत डेटा नहीं है और यह आपके उपकरण से बाहर नहीं जाता। यदि आपने Android बैकअप चालू कर रखा है, तो सिस्टम इसे अन्य ऐप डेटा के साथ आपके Google खाते में सहेजता है; यह संचालन तंत्र की सुविधा है, इस ऐप की नहीं।"
     ]},
     { h: "Google Play पर एक बार की ख़रीद", p: [
-      "Harmonica Cheatsheet मुफ़्त है। बाकी पोज़िशन, कीज़ और ट्यूनिंग <strong>एक बार की इन-ऐप ख़रीद</strong> (“पूर्ण संस्करण”) से खोली जा सकती हैं। ख़रीद Google Play संभालता है: ऐप आपके डिवाइस के Play Store ऐप से केवल पूछता है कि ख़रीद मौजूद है या नहीं — ऐप के पास स्वयं अब भी <strong>इंटरनेट की कोई पहुँच नहीं</strong> है और न ही अपना कोई सर्वर।",
+      "Harmonica Cheatsheet मुफ़्त है। बाकी पोज़िशन, कीज़ और ट्यूनिंग <strong>एक बार की इन-ऐप ख़रीद</strong> (“पूर्ण संस्करण”) से खोली जा सकती हैं। ख़रीद Google Play संभालता है: ऐप आपके डिवाइस के Play Store ऐप से केवल पूछता है कि ख़रीद मौजूद है या नहीं — उसका अपना कोई सर्वर नहीं है। इसके लिए ऐप में शामिल Google की ख़रीद लाइब्रेरी (Google Play Billing Library) Android की <em>इंटरनेट</em> और <em>नेटवर्क स्थिति</em> अनुमतियाँ साथ लाती है; इनके ज़रिए Google ख़रीद प्रक्रिया से जुड़ा तकनीकी निदान डेटा अपने पास भेज सकता है। इस ऐप के प्रदाता को उसमें से कुछ भी नहीं मिलता।",
       "भुगतान संबंधी डेटा केवल Google संसाधित करता है; इस ऐप के प्रदाता को न आपका नाम दिखता है, न पता, न भुगतान का साधन। उस पर Google की अपनी गोपनीयता नीति लागू होती है: <a href=\"https://policies.google.com/privacy\">policies.google.com/privacy</a>"
     ]},
     { h: "अनुमतियाँ एक नज़र में", ul: [
       "<strong>माइक्रोफ़ोन</strong> — केवल अभ्यास मोड के लिए, ऊपर देखें।",
-      "<strong>Google Play Billing</strong> — ताकि ऐप Play Store ऐप के ज़रिए एक बार की ख़रीद पूरी कर सके।"
+      "<strong>Google Play Billing</strong> — ताकि ऐप Play Store ऐप के ज़रिए एक बार की ख़रीद पूरी कर सके।",
+      "<strong>इंटरनेट और नेटवर्क स्थिति</strong> — Google की ख़रीद लाइब्रेरी के साथ आती हैं और केवल Google Play के साथ ख़रीद पूरी करने के लिए इस्तेमाल होती हैं; ऐप स्वयं इनके ज़रिए कोई डेटा नहीं भेजता।"
     ], p: [
-      "ऐप इसके अलावा कोई अनुमति नहीं माँगता — विशेष रूप से उसके पास <strong>इंटरनेट की कोई पहुँच नहीं</strong> है। इसे आप Android की ऐप सेटिंग्स में कभी भी जाँच सकते हैं।"
+      "ऐप इसके अलावा कोई अनुमति नहीं माँगता। न विज्ञापन है, न ट्रैकिंग, न प्रदाता का कोई सर्वर।"
     ]},
     { h: "बच्चे", p: [
       "यह ऐप हर आयु के हारमोनिका बजाने वालों के लिए है और किसी से भी डेटा एकत्र नहीं करता — बच्चों से भी नहीं।"
@@ -882,11 +895,11 @@ T.pl = {
     ["Nagrywanie dźwięku", "Nigdy nie jest zapisywane"],
     ["Konto / logowanie", "Niewymagane"],
     ["Reklamy / śledzenie", "Brak"],
-    ["Dostęp do internetu", "Brak"]
+    ["Dostęp do internetu", "Tylko do zakupów w Google Play"]
   ],
   sections: [
     { h: "W skrócie", p: [
-      "Harmonica Cheatsheet to podręczny informator dla grających na harmonijce ustnej. Wszystko jest obliczane i rysowane na Twoim urządzeniu, a aplikacja <strong>nie ma dostępu do internetu</strong>. Nie istnieje żaden serwer dostawcy, nie ma kont użytkowników, reklam ani oprogramowania analitycznego. Żadne dane osobowe nie są zbierane, przechowywane ani przesyłane."
+      "Harmonica Cheatsheet to podręczny informator dla grających na harmonijce ustnej. Wszystko jest obliczane i rysowane na Twoim urządzeniu, a sama aplikacja <strong>nie wysyła żadnych danych</strong>. Nie istnieje żaden serwer dostawcy, nie ma kont użytkowników, reklam ani oprogramowania analitycznego. Żadne dane osobowe nie są zbierane, przechowywane ani przesyłane."
     ]},
     { h: "Mikrofon w trybie ćwiczeń", p: [
       "Aplikacja ma tryb ćwiczeń: słucha przez mikrofon i pokazuje, jaki dźwięk grasz i jak dokładnie go trafiasz. W tym celu jednorazowo prosi o uprawnienie <em>mikrofon</em>."
@@ -901,14 +914,15 @@ T.pl = {
       "Nie są to dane osobowe i nie opuszczają Twojego urządzenia. Jeśli masz włączoną kopię zapasową Androida, system zapisuje je na Twoim koncie Google razem z danymi innych aplikacji; jest to funkcja systemu operacyjnego, a nie tej aplikacji."
     ]},
     { h: "Jednorazowy zakup w Google Play", p: [
-      "Harmonica Cheatsheet jest bezpłatna. Pozostałe pozycje, tonacje i stroje można odblokować <strong>jednorazowym zakupem w aplikacji</strong> („Pełna wersja”). Zakup obsługuje Google Play: aplikacja pyta aplikację Sklep Play na Twoim urządzeniu, czy zakup istnieje — sama nadal <strong>nie ma dostępu do internetu</strong> ani własnego serwera.",
+      "Harmonica Cheatsheet jest bezpłatna. Pozostałe pozycje, tonacje i stroje można odblokować <strong>jednorazowym zakupem w aplikacji</strong> („Pełna wersja”). Zakup obsługuje Google Play: aplikacja pyta aplikację Sklep Play na Twoim urządzeniu, czy zakup istnieje — własnego serwera nie ma. Wbudowana w tym celu biblioteka zakupów Google (Google Play Billing Library) wnosi uprawnienia Androida <em>Internet</em> i <em>stan sieci</em>; za ich pośrednictwem Google może przesyłać do siebie techniczne dane diagnostyczne dotyczące procesu zakupu. Dostawca tej aplikacji nie otrzymuje z nich nic.",
       "Dane płatnicze przetwarza wyłącznie Google; dostawca tej aplikacji nie widzi ani Twojego imienia i nazwiska, ani adresu, ani metody płatności. Do tego przetwarzania stosuje się własna polityka prywatności Google: <a href=\"https://policies.google.com/privacy\">policies.google.com/privacy</a>."
     ]},
     { h: "Uprawnienia w skrócie", ul: [
       "<strong>Mikrofon</strong> — wyłącznie do trybu ćwiczeń, patrz wyżej.",
-      "<strong>Google Play Billing</strong> — aby aplikacja mogła obsłużyć jednorazowy zakup przez aplikację Sklep Play."
+      "<strong>Google Play Billing</strong> — aby aplikacja mogła obsłużyć jednorazowy zakup przez aplikację Sklep Play.",
+      "<strong>Internet i stan sieci</strong> — pochodzą z biblioteki zakupów Google i służą wyłącznie do obsługi zakupów w Google Play; sama aplikacja nie wysyła przez nie żadnych danych."
     ], p: [
-      "Aplikacja nie prosi o żadne inne uprawnienia — w szczególności <strong>nie ma dostępu do internetu</strong>. Można to w każdej chwili sprawdzić w ustawieniach aplikacji w Androidzie."
+      "Aplikacja nie prosi o żadne inne uprawnienia. Nie ma reklam, śledzenia ani serwera dostawcy."
     ]},
     { h: "Dzieci", p: [
       "Aplikacja jest skierowana do grających na harmonijce w każdym wieku i nie zbiera danych od nikogo — także od dzieci."
@@ -936,11 +950,11 @@ T.cs = {
     ["Nahrávání zvuku", "Nikdy se neukládá"],
     ["Účet / přihlášení", "Není potřeba"],
     ["Reklama / sledování", "Žádné"],
-    ["Přístup k internetu", "Žádný"]
+    ["Přístup k internetu", "Pouze pro nákupy přes Google Play"]
   ],
   sections: [
     { h: "Stručně", p: [
-      "Harmonica Cheatsheet je příručka pro hráče na foukací harmoniku. Vše se počítá a vykresluje přímo ve vašem zařízení a aplikace <strong>nemá přístup k internetu</strong>. Neexistuje žádný server poskytovatele, žádné uživatelské účty, žádná reklama ani analytický software. Žádné osobní údaje se neshromažďují, neukládají ani nepřenášejí."
+      "Harmonica Cheatsheet je příručka pro hráče na foukací harmoniku. Vše se počítá a vykresluje přímo ve vašem zařízení a aplikace sama <strong>neodesílá žádná data</strong>. Neexistuje žádný server poskytovatele, žádné uživatelské účty, žádná reklama ani analytický software. Žádné osobní údaje se neshromažďují, neukládají ani nepřenášejí."
     ]},
     { h: "Mikrofon v režimu cvičení", p: [
       "Aplikace má režim cvičení: poslouchá přes mikrofon a ukazuje, který tón právě hrajete a jak přesně jej trefujete. K tomu si jednorázově vyžádá oprávnění <em>mikrofon</em>."
@@ -955,14 +969,15 @@ T.cs = {
       "Nejde o osobní údaje a vaše zařízení neopouštějí. Máte-li zapnuté zálohování Androidu, systém je uloží spolu s daty ostatních aplikací do vašeho účtu Google; to je funkce operačního systému, nikoli této aplikace."
     ]},
     { h: "Jednorázový nákup na Google Play", p: [
-      "Harmonica Cheatsheet je zdarma. Další pozice, tóniny a ladění lze odemknout <strong>jednorázovým nákupem v aplikaci</strong> („Plná verze“). Nákup zpracovává Google Play: aplikace se aplikace Obchod Play ve vašem zařízení zeptá, zda nákup existuje — sama i nadále <strong>nemá přístup k internetu</strong> ani vlastní server.",
+      "Harmonica Cheatsheet je zdarma. Další pozice, tóniny a ladění lze odemknout <strong>jednorázovým nákupem v aplikaci</strong> („Plná verze“). Nákup zpracovává Google Play: aplikace se aplikace Obchod Play ve vašem zařízení zeptá, zda nákup existuje — vlastní server nemá. Knihovna pro nákupy od Googlu (Google Play Billing Library), kterou aplikace k tomu obsahuje, s sebou přináší oprávnění Androidu <em>Internet</em> a <em>stav sítě</em>; jejich prostřednictvím může Google sám sobě předávat technická diagnostická data o průběhu nákupu. Poskytovatel této aplikace z nich nic nedostává.",
       "Platební údaje zpracovává výhradně Google; poskytovatel této aplikace nevidí vaše jméno, adresu ani platební prostředek. Na toto zpracování se vztahují vlastní zásady ochrany osobních údajů společnosti Google: <a href=\"https://policies.google.com/privacy\">policies.google.com/privacy</a>."
     ]},
     { h: "Oprávnění v přehledu", ul: [
       "<strong>Mikrofon</strong> — pouze pro režim cvičení, viz výše.",
-      "<strong>Google Play Billing</strong> — aby aplikace mohla zpracovat jednorázový nákup přes aplikaci Obchod Play."
+      "<strong>Google Play Billing</strong> — aby aplikace mohla zpracovat jednorázový nákup přes aplikaci Obchod Play.",
+      "<strong>Internet a stav sítě</strong> — přináší je knihovna pro nákupy od Googlu a slouží jen ke zpracování nákupů přes Google Play; aplikace sama jejich prostřednictvím žádná data neodesílá."
     ], p: [
-      "Jiná oprávnění si aplikace nevyžádá — zejména <strong>nemá přístup k internetu</strong>. Kdykoli si to můžete ověřit v nastavení aplikací v Androidu."
+      "Jiná oprávnění si aplikace nevyžádá. Není tu žádná reklama, žádné sledování ani server poskytovatele."
     ]},
     { h: "Děti", p: [
       "Aplikace je určena hráčům na harmoniku každého věku a neshromažďuje údaje od nikoho — ani od dětí."
@@ -990,11 +1005,11 @@ T.nb = {
     ["Lydopptak", "Lagres aldri"],
     ["Konto / innlogging", "Ikke nødvendig"],
     ["Annonser / sporing", "Ingen"],
-    ["Internettilgang", "Ingen"]
+    ["Internettilgang", "Kun for kjøp i Google Play"]
   ],
   sections: [
     { h: "Kort sagt", p: [
-      "Harmonica Cheatsheet er et oppslagsverk for munnspillere. Alt regnes ut og tegnes på enheten din, og appen har <strong>ingen internettilgang</strong>. Det finnes ingen server hos leverandøren, ingen brukerkontoer, ingen reklame og ingen analyseprogramvare. Ingen personopplysninger samles inn, lagres eller overføres."
+      "Harmonica Cheatsheet er et oppslagsverk for munnspillere. Alt regnes ut og tegnes på enheten din, og appen selv <strong>sender ingen data</strong>. Det finnes ingen server hos leverandøren, ingen brukerkontoer, ingen reklame og ingen analyseprogramvare. Ingen personopplysninger samles inn, lagres eller overføres."
     ]},
     { h: "Mikrofonen i øvingsmodus", p: [
       "Appen har en øvingsmodus: den lytter gjennom mikrofonen og viser hvilken tone du spiller og hvor nøyaktig du treffer den. Til dette ber den én gang om tillatelsen <em>mikrofon</em>."
@@ -1009,14 +1024,15 @@ T.nb = {
       "Dette er ikke personopplysninger, og de forlater ikke enheten din. Har du slått på Android-sikkerhetskopiering, lagrer Android dem i Google-kontoen din sammen med andre appdata; det er en funksjon i operativsystemet, ikke i denne appen."
     ]},
     { h: "Engangskjøp i Google Play", p: [
-      "Harmonica Cheatsheet er gratis. Flere posisjoner, tonearter og stemminger kan låses opp med et <strong>engangskjøp i appen</strong> («Fullversjon»). Kjøpet håndteres av Google Play: Appen spør Play Butikk-appen på enheten din om kjøpet finnes — selv har appen fortsatt <strong>ingen internettilgang</strong> og ingen egen server.",
+      "Harmonica Cheatsheet er gratis. Flere posisjoner, tonearter og stemminger kan låses opp med et <strong>engangskjøp i appen</strong> («Fullversjon»). Kjøpet håndteres av Google Play: Appen spør Play Butikk-appen på enheten din om kjøpet finnes — noen egen server har den ikke. Googles kjøpsbibliotek (Google Play Billing Library), som appen inneholder for dette, tar med seg Android-tillatelsene <em>Internett</em> og <em>nettverksstatus</em>; gjennom dem kan Google sende tekniske diagnosedata om kjøpet til seg selv. Leverandøren av denne appen mottar ingenting av dette.",
       "Betalingsopplysninger behandles utelukkende av Google; leverandøren av denne appen ser verken navn, adresse eller betalingsmiddel. For den behandlingen gjelder Googles egen personvernerklæring: <a href=\"https://policies.google.com/privacy\">policies.google.com/privacy</a>."
     ]},
     { h: "Tillatelser i korthet", ul: [
       "<strong>Mikrofon</strong> — bare til øvingsmodus, se ovenfor.",
-      "<strong>Google Play Billing</strong> — slik at appen kan håndtere engangskjøpet via Play Butikk-appen."
+      "<strong>Google Play Billing</strong> — slik at appen kan håndtere engangskjøpet via Play Butikk-appen.",
+      "<strong>Internett og nettverksstatus</strong> — følger med Googles kjøpsbibliotek og brukes bare til å håndtere kjøp med Google Play; appen selv sender ingen data gjennom dem."
     ], p: [
-      "Appen ber ikke om andre tillatelser — den har i særdeleshet <strong>ingen internettilgang</strong>. Dette kan du når som helst kontrollere i appinnstillingene i Android."
+      "Appen ber ikke om andre tillatelser. Det finnes ingen reklame, ingen sporing og ingen server hos leverandøren."
     ]},
     { h: "Barn", p: [
       "Appen retter seg mot munnspillere i alle aldre og samler ikke inn opplysninger fra noen — heller ikke fra barn."
@@ -1044,11 +1060,11 @@ T.fi = {
     ["Äänen tallennus", "Ei tallenneta koskaan"],
     ["Tili / kirjautuminen", "Ei tarvita"],
     ["Mainokset / seuranta", "Ei lainkaan"],
-    ["Internet-yhteys", "Ei lainkaan"]
+    ["Internet-yhteys", "Vain Google Play -ostoihin"]
   ],
   sections: [
     { h: "Lyhyesti", p: [
-      "Harmonica Cheatsheet on hakuteos huuliharpunsoittajille. Kaikki lasketaan ja piirretään laitteellasi, eikä sovelluksella ole <strong>lainkaan internet-yhteyttä</strong>. Palveluntarjoajalla ei ole palvelinta, eikä sovelluksessa ole käyttäjätilejä, mainoksia tai analytiikkaohjelmistoa. Henkilötietoja ei kerätä, tallenneta eikä siirretä."
+      "Harmonica Cheatsheet on hakuteos huuliharpunsoittajille. Kaikki lasketaan ja piirretään laitteellasi, eikä sovellus itse <strong>lähetä mitään tietoja</strong>. Palveluntarjoajalla ei ole palvelinta, eikä sovelluksessa ole käyttäjätilejä, mainoksia tai analytiikkaohjelmistoa. Henkilötietoja ei kerätä, tallenneta eikä siirretä."
     ]},
     { h: "Mikrofoni harjoitustilassa", p: [
       "Sovelluksessa on harjoitustila: se kuuntelee mikrofonin kautta ja näyttää, mitä säveltä soitat ja kuinka tarkasti se osuu. Tätä varten se pyytää kerran <em>mikrofonin</em> käyttöoikeuden."
@@ -1063,14 +1079,15 @@ T.fi = {
       "Nämä eivät ole henkilötietoja eivätkä ne poistu laitteeltasi. Jos Androidin varmuuskopiointi on käytössä, järjestelmä tallentaa ne Google-tilillesi muiden sovellustietojen ohella; se on käyttöjärjestelmän eikä tämän sovelluksen toiminto."
     ]},
     { h: "Kertaosto Google Playssa", p: [
-      "Harmonica Cheatsheet on ilmainen. Muut asemat, sävellajit ja viritykset voi avata <strong>sovelluksen sisäisellä kertaostolla</strong> (”Täysversio”). Oston hoitaa Google Play: sovellus kysyy laitteesi Play Kauppa -sovellukselta, onko osto tehty — sovelluksella itsellään ei edelleenkään ole <strong>internet-yhteyttä</strong> eikä omaa palvelinta.",
+      "Harmonica Cheatsheet on ilmainen. Muut asemat, sävellajit ja viritykset voi avata <strong>sovelluksen sisäisellä kertaostolla</strong> (”Täysversio”). Oston hoitaa Google Play: sovellus kysyy laitteesi Play Kauppa -sovellukselta, onko osto tehty — omaa palvelinta sillä ei ole. Tätä varten sovellukseen sisältyvä Googlen ostokirjasto (Google Play Billing Library) tuo mukanaan Androidin käyttöoikeudet <em>Internet</em> ja <em>verkon tila</em>; niiden kautta Google voi välittää itselleen teknisiä diagnostiikkatietoja ostotapahtumasta. Tämän sovelluksen tarjoaja ei saa niistä mitään.",
       "Maksutiedot käsittelee yksinomaan Google; tämän sovelluksen tarjoaja ei näe nimeäsi, osoitettasi eikä maksuvälinettäsi. Tähän käsittelyyn sovelletaan Googlen omaa tietosuojakäytäntöä: <a href=\"https://policies.google.com/privacy\">policies.google.com/privacy</a>."
     ]},
     { h: "Käyttöoikeudet lyhyesti", ul: [
       "<strong>Mikrofoni</strong> — vain harjoitustilaa varten, katso yllä.",
-      "<strong>Google Play Billing</strong> — jotta sovellus voi hoitaa kertaoston Play Kauppa -sovelluksen kautta."
+      "<strong>Google Play Billing</strong> — jotta sovellus voi hoitaa kertaoston Play Kauppa -sovelluksen kautta.",
+      "<strong>Internet ja verkon tila</strong> — tulevat Googlen ostokirjaston mukana ja ovat käytössä vain Google Play -ostojen käsittelyssä; sovellus itse ei lähetä niiden kautta mitään tietoja."
     ], p: [
-      "Muita käyttöoikeuksia sovellus ei pyydä — erityisesti sillä <strong>ei ole internet-yhteyttä</strong>. Voit tarkistaa tämän milloin tahansa Androidin sovellusasetuksista."
+      "Muita käyttöoikeuksia sovellus ei pyydä. Mainoksia, seurantaa tai tarjoajan palvelinta ei ole."
     ]},
     { h: "Lapset", p: [
       "Sovellus on tarkoitettu kaikenikäisille huuliharpunsoittajille eikä se kerää tietoja keneltäkään — ei myöskään lapsilta."
@@ -1098,11 +1115,11 @@ T.da = {
     ["Lydoptagelse", "Gemmes aldrig"],
     ["Konto / login", "Ikke nødvendig"],
     ["Reklamer / sporing", "Ingen"],
-    ["Internetadgang", "Ingen"]
+    ["Internetadgang", "Kun til køb i Google Play"]
   ],
   sections: [
     { h: "Kort fortalt", p: [
-      "Harmonica Cheatsheet er et opslagsværk for mundharmonikaspillere. Alt beregnes og tegnes på din enhed, og appen har <strong>ingen internetadgang</strong>. Der findes ingen server hos udbyderen, ingen brugerkonti, ingen reklamer og ingen analysesoftware. Der indsamles, gemmes eller overføres ingen personoplysninger."
+      "Harmonica Cheatsheet er et opslagsværk for mundharmonikaspillere. Alt beregnes og tegnes på din enhed, og appen selv <strong>sender ingen data</strong>. Der findes ingen server hos udbyderen, ingen brugerkonti, ingen reklamer og ingen analysesoftware. Der indsamles, gemmes eller overføres ingen personoplysninger."
     ]},
     { h: "Mikrofonen i øvetilstand", p: [
       "Appen har en øvetilstand: den lytter gennem mikrofonen og viser, hvilken tone du spiller, og hvor præcist du rammer den. Til det beder den én gang om tilladelsen <em>mikrofon</em>."
@@ -1117,14 +1134,15 @@ T.da = {
       "Det er ikke personoplysninger, og de forlader ikke din enhed. Har du slået Android-sikkerhedskopiering til, gemmer Android dem i din Google-konto sammen med andre appdata; det er en funktion i styresystemet, ikke i denne app."
     ]},
     { h: "Engangskøb i Google Play", p: [
-      "Harmonica Cheatsheet er gratis. Flere positioner, tonearter og stemninger kan låses op med et <strong>engangskøb i appen</strong> (»Fuld version«). Købet håndteres af Google Play: Appen spørger Play Butik-appen på din enhed, om købet findes — selv har appen fortsat <strong>ingen internetadgang</strong> og ingen egen server.",
+      "Harmonica Cheatsheet er gratis. Flere positioner, tonearter og stemninger kan låses op med et <strong>engangskøb i appen</strong> (»Fuld version«). Købet håndteres af Google Play: Appen spørger Play Butik-appen på din enhed, om købet findes — nogen egen server har den ikke. Googles købsbibliotek (Google Play Billing Library), som appen indeholder til dette, medbringer Android-tilladelserne <em>Internet</em> og <em>netværksstatus</em>; via dem kan Google sende tekniske diagnosedata om købet til sig selv. Udbyderen af denne app modtager intet af det.",
       "Betalingsoplysninger behandles udelukkende af Google; udbyderen af denne app ser hverken navn, adresse eller betalingsmiddel. For den behandling gælder Googles egen privatlivspolitik: <a href=\"https://policies.google.com/privacy\">policies.google.com/privacy</a>."
     ]},
     { h: "Tilladelser i overblik", ul: [
       "<strong>Mikrofon</strong> — kun til øvetilstanden, se ovenfor.",
-      "<strong>Google Play Billing</strong> — så appen kan håndtere engangskøbet via Play Butik-appen."
+      "<strong>Google Play Billing</strong> — så appen kan håndtere engangskøbet via Play Butik-appen.",
+      "<strong>Internet og netværksstatus</strong> — følger med Googles købsbibliotek og bruges kun til at håndtere køb med Google Play; appen selv sender ingen data via dem."
     ], p: [
-      "Appen beder ikke om andre tilladelser — den har i særdeleshed <strong>ingen internetadgang</strong>. Det kan du til enhver tid kontrollere i appindstillingerne i Android."
+      "Appen beder ikke om andre tilladelser. Der er ingen reklamer, ingen sporing og ingen server hos udbyderen."
     ]},
     { h: "Børn", p: [
       "Appen henvender sig til mundharmonikaspillere i alle aldre og indsamler ikke oplysninger fra nogen — heller ikke fra børn."
@@ -1152,11 +1170,11 @@ T.id = {
     ["Rekaman audio", "Tidak pernah disimpan"],
     ["Akun / masuk", "Tidak diperlukan"],
     ["Iklan / pelacakan", "Tidak ada"],
-    ["Akses internet", "Tidak ada"]
+    ["Akses internet", "Hanya untuk pembelian Google Play"]
   ],
   sections: [
     { h: "Ringkasnya", p: [
-      "Harmonica Cheatsheet adalah buku acuan bagi pemain harmonika. Semua perhitungan dan penggambaran dilakukan di perangkat Anda, dan aplikasi ini <strong>tidak memiliki akses internet</strong>. Tidak ada server penyedia, tidak ada akun pengguna, tidak ada iklan, dan tidak ada perangkat lunak analitik. Tidak ada data pribadi yang dikumpulkan, disimpan, atau dikirimkan."
+      "Harmonica Cheatsheet adalah buku acuan bagi pemain harmonika. Semua perhitungan dan penggambaran dilakukan di perangkat Anda, dan aplikasi ini sendiri <strong>tidak mengirim data apa pun</strong>. Tidak ada server penyedia, tidak ada akun pengguna, tidak ada iklan, dan tidak ada perangkat lunak analitik. Tidak ada data pribadi yang dikumpulkan, disimpan, atau dikirimkan."
     ]},
     { h: "Mikrofon dalam mode latihan", p: [
       "Aplikasi ini memiliki mode latihan: ia mendengarkan melalui mikrofon dan menunjukkan nada apa yang sedang Anda mainkan serta seberapa tepat nada itu. Untuk itu ia meminta izin <em>mikrofon</em> satu kali saja."
@@ -1171,14 +1189,15 @@ T.id = {
       "Semua itu bukan data pribadi dan tidak meninggalkan perangkat Anda. Jika Anda mengaktifkan cadangan Android, sistem menyimpannya ke akun Google Anda bersama data aplikasi lain; itu adalah fungsi sistem operasi, bukan fungsi aplikasi ini."
     ]},
     { h: "Pembelian sekali bayar di Google Play", p: [
-      "Harmonica Cheatsheet gratis. Posisi, nada, dan penyeteman lainnya dapat dibuka dengan <strong>pembelian dalam aplikasi sekali bayar</strong> („Versi lengkap”). Pembelian ditangani oleh Google Play: aplikasi menanyakan kepada aplikasi Play Store di perangkat Anda apakah pembelian sudah ada — aplikasi ini sendiri tetap <strong>tidak memiliki akses internet</strong> dan tidak punya server sendiri.",
+      "Harmonica Cheatsheet gratis. Posisi, nada, dan penyeteman lainnya dapat dibuka dengan <strong>pembelian dalam aplikasi sekali bayar</strong> („Versi lengkap”). Pembelian ditangani oleh Google Play: aplikasi menanyakan kepada aplikasi Play Store di perangkat Anda apakah pembelian sudah ada — aplikasi ini tidak punya server sendiri. Pustaka pembelian Google (Google Play Billing Library) yang disertakan di aplikasi untuk keperluan ini membawa izin Android <em>Internet</em> dan <em>status jaringan</em>; melalui izin itu Google dapat mengirimkan data diagnostik teknis tentang proses pembelian kepada dirinya sendiri. Penyedia aplikasi ini tidak menerima apa pun darinya.",
       "Data pembayaran diproses semata-mata oleh Google; penyedia aplikasi ini tidak melihat nama, alamat, maupun alat pembayaran Anda. Untuk pemrosesan itu berlaku kebijakan privasi Google sendiri: <a href=\"https://policies.google.com/privacy\">policies.google.com/privacy</a>."
     ]},
     { h: "Izin secara sekilas", ul: [
       "<strong>Mikrofon</strong> — hanya untuk mode latihan, lihat di atas.",
-      "<strong>Google Play Billing</strong> — agar aplikasi dapat memproses pembelian sekali bayar melalui aplikasi Play Store."
+      "<strong>Google Play Billing</strong> — agar aplikasi dapat memproses pembelian sekali bayar melalui aplikasi Play Store.",
+      "<strong>Internet dan status jaringan</strong> — dibawa oleh pustaka pembelian Google dan hanya dipakai untuk memproses pembelian dengan Google Play; aplikasi ini sendiri tidak mengirim data melaluinya."
     ], p: [
-      "Aplikasi tidak meminta izin lain — khususnya, aplikasi ini <strong>tidak memiliki akses internet</strong>. Anda dapat memeriksanya kapan saja di pengaturan aplikasi Android."
+      "Aplikasi tidak meminta izin lain. Tidak ada iklan, tidak ada pelacakan, dan tidak ada server penyedia."
     ]},
     { h: "Anak-anak", p: [
       "Aplikasi ini ditujukan bagi pemain harmonika segala usia dan tidak mengumpulkan data dari siapa pun — termasuk dari anak-anak."
@@ -1206,11 +1225,11 @@ T.th = {
     ["การบันทึกเสียง", "ไม่เก็บไว้เลย"],
     ["บัญชี / การลงชื่อเข้าใช้", "ไม่จำเป็น"],
     ["โฆษณา / การติดตาม", "ไม่มี"],
-    ["การเข้าถึงอินเทอร์เน็ต", "ไม่มี"]
+    ["การเข้าถึงอินเทอร์เน็ต", "ใช้สำหรับการซื้อผ่าน Google Play เท่านั้น"]
   ],
   sections: [
     { h: "โดยสรุป", p: [
-      "Harmonica Cheatsheet เป็นคู่มืออ้างอิงสำหรับผู้เล่นฮาร์โมนิกา การคำนวณและการวาดทั้งหมดเกิดขึ้นบนอุปกรณ์ของคุณ และแอปนี้<strong>ไม่มีการเข้าถึงอินเทอร์เน็ต</strong> ไม่มีเซิร์ฟเวอร์ของผู้ให้บริการ ไม่มีบัญชีผู้ใช้ ไม่มีโฆษณา และไม่มีซอฟต์แวร์วิเคราะห์ข้อมูล ไม่มีการเก็บรวบรวม จัดเก็บ หรือส่งต่อข้อมูลส่วนบุคคลใด ๆ"
+      "Harmonica Cheatsheet เป็นคู่มืออ้างอิงสำหรับผู้เล่นฮาร์โมนิกา การคำนวณและการวาดทั้งหมดเกิดขึ้นบนอุปกรณ์ของคุณ และตัวแอปเอง<strong>ไม่ส่งข้อมูลใด ๆ</strong> ไม่มีเซิร์ฟเวอร์ของผู้ให้บริการ ไม่มีบัญชีผู้ใช้ ไม่มีโฆษณา และไม่มีซอฟต์แวร์วิเคราะห์ข้อมูล ไม่มีการเก็บรวบรวม จัดเก็บ หรือส่งต่อข้อมูลส่วนบุคคลใด ๆ"
     ]},
     { h: "ไมโครโฟนในโหมดฝึกซ้อม", p: [
       "แอปมีโหมดฝึกซ้อม โดยจะฟังผ่านไมโครโฟนและแสดงว่าคุณกำลังเล่นโน้ตใดและตรงเสียงเพียงใด สำหรับสิ่งนี้แอปจะขอสิทธิ์ <em>ไมโครโฟน</em> เพียงครั้งเดียว"
@@ -1225,14 +1244,15 @@ T.th = {
       "ข้อมูลเหล่านี้ไม่ใช่ข้อมูลส่วนบุคคลและจะไม่ออกจากอุปกรณ์ของคุณ หากคุณเปิดใช้การสำรองข้อมูลของ Android ระบบจะบันทึกข้อมูลเหล่านี้ไว้ในบัญชี Google ของคุณพร้อมกับข้อมูลแอปอื่น ๆ ซึ่งเป็นฟังก์ชันของระบบปฏิบัติการ ไม่ใช่ของแอปนี้"
     ]},
     { h: "การซื้อครั้งเดียวบน Google Play", p: [
-      "Harmonica Cheatsheet ใช้งานฟรี ตำแหน่ง คีย์ และการตั้งเสียงอื่น ๆ ปลดล็อกได้ด้วย<strong>การซื้อในแอปครั้งเดียว</strong> („เวอร์ชันเต็ม”) Google Play เป็นผู้ดำเนินการซื้อ แอปเพียงสอบถามแอป Play Store ในอุปกรณ์ของคุณว่ามีการซื้อแล้วหรือไม่ ตัวแอปเองยังคง<strong>ไม่มีการเข้าถึงอินเทอร์เน็ต</strong>และไม่มีเซิร์ฟเวอร์ของตัวเอง",
+      "Harmonica Cheatsheet ใช้งานฟรี ตำแหน่ง คีย์ และการตั้งเสียงอื่น ๆ ปลดล็อกได้ด้วย<strong>การซื้อในแอปครั้งเดียว</strong> („เวอร์ชันเต็ม”) Google Play เป็นผู้ดำเนินการซื้อ แอปเพียงสอบถามแอป Play Store ในอุปกรณ์ของคุณว่ามีการซื้อแล้วหรือไม่ ตัวแอปไม่มีเซิร์ฟเวอร์ของตัวเอง ไลบรารีการซื้อของ Google (Google Play Billing Library) ที่รวมอยู่ในแอปเพื่อการนี้มาพร้อมกับสิทธิ์ <em>อินเทอร์เน็ต</em> และ <em>สถานะเครือข่าย</em> ของ Android ซึ่ง Google อาจใช้ส่งข้อมูลการวินิจฉัยทางเทคนิคเกี่ยวกับขั้นตอนการซื้อไปยัง Google เอง ผู้ให้บริการแอปนี้ไม่ได้รับข้อมูลเหล่านั้นเลย",
       "ข้อมูลการชำระเงินได้รับการประมวลผลโดย Google เท่านั้น ผู้ให้บริการแอปนี้ไม่เห็นทั้งชื่อ ที่อยู่ หรือวิธีการชำระเงินของคุณ การประมวลผลดังกล่าวอยู่ภายใต้นโยบายความเป็นส่วนตัวของ Google เอง: <a href=\"https://policies.google.com/privacy\">policies.google.com/privacy</a>"
     ]},
     { h: "สิทธิ์โดยสรุป", ul: [
       "<strong>ไมโครโฟน</strong> — สำหรับโหมดฝึกซ้อมเท่านั้น ดูด้านบน",
-      "<strong>Google Play Billing</strong> — เพื่อให้แอปดำเนินการซื้อครั้งเดียวผ่านแอป Play Store ได้"
+      "<strong>Google Play Billing</strong> — เพื่อให้แอปดำเนินการซื้อครั้งเดียวผ่านแอป Play Store ได้",
+      "<strong>อินเทอร์เน็ตและสถานะเครือข่าย</strong> — มาพร้อมกับไลบรารีการซื้อของ Google และใช้เพื่อดำเนินการซื้อกับ Google Play เท่านั้น ตัวแอปเองไม่ส่งข้อมูลใด ๆ ผ่านสิทธิ์เหล่านี้"
     ], p: [
-      "แอปไม่ร้องขอสิทธิ์อื่นใด โดยเฉพาะอย่างยิ่งแอปนี้<strong>ไม่มีการเข้าถึงอินเทอร์เน็ต</strong> คุณสามารถตรวจสอบได้ตลอดเวลาในการตั้งค่าแอปของ Android"
+      "แอปไม่ร้องขอสิทธิ์อื่นใด ไม่มีโฆษณา ไม่มีการติดตาม และไม่มีเซิร์ฟเวอร์ของผู้ให้บริการ"
     ]},
     { h: "เด็ก", p: [
       "แอปนี้มีไว้สำหรับผู้เล่นฮาร์โมนิกาทุกวัย และไม่เก็บข้อมูลจากผู้ใด รวมถึงเด็กด้วย"
@@ -1260,11 +1280,11 @@ T.pt = {
     ["Gravação de áudio", "Nunca é guardada"],
     ["Conta / início de sessão", "Não é necessária"],
     ["Publicidade / rastreio", "Nenhum"],
-    ["Acesso à Internet", "Nenhum"]
+    ["Acesso à Internet", "Só para compras na Google Play"]
   ],
   sections: [
     { h: "Em resumo", p: [
-      "Harmonica Cheatsheet é uma obra de consulta para tocadores de harmónica. Tudo é calculado e desenhado no seu dispositivo, e a aplicação <strong>não tem qualquer acesso à Internet</strong>. Não existe servidor do fornecedor, nem contas de utilizador, nem publicidade, nem software de análise. Não são recolhidos, guardados nem transmitidos quaisquer dados pessoais."
+      "Harmonica Cheatsheet é uma obra de consulta para tocadores de harmónica. Tudo é calculado e desenhado no seu dispositivo, e a própria aplicação <strong>não envia quaisquer dados</strong>. Não existe servidor do fornecedor, nem contas de utilizador, nem publicidade, nem software de análise. Não são recolhidos, guardados nem transmitidos quaisquer dados pessoais."
     ]},
     { h: "O microfone no modo de treino", p: [
       "A aplicação tem um modo de treino: escuta pelo microfone e mostra que nota está a tocar e com que exatidão a afina. Para isso pede uma única vez a permissão de <em>microfone</em>."
@@ -1279,14 +1299,15 @@ T.pt = {
       "Não são dados pessoais e não saem do seu dispositivo. Se tiver a cópia de segurança do Android ativada, o sistema guarda-os na sua conta Google juntamente com os dados de outras aplicações; trata-se de uma função do sistema operativo e não desta aplicação."
     ]},
     { h: "Compra única na Google Play", p: [
-      "Harmonica Cheatsheet é gratuita. Outras posições, tons e afinações podem ser desbloqueados com uma <strong>compra única na aplicação</strong> («Versão completa»). A compra é tratada pela Google Play: a aplicação pergunta à aplicação Play Store do seu dispositivo se a compra existe — a própria aplicação continua <strong>sem qualquer acesso à Internet</strong> e sem servidor próprio.",
+      "Harmonica Cheatsheet é gratuita. Outras posições, tons e afinações podem ser desbloqueados com uma <strong>compra única na aplicação</strong> («Versão completa»). A compra é tratada pela Google Play: a aplicação pergunta à aplicação Play Store do seu dispositivo se a compra existe — não tem servidor próprio. A biblioteca de compras da Google (Google Play Billing Library), incluída na aplicação para esse fim, traz consigo as permissões Android <em>Internet</em> e <em>estado da rede</em>; através delas, a Google pode transmitir a si própria dados técnicos de diagnóstico sobre o processo de compra. O fornecedor desta aplicação não recebe nada disso.",
       "Os dados de pagamento são tratados exclusivamente pela Google; o fornecedor desta aplicação não vê o seu nome, morada nem meio de pagamento. A esse tratamento aplica-se a política de privacidade da própria Google: <a href=\"https://policies.google.com/privacy\">policies.google.com/privacy</a>."
     ]},
     { h: "Permissões num relance", ul: [
       "<strong>Microfone</strong> — apenas para o modo de treino, ver acima.",
-      "<strong>Google Play Billing</strong> — para que a aplicação possa tratar a compra única através da aplicação Play Store."
+      "<strong>Google Play Billing</strong> — para que a aplicação possa tratar a compra única através da aplicação Play Store.",
+      "<strong>Internet e estado da rede</strong> — vêm com a biblioteca de compras da Google e servem apenas para tratar compras com a Google Play; a própria aplicação não envia dados através delas."
     ], p: [
-      "A aplicação não pede outras permissões — em particular, não tem <strong>qualquer acesso à Internet</strong>. Pode verificá-lo a qualquer momento nas definições de aplicações do Android."
+      "A aplicação não pede outras permissões. Não há publicidade, nem rastreio, nem servidor do fornecedor."
     ]},
     { h: "Crianças", p: [
       "A aplicação dirige-se a tocadores de harmónica de qualquer idade e não recolhe dados de ninguém — também não de crianças."
@@ -1314,11 +1335,11 @@ T.nl = {
     ["Geluidsopname", "Wordt nooit bewaard"],
     ["Account / aanmelden", "Niet nodig"],
     ["Advertenties / tracking", "Geen"],
-    ["Internettoegang", "Geen"]
+    ["Internettoegang", "Alleen voor aankopen via Google Play"]
   ],
   sections: [
     { h: "Kort gezegd", p: [
-      "Harmonica Cheatsheet is een naslagwerk voor mondharmonicaspelers. Alles wordt op je apparaat berekend en getekend, en de app heeft <strong>geen internettoegang</strong>. Er is geen server van de aanbieder, er zijn geen gebruikersaccounts, geen advertenties en geen analysesoftware. Er worden geen persoonsgegevens verzameld, opgeslagen of doorgegeven."
+      "Harmonica Cheatsheet is een naslagwerk voor mondharmonicaspelers. Alles wordt op je apparaat berekend en getekend, en de app zelf <strong>verstuurt geen gegevens</strong>. Er is geen server van de aanbieder, er zijn geen gebruikersaccounts, geen advertenties en geen analysesoftware. Er worden geen persoonsgegevens verzameld, opgeslagen of doorgegeven."
     ]},
     { h: "De microfoon in de oefenmodus", p: [
       "De app heeft een oefenmodus: hij luistert via de microfoon mee en laat zien welke toon je speelt en hoe zuiver die is. Daarvoor vraagt hij eenmalig de toestemming <em>microfoon</em>."
@@ -1333,14 +1354,15 @@ T.nl = {
       "Dit zijn geen persoonsgegevens en ze verlaten je apparaat niet. Heb je de Android-back-up ingeschakeld, dan bewaart Android ze samen met andere app-gegevens in je Google-account; dat is een functie van het besturingssysteem, niet van deze app."
     ]},
     { h: "Eenmalige aankoop in Google Play", p: [
-      "Harmonica Cheatsheet is gratis. Meer posities, toonsoorten en stemmingen zijn te ontgrendelen met een <strong>eenmalige in-app-aankoop</strong> („Volledige versie”). Google Play handelt de aankoop af: de app vraagt de Play Store-app op je apparaat of de aankoop bestaat — zelf heeft de app nog steeds <strong>geen internettoegang</strong> en geen eigen server.",
+      "Harmonica Cheatsheet is gratis. Meer posities, toonsoorten en stemmingen zijn te ontgrendelen met een <strong>eenmalige in-app-aankoop</strong> („Volledige versie”). Google Play handelt de aankoop af: de app vraagt de Play Store-app op je apparaat of de aankoop bestaat — een eigen server heeft de app niet. De aankoopbibliotheek van Google (Google Play Billing Library), die de app hiervoor bevat, brengt de Android-toestemmingen <em>internet</em> en <em>netwerkstatus</em> mee; daarlangs kan Google technische diagnosegegevens over het aankoopproces naar zichzelf versturen. De aanbieder van deze app ontvangt daarvan niets.",
       "Betaalgegevens worden uitsluitend door Google verwerkt; de aanbieder van deze app krijgt naam, adres noch betaalmiddel te zien. Daarvoor geldt de eigen privacyverklaring van Google: <a href=\"https://policies.google.com/privacy\">policies.google.com/privacy</a>."
     ]},
     { h: "Toestemmingen in één oogopslag", ul: [
       "<strong>Microfoon</strong> — alleen voor de oefenmodus, zie hierboven.",
-      "<strong>Google Play Billing</strong> — zodat de app de eenmalige aankoop via de Play Store-app kan afhandelen."
+      "<strong>Google Play Billing</strong> — zodat de app de eenmalige aankoop via de Play Store-app kan afhandelen.",
+      "<strong>Internet en netwerkstatus</strong> — komen mee met de aankoopbibliotheek van Google en worden alleen gebruikt om aankopen via Google Play af te handelen; de app zelf verstuurt daarlangs geen gegevens."
     ], p: [
-      "De app vraagt geen andere toestemmingen — hij heeft met name <strong>geen internettoegang</strong>. Dat kun je op elk moment nakijken in de Android-app-instellingen."
+      "De app vraagt geen andere toestemmingen. Er zijn geen advertenties, geen tracking en geen server van de aanbieder."
     ]},
     { h: "Kinderen", p: [
       "De app richt zich op mondharmonicaspelers van elke leeftijd en verzamelt van niemand gegevens — ook niet van kinderen."
